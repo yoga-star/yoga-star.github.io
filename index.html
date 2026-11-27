@@ -171,6 +171,15 @@ body[data-view=home] .logo{display:none}
 .view:not([hidden]) .ah-badge{animation:rise 1s var(--ease) 1s both}
 @keyframes imgin{from{clip-path:inset(100% 0 0 0);scale:1.12}to{clip-path:inset(0 0 0 0);scale:1}}
 @keyframes marq{to{transform:translateX(-50%)}}
+.stats{padding-top:clamp(72px,8vw,120px)}
+.st-k{font-size:13px;color:var(--mute);margin-bottom:20px}
+.st-g{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid var(--ink)}
+.stat{padding:30px 20px 6px 0}.stat+.stat{border-left:1px solid var(--line);padding-left:24px}
+.st-n{font:600 clamp(40px,4.4vw,70px)/1 var(--disp);letter-spacing:-.045em;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.st-n em{font-style:normal;color:var(--blue);margin-left:.02em}
+.stat h3{margin-top:18px;font:600 clamp(17px,1.35vw,20px)/1.2 var(--disp);letter-spacing:-.01em}
+.st-s{margin-top:6px;font-size:15px;line-height:1.45;color:var(--mute);max-width:24ch}
+@media (max-width:1000px){.st-g{grid-template-columns:repeat(2,minmax(0,1fr))}.stat,.stat+.stat{border-left:0;padding:24px 14px 22px 0;border-bottom:1px solid var(--line)}.stat:first-child{grid-column:1/-1}.stat:nth-child(odd):not(:first-child){border-left:1px solid var(--line);padding-left:16px}}
 .ab2{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px 64px;align-items:start;padding-top:clamp(64px,8vw,120px)}
 .ab2-t{font-size:clamp(30px,3.4vw,52px);letter-spacing:-.035em;line-height:1.05}
 .ab2 .bio{font-size:clamp(17px,1.3vw,19px)}
@@ -717,6 +726,7 @@ span.w{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .1em .1
     </div>
   </div>
   <div class="wrap">
+    <div class="stats" data-r><p class="st-k mono">Work so far</p><div class="st-g"><div class="stat"><p class="st-n"><b data-n="1500">1,500</b><em>+</em></p><h3>Designs</h3><p class="st-s">Posters, logos, brand identity and print</p></div><div class="stat"><p class="st-n"><b data-n="600">600</b><em>+</em></p><h3>Video edits</h3><p class="st-s">Reels, ad films, testimonials and explainers</p></div><div class="stat"><p class="st-n"><b data-n="350">350</b><em>+</em></p><h3>AI films</h3><p class="st-s">Films made with AI, planned shot by shot</p></div><div class="stat"><p class="st-n"><b data-n="20">20</b></p><h3>AI brand collabs</h3><p class="st-s">AI films made with brands</p></div><div class="stat"><p class="st-n"><b data-n="10">10</b><em>+</em></p><h3>Websites</h3><p class="st-s">Business sites, online stores and web apps</p></div></div></div>
     <div class="ab2">
       <h2 class="ab2-t" data-r>From the first sketch to the final file, so every post, page and film looks like the same brand.</h2>
       <div class="bio" data-r>
@@ -853,6 +863,23 @@ span.w{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .1em .1
       if (el.getBoundingClientRect().top > innerHeight * 0.92) { el.classList.add('rp'); revIO.observe(el); }
     }
   };
+
+  // About: work counts run up once when they scroll into view
+  const stNums = document.querySelectorAll('.st-n b[data-n]');
+  if (stNums.length && !reduce) {
+    const nio = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return;
+      nio.unobserve(e.target);
+      const el = e.target, to = +el.dataset.n, t0 = performance.now(), dur = 1500;
+      const step = t => {
+        const k = Math.min(1, (t - t0) / dur);
+        el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))).toLocaleString('en-IN');
+        if (k < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }), {threshold: 0.5});
+    stNums.forEach(n => { n.textContent = '0'; nio.observe(n); });
+  }
 
   // pages scrolling inside screens
   const measure = () => document.querySelectorAll('.scr').forEach(s => {
