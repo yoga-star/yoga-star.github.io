@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yoga Portfolio</title>
+<meta name="description" content="Yoga is a designer and video editor in Bengaluru: graphic design, video editing and web design for growing brands.">
+<meta property="og:title" content="Yoga Portfolio">
+<meta property="og:description" content="Graphic design, video editing and web design by Yoga, Bengaluru.">
+<meta name="theme-color" content="#ffffff">
+<script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("boot")</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500;600&family=Funnel+Sans:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* VOICE   friendly, sharp and a little techy: a studio front door
+   IDEA    a type specimen sheet: the word sits on its cap, x-height and baseline guides
+   PICTURE the landing itself: navy-to-blue grainy "Portfolio" on drawn guide lines, three solid blue buttons
+   COLOUR  white and ice blue ground, shades of blue from cobalt to navy, blue-black ink; no yellow, no glass
+   TYPE    Funnel Display headings, Funnel Sans text, Geist Mono for small technical labels
+   LAYOUT  laptop: everything centred in a full screen; phone: the same stack, buttons three across */
+:root{color-scheme:light;--bg:#fff;--ink:#0e1220;--mute:#5b6275;--line:#e3e7f2;--blue:#2450ff;--blue2:#5b7bff;--sky:#dce6ff;--navy:#0b1540;--cyan:#22c3ff;--ph:#eef2fa;--ph2:#e2e8f5;--ph3:#cbd5ea;--ease:cubic-bezier(.16,1,.3,1);--hh:68px;--r:16px;--disp:"Funnel Display","Helvetica Neue",Arial,sans-serif;--text:"Funnel Sans","Helvetica Neue",Arial,sans-serif;--mono:"Geist Mono",ui-monospace,Menlo,monospace;--noise:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");--noise-l:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .7 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");--tnl:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .3 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+:root[data-theme=light],:root[data-theme=dark]{color-scheme:light}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:calc(var(--hh) + 16px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 var(--text);-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:inherit;text-decoration:none}
+img,video{max-width:100%;display:block}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-align:left}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+h1,h2,h3{font-family:var(--disp);font-weight:500;letter-spacing:-.025em;line-height:1.04;margin:0;text-wrap:balance}
+p{margin:0}
+.mono{font-family:var(--mono);font-size:13px;letter-spacing:0}
+.wrap{max-width:1360px;margin-inline:auto;padding-inline:max(3.5vw,16px)}
+.ar{display:inline-block;transition:transform .6s var(--ease)}
+a:hover .ar,button:hover .ar{transform:translate(3px,-3px)}
+
+/* the lit background: gradient light, grain, moving dots, cursor light */
+.fx{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.fx .b{position:absolute;border-radius:50%;will-change:transform}
+.fx .b1{width:80vmax;height:80vmax;left:-28vmax;bottom:-46vmax;background:radial-gradient(closest-side,rgba(36,80,255,.62),rgba(36,80,255,0));animation:drift1 22s ease-in-out infinite alternate}
+.fx .b2{width:62vmax;height:62vmax;right:-22vmax;top:-30vmax;background:radial-gradient(closest-side,rgba(110,140,255,.5),rgba(110,140,255,0));animation:drift2 26s ease-in-out infinite alternate}
+.fx .b3{width:52vmax;height:52vmax;right:-10vmax;bottom:-34vmax;background:radial-gradient(closest-side,rgba(130,200,255,.55),rgba(130,200,255,0));animation:drift3 30s ease-in-out infinite alternate}
+.fx .grain{position:absolute;inset:0;background-image:var(--noise);opacity:.11;mix-blend-mode:multiply}
+.fx-soft .b1{opacity:.55}.fx-soft .b2{opacity:.5}.fx-soft .b3{opacity:.5}
+
+/* header */
+.top{position:sticky;top:0;z-index:30;transition:background-color .4s,box-shadow .4s}
+body:not([data-view=home]) .top{background:#fff;box-shadow:0 1px 0 var(--line)}
+.bar{display:flex;align-items:center;gap:clamp(12px,2vw,28px);height:var(--hh)}
+.logo{font:600 24px/1 var(--disp);letter-spacing:-.04em;display:inline-flex;align-items:baseline}
+.logo i{width:7px;height:7px;border-radius:50%;background:var(--blue);margin-left:2px;box-shadow:0 0 0 1px rgba(14,18,32,.12)}
+body[data-view=home] .logo{opacity:0;pointer-events:none}
+.sp{flex:1}
+.cats{display:none;gap:6px;padding:5px;border-radius:999px;background:rgba(36,80,255,.07)}
+body:not([data-view=home]) .cats{display:flex}
+.cats a{display:inline-flex;align-items:center;gap:7px;padding:8px 16px;border-radius:999px;color:var(--mute);font-size:15px;transition:background-color .4s,color .4s}
+.cats a:hover{color:var(--ink)}
+.cats a.on{background:var(--blue);color:#fff}
+.cats a svg{width:17px;height:17px;flex:none}
+.pill{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 20px;border-radius:999px;font-weight:500;font-size:15px;transition:background-color .4s,color .4s,transform .5s var(--ease)}
+.pill.b{background:var(--blue);color:#fff;box-shadow:0 10px 24px -12px rgba(36,80,255,.7)}
+.pill.b:hover{background:var(--navy);color:#fff}
+.pill.w{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.pill.w:hover{background:var(--ink);color:#fff}
+.tr{display:flex;align-items:center;gap:clamp(10px,1.6vw,20px)}
+.ib{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#fff;color:var(--blue);box-shadow:inset 0 0 0 1px var(--line),0 6px 16px -10px rgba(16,40,150,.4);transition:background-color .35s,color .35s,transform .6s var(--ease)}
+.ib svg{width:22px;height:22px}
+.ib:hover,.ib.on{background:var(--blue);color:#fff}
+body[data-view=home] footer{display:none}
+.toc a{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 16px;border-radius:999px;background:rgba(255,255,255,.8);box-shadow:inset 0 0 0 1px var(--line);font-size:15px;transition:background-color .35s,color .35s,box-shadow .35s}
+.toc a:hover{background:var(--blue);color:#fff;box-shadow:none}
+.toc a svg{width:17px;height:17px}
+
+/* landing: a type specimen, the word on its guide lines */
+.home{position:relative;min-height:100svh;margin-top:calc(var(--hh) * -1);display:grid;place-items:center;padding:calc(var(--hh) + 20px) max(3.5vw,16px) 72px;overflow:hidden;background:radial-gradient(ellipse 70% 55% at 50% 48%,#dbe7ff 0%,rgba(219,231,255,0) 70%),linear-gradient(180deg,#dce8ff 0%,#d2e1ff 55%,#c4d5ff 100%)}
+.home .fx .b{opacity:.75}
+.home .fx .b2{background:radial-gradient(closest-side,rgba(92,222,170,.7),rgba(92,222,170,0))}
+.home .fx .b3{background:radial-gradient(closest-side,rgba(38,192,150,.5),rgba(38,192,150,0))}
+.home .fx .b4{position:absolute;border-radius:50%;width:50vmax;height:50vmax;left:-16vmax;top:-24vmax;background:radial-gradient(closest-side,rgba(132,232,192,.65),rgba(132,232,192,0));animation:drift2 28s ease-in-out infinite alternate-reverse}
+/* grain that adds texture without greying the colour: mid-grey noise in soft light */
+.home .fx .grain{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/><feComponentTransfer><feFuncR type='linear' slope='1.9' intercept='-.45'/><feFuncG type='linear' slope='1.9' intercept='-.45'/><feFuncB type='linear' slope='1.9' intercept='-.45'/></feComponentTransfer></filter><rect width='100%' height='100%' filter='url(%23g)'/></svg>");mix-blend-mode:soft-light;opacity:.75}
+.hchip{display:none;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1px var(--line);font-size:14px;color:var(--ink);white-space:nowrap}
+.hchip i{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 3px rgba(34,195,255,.2)}
+body[data-view=home] .hchip{display:inline-flex;animation:rise 1s var(--ease) .2s both}
+body[data-view=home] .logo{display:none}
+.center{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:clamp(24px,3.4vh,38px);width:100%}
+.kick{font:500 clamp(18px,2.1vw,32px)/1.1 var(--disp);letter-spacing:-.02em;color:var(--ink);animation:rise 1s var(--ease) .35s both}
+.kick span{color:var(--mute)}
+.spec{position:relative;padding:0 clamp(10px,2.6vw,40px)}
+.guide{position:absolute;left:calc(-1 * min(9vw,130px));right:calc(-1 * min(9vw,130px));height:0;border-top:1px solid rgba(36,80,255,.32);transform-origin:left;animation:draw 1.5s var(--ease) both;animation-delay:calc(var(--k) * .14s + .55s)}
+.guide span{position:absolute;right:0;bottom:5px;font:12px/1 var(--mono);color:#6b86ff;white-space:nowrap;animation:rise .8s var(--ease) both;animation-delay:calc(var(--k) * .14s + 1.2s)}
+.big{position:relative;display:block;font:600 clamp(58px,14.6vw,240px)/.9 var(--disp);letter-spacing:-.055em;white-space:nowrap}
+.big .l{display:inline-block;padding:0 .1em;margin:0 -.1em;background-image:var(--tnl),linear-gradient(180deg,var(--navy) 24%,var(--blue) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;animation:letter 1.2s var(--ease) both;animation-delay:calc(var(--k) * .055s + .45s)}
+.hb{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+/* category buttons: ice-white pills, blue icon, soft blue glow underneath */
+.cb{position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:16px;height:66px;padding:0 30px 0 34px;border-radius:999px;color:var(--ink);transition:transform .6s var(--ease);animation:popb 1s var(--ease) both;animation-delay:calc(var(--k) * .09s + 1s)}
+.cb::before,.cb::after{content:"";position:absolute;border-radius:inherit}
+.cb::after{inset:0;z-index:-1;background:linear-gradient(180deg,#fff 0%,#e8efff 100%);box-shadow:inset 0 0 0 1.5px #fff,0 0 0 1px rgba(36,80,255,.12)}
+.cb::before{inset:10px 14px -6px;z-index:-2;background:#6f95ff;filter:blur(18px);opacity:.5;transition:opacity .6s,inset .6s var(--ease)}
+.cb:hover,.cb:focus-visible{transform:translateY(-4px)}
+.cb:hover::before,.cb:focus-visible::before{opacity:.85;inset:6px 6px -12px}
+.cb .tx{display:grid;gap:5px;text-align:left}
+.cb b{font:500 18px/1 var(--disp);letter-spacing:-.015em;white-space:nowrap}
+.cb small{font:12px/1 var(--mono);color:var(--mute);white-space:nowrap}
+.cb .ic{display:grid;place-items:center;flex:none;color:var(--blue);transition:transform .7s var(--ease)}
+.cb .ic svg{width:24px;height:24px}
+.cb:hover .ic,.cb:focus-visible .ic{transform:translate(3px,-3px) rotate(-8deg)}
+.corner{position:absolute;z-index:1;bottom:22px;color:var(--mute);display:flex;gap:18px;flex-wrap:wrap}
+.corner.l{left:max(3.5vw,16px)}
+.corner.r{right:max(3.5vw,16px)}
+.corner b{font-weight:400;color:var(--ink);font-variant-numeric:tabular-nums}
+@keyframes draw{from{transform:scaleX(0)}}
+@keyframes letter{from{opacity:0;translate:0 .3em}}
+@keyframes popb{from{opacity:0;translate:0 16px;scale:.96}}
+
+/* AI page */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}
+.steps li{padding:18px 0 0;border-top:1px solid var(--ink)}
+.steps .mono{color:var(--blue)}
+.steps h3{font-size:clamp(19px,1.6vw,23px);margin:10px 0 8px}
+.steps p{color:var(--mute);font-size:15px}
+.sb{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,3.3fr);gap:20px;align-items:start}
+.sb .g3{gap:20px 16px}
+.ai4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;align-items:center}
+.ai4 .ai4f{display:contents}
+.ait{padding-left:clamp(4px,1.4vw,20px)}
+.ait h3{font:500 clamp(22px,2vw,30px)/1.12 var(--disp);letter-spacing:-.02em;margin-bottom:12px}
+.ait p{color:var(--mute);margin-bottom:20px}
+.kf-note{color:var(--mute);max-width:62ch;margin:-6px 0 20px}
+.strip.tall>*{flex-basis:calc((100% - 96px) / 6.3)}
+.aig{gap:26px 18px}
+.tgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 40px}
+.tgrp .mono{color:var(--mute);margin-bottom:10px}
+
+/* About: big portrait */
+.ah{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);min-height:100svh;margin-top:calc(var(--hh) * -1)}
+.ah-l{display:flex;flex-direction:column;justify-content:space-between;gap:44px;padding:calc(var(--hh) + clamp(32px,4.4vw,64px)) clamp(20px,4.4vw,72px) clamp(28px,3.4vw,48px);background:radial-gradient(ellipse 80% 70% at 0% 100%,#d4dfff 0%,#eef2ff 42%,#fff 76%)}
+.ah-t{font:600 clamp(64px,9.4vw,156px)/.9 var(--disp);letter-spacing:-.055em;margin-top:clamp(18px,2.4vw,32px)}
+.ah-t span{color:var(--blue)}
+.ah-i{font-size:clamp(18px,1.6vw,23px);line-height:1.45;max-width:30ch;margin-top:clamp(18px,2.2vw,28px);color:var(--ink)}
+.ah-rows{border-top:1px solid var(--ink)}
+.ah-rows a{display:grid;grid-template-columns:44px minmax(0,1fr) auto;align-items:center;gap:8px;padding:16px 0;border-bottom:1px solid var(--line);transition:padding .6s var(--ease),color .35s}
+.ah-rows a:hover{padding-left:12px;color:var(--blue)}
+.ah-rows .mono{color:var(--blue)}
+.ah-rows b{display:inline-flex;align-items:center;gap:12px;font:500 clamp(20px,1.9vw,28px)/1.1 var(--disp);letter-spacing:-.02em}
+.ah-rows b svg{width:26px;height:26px;color:var(--blue);flex:none}
+.ah-rows i{font-style:normal;color:var(--mute);white-space:nowrap}
+.ah-r{position:relative;overflow:hidden;background:#dfe6f6;min-height:520px}
+.ah-r img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+.ah-badge{position:absolute;left:24px;bottom:84px;display:inline-flex;align-items:center;gap:9px;padding:11px 16px;border-radius:14px;background:#fff;font-size:15px;box-shadow:0 18px 40px -20px rgba(14,18,32,.5)}
+.ah-badge i{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 3px rgba(34,195,255,.2)}
+.ah-marq{position:absolute;left:0;right:0;bottom:0;padding:13px 0;background:var(--navy);overflow:hidden}
+.ah-track{display:flex;width:max-content;animation:marq 45s linear infinite}
+.ah-marq:hover .ah-track{animation-play-state:paused}
+.ah-track .tl{margin-right:10px;background:rgba(255,255,255,.08);color:#fff}
+.ah-track .tl b{background:var(--blue)}
+.ah-track .tl b.dot{background:rgba(255,255,255,.14)}
+.ah-track .tl b.dot::after{background:#fff}
+.view:not([hidden]) .ah-t{animation:rise 1.2s var(--ease) .35s both}
+.view:not([hidden]) .ah-i{animation:rise 1.2s var(--ease) .5s both}
+.view:not([hidden]) .ah-rows a{animation:rise 1s var(--ease) both}
+.view:not([hidden]) .ah-rows a:nth-child(1){animation-delay:.6s}
+.view:not([hidden]) .ah-rows a:nth-child(2){animation-delay:.68s}
+.view:not([hidden]) .ah-rows a:nth-child(3){animation-delay:.76s}
+.view:not([hidden]) .ah-rows a:nth-child(4){animation-delay:.84s}
+.view:not([hidden]) .ah-r img{animation:imgin 1.6s var(--ease) .25s both}
+.view:not([hidden]) .ah-badge{animation:rise 1s var(--ease) 1s both}
+@keyframes imgin{from{clip-path:inset(100% 0 0 0);scale:1.12}to{clip-path:inset(0 0 0 0);scale:1}}
+@keyframes marq{to{transform:translateX(-50%)}}
+.ab2{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px 64px;align-items:start;padding-top:clamp(64px,8vw,120px)}
+.ab2-t{font-size:clamp(30px,3.4vw,52px);letter-spacing:-.035em;line-height:1.05}
+.ab2 .bio{font-size:clamp(17px,1.3vw,19px)}
+#v-about .tools{grid-column:auto;margin-top:clamp(40px,5vw,72px);padding-top:22px;border-top:1px solid var(--ink)}
+
+/* Apsaraa collection grid */
+.aps{margin-bottom:clamp(44px,5vw,72px)}
+.aps-h{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 24px;margin-bottom:18px}
+.aps-h h3{font-size:clamp(22px,2vw,28px)}
+.aps-h p{color:var(--mute)}
+.aps-g{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px 18px}
+.aps-g>:first-child{grid-column:span 2;grid-row:span 2}
+.aps-g>:first-child .ph{aspect-ratio:auto!important;height:calc(100% - 58px);min-height:420px}
+.aps-g>:first-child .ph img{object-position:50% 20%}
+.aps-g .cap{font-size:14px}
+
+/* placeholders */
+.ph{position:relative;overflow:hidden;border-radius:var(--r);background:var(--tone,var(--ph));transition:background-color .5s}
+.t2{--tone:#e9eef9}
+.t3{--tone:#eef0f6}
+.t4{--tone:#e5ecfb}
+.pl{position:absolute;left:12px;bottom:10px;font:12.5px/1.2 var(--mono);color:var(--mute)}
+.dur{position:absolute;right:12px;bottom:10px;font:12.5px/1.2 var(--mono);color:var(--ink);background:rgba(255,255,255,.8);padding:3px 7px;border-radius:999px}
+.play{position:absolute;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:var(--blue);box-shadow:0 10px 24px -10px rgba(36,80,255,.8);transition:transform .6s var(--ease),background-color .4s}
+.play::after{content:"";position:absolute;left:23px;top:19px;border-left:15px solid #fff;border-block:10px solid transparent;transition:border-color .4s}
+.vt:hover .play{transform:scale(1.1);background:var(--navy)}
+.vt .pv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s var(--ease)}
+.vt .pv.on{opacity:1}
+.vt .dur{z-index:1}
+.lbi .ph,.vt .ph{transition:transform .8s var(--ease),background-color .5s}
+.lbi:hover .ph,.vt:hover .ph{transform:translateY(-4px);--tone:#dfe7fb}
+.cap{display:grid;gap:1px;padding-top:11px;font-size:15px;line-height:1.4}
+.cap b{font-weight:500}
+.cap span{color:var(--mute)}
+
+/* inner pages */
+.view[hidden]{display:none}
+.vh .crumb{animation:rise 1s var(--ease) .3s both}
+.vh{position:relative;margin-top:calc(var(--hh) * -1);padding:calc(var(--hh) + clamp(36px,5vw,72px)) 0 clamp(36px,4vw,56px);overflow:hidden}
+.vh .wrap{position:relative;z-index:1}
+.crumb{display:inline-flex;align-items:center;gap:8px;color:var(--mute);padding:6px 12px 6px 8px;border-radius:999px;background:rgba(255,255,255,.7);box-shadow:inset 0 0 0 1px var(--line);transition:color .3s}
+.crumb:hover{color:var(--ink)}
+.vh h1{font-size:clamp(56px,9vw,148px);font-weight:600;letter-spacing:-.055em;line-height:.9;margin-top:clamp(18px,2.4vw,30px)}
+.vh-row{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:20px 48px;align-items:end;margin-top:clamp(20px,2.6vw,32px);animation:rise 1.2s var(--ease) .55s both}
+.lede{font-size:clamp(18px,1.5vw,21px);max-width:38ch}
+.toc{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px}
+.toc button{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 16px;border-radius:999px;background:rgba(255,255,255,.8);box-shadow:inset 0 0 0 1px var(--line);font-size:15px;transition:background-color .35s,color .35s,box-shadow .35s}
+.toc button:hover{background:var(--blue);color:#fff;box-shadow:none}
+.toc sup{font:12px var(--mono);opacity:.7;vertical-align:baseline}
+.ss{padding-top:clamp(56px,7vw,104px)}
+.ssh{display:grid;grid-template-columns:auto minmax(0,5fr) minmax(0,5fr) auto;gap:6px 22px;align-items:center;margin-bottom:clamp(24px,3vw,40px)}
+.ssh .k{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:var(--sky);color:var(--blue);font-weight:500}
+.ssh .n{color:var(--mute);white-space:nowrap}
+.ssh h2{font-size:clamp(28px,3vw,44px)}
+.ssh p{color:var(--mute);max-width:46ch}
+.next{position:relative;display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:clamp(80px,9vw,140px);padding:clamp(24px,3vw,40px);border-radius:28px;background:var(--ph);overflow:hidden;transition:background-color .5s}
+.next:hover{background:var(--sky)}
+.next small{display:block;color:var(--mute);font:13px var(--mono);margin-bottom:6px}
+.next b{font:600 clamp(34px,5.4vw,84px)/1 var(--disp);letter-spacing:-.045em}
+.next .circ{flex:none;display:grid;place-items:center;width:clamp(56px,6vw,84px);aspect-ratio:1;border-radius:50%;background:var(--blue);color:#fff;font-size:clamp(22px,2.4vw,32px);transition:transform .6s var(--ease),background-color .4s,color .4s}
+.next:hover .circ{transform:rotate(-45deg);background:var(--navy);color:#fff}
+
+/* graphic */
+.gg{columns:4;column-gap:20px}
+/* Posters: one wall for every poster (27 Nov). Rows are 8px; app.js sets each tile's row span from its height. */
+.flt{display:flex;flex-wrap:wrap;gap:8px 30px;margin:0 0 30px;border-bottom:1px solid var(--line)}
+.flt button{position:relative;padding:0 0 14px;font:500 19px/1 var(--disp);letter-spacing:-.01em;color:var(--mute);transition:color .3s}
+.flt button sup{font:400 12px var(--mono);margin-left:4px;color:var(--mute)}
+.flt button::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.flt button:hover{color:var(--ink)}
+.flt button.on{color:var(--ink)}
+.flt button.on::after{transform:none}
+.wall{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:8px;column-gap:20px;grid-auto-flow:dense}
+.wall .wi{grid-row-end:span 50}
+.wall .wi.wide{grid-column:span 2}
+.wall .wi[data-off]{display:none}
+.wall .cap{padding-bottom:26px}
+.gg>*{break-inside:avoid;margin-bottom:28px}
+.lbi{display:block;width:100%}
+.idf{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:24px 44px;align-items:start;margin-bottom:clamp(36px,4vw,56px)}
+.idf h3,.app h3,.print h3,.site h3{font-size:clamp(26px,2.4vw,36px)}
+.idf p,.app p,.print p,.site p{color:var(--mute);margin-top:12px;max-width:40ch}
+.dl{margin:20px 0 0}
+.dl div{display:grid;grid-template-columns:7em minmax(0,1fr);gap:12px;padding:10px 0;border-top:1px solid var(--line);font-size:15px}
+.dl dt{color:var(--mute)}
+.dl dd{margin:0}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px 20px}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 20px}
+.feed{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:clamp(14px,2vw,26px);border-radius:var(--r);background:var(--ph)}
+.feed .ph{aspect-ratio:4/5;border-radius:6px;--tone:var(--ph2)}
+.row5{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.row4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.d3{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;align-items:center}
+.d3t{grid-column:span 2;padding-left:clamp(12px,3vw,48px)}
+.d3t h3{font:500 clamp(24px,2.4vw,34px)/1.1 var(--disp);letter-spacing:-.02em;margin-bottom:14px}
+.d3t p{color:var(--mute);max-width:46ch;margin-bottom:22px}
+.print{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:24px 44px;align-items:start}
+.bk{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:28px 44px;align-items:start}
+.bk button{display:block;width:100%}
+.bk .ph{transition:transform .8s var(--ease)}
+.bk button:hover .ph{transform:translateY(-4px)}
+.bk-r{display:grid;gap:30px}
+.bk-r .k{display:block;color:var(--blue);font-size:12.5px;letter-spacing:.04em;margin-bottom:12px}
+.bk h3{font-size:clamp(26px,2.4vw,36px)}
+.bk p{color:var(--mute);margin-top:12px;max-width:44ch}
+.bk-h{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.strip.bkp>*{flex-basis:calc((100% - 96px) / 6.4)}
+.bk.land{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+.bk.land .bk-h{grid-column:1/-1;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.strip.bkp.land>*{flex-basis:calc((100% - 48px) / 3.3)}
+/* brand identity: three covers (27 Nov 2026) */
+.bcs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.bc-c{display:block;width:100%;position:relative;border-radius:var(--r);overflow:hidden;text-align:left}
+.bc-c .ph{aspect-ratio:4/5;border-radius:var(--r);overflow:hidden}
+.bc-c .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.bc-c:hover .ph img{transform:scale(1.04)}
+.bc-go{position:absolute;left:18px;bottom:18px;padding:10px 16px;border-radius:999px;background:#fff;color:var(--ink);font-size:14px;opacity:0;transform:translateY(8px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.bc-c:hover .bc-go,.bc-c:focus-visible .bc-go{opacity:1;transform:none}
+.bc-m{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:18px}
+.bc-l{width:auto;display:block}
+.bc-m .mono{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);text-align:right;white-space:nowrap}
+@media (hover:none){.bc-go{opacity:1;transform:none}}
+.bcs.sm{margin-bottom:56px}
+.pa{grid-template-columns:2fr 1fr 1fr 1fr;align-items:start}
+.pa>:first-child{grid-row:span 2}
+@media (max-width:860px){.pa>:first-child{grid-row:auto;grid-column:1/-1}}
+@media (max-width:860px){.bcs{grid-template-columns:minmax(0,1fr);gap:34px}.bc-l{max-height:26px}.bc-m .mono{font-size:11px;white-space:nowrap}}
+.bk-n{display:block;margin-top:10px;font-size:12px;color:var(--mute)}
+.spread{display:flex;justify-content:center;gap:3px;padding:clamp(20px,4vw,56px);border-radius:var(--r);background:var(--ph)}
+.spread .ph{width:min(44%,360px);aspect-ratio:148/210;border-radius:4px;--tone:#fff;box-shadow:0 12px 30px -18px rgba(14,18,32,.35)}
+.thumbs{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:10px;margin-top:14px}
+.thumbs .ph{aspect-ratio:148/210;border-radius:6px}
+.print.pm+.print.pm{margin-top:clamp(48px,6vw,84px)}
+.pr-open{display:block;width:100%;text-align:left}
+.spread.land{flex-direction:column;align-items:center;gap:14px}
+.spread.land .ph{width:min(100%,640px)}
+.thumbs.two{grid-template-columns:repeat(2,minmax(0,1fr));max-width:420px}
+.strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:6px}
+.strip::-webkit-scrollbar{display:none}
+.strip>*{flex:0 0 calc((100% - 48px) / 3.4);scroll-snap-align:start}
+.sbtn{display:flex;gap:10px;justify-content:flex-end;margin-top:16px}
+.sbtn button{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--ph);font-size:18px;transition:background-color .35s,color .35s}
+.sbtn button:hover{background:var(--blue);color:#fff}
+
+/* video */
+.vt{display:block;width:100%}
+.feat .cap{grid-template-columns:minmax(0,1fr) auto;align-items:baseline}
+.feat .play{width:84px;height:84px;margin:-42px 0 0 -42px}
+.feat .play::after{left:34px;top:27px;border-left-width:22px;border-block-width:15px}
+.eq{display:grid;grid-template-columns:16fr 5.0625fr 5.0625fr 5.0625fr;gap:16px;align-items:start}
+
+/* web */
+.frame{display:block;border-radius:var(--r);overflow:hidden;background:#fff;box-shadow:0 0 0 1px var(--line),0 24px 50px -30px rgba(14,18,32,.35);transition:transform .8s var(--ease),box-shadow .8s}
+.frame:hover{transform:translateY(-4px)}
+.fbar{height:34px;display:flex;align-items:center;gap:10px;padding:0 12px;font:12.5px/1 var(--mono);color:var(--mute);border-bottom:1px solid var(--line);white-space:nowrap;overflow:hidden}
+.fbar::before{content:"";flex:none;width:34px;height:8px;background:radial-gradient(circle,var(--ph3) 3.5px,transparent 4px) 0 0/12px 8px repeat-x}
+.fbar span{flex:1;text-align:center;margin-right:46px;overflow:hidden;text-overflow:ellipsis}
+.scr{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--ph);container-type:inline-size}
+.pg{position:absolute;left:0;top:0;width:100%;transition:transform 1.6s var(--ease)}
+.frame:hover .pg,.phone:hover .pg{transform:translateY(var(--sh,0));transition:transform 9s cubic-bezier(.45,0,.25,1)}
+.w-nav{height:7cqw;display:flex;align-items:center;justify-content:space-between;padding:0 5cqw}
+.w-nav::before{content:"";width:12cqw;height:1.8cqw;border-radius:1cqw;background:var(--ph3)}
+.w-nav::after{content:"";width:30cqw;height:1.1cqw;background:repeating-linear-gradient(90deg,var(--ph2) 0 5cqw,transparent 5cqw 8cqw)}
+.w-hero{height:40cqw;margin:0 5cqw;border-radius:2cqw;background:var(--ph2);display:flex;flex-direction:column;justify-content:flex-end;gap:1.8cqw;padding:5cqw}
+.w-hero i,.w-split i{display:block;height:3.4cqw;width:62%;border-radius:.6cqw;background:var(--ph3)}
+.w-hero i+i{width:38%}
+.w-split{display:grid;grid-template-columns:1fr 1fr;gap:5cqw;margin:3cqw 5cqw 0;height:36cqw}
+.w-split div{display:flex;flex-direction:column;justify-content:center;gap:1.8cqw}
+.w-split i{width:90%}
+.w-split i+i{width:70%}
+.w-split u{display:block;width:16cqw;height:4.4cqw;margin-top:2cqw;border-radius:3cqw;background:var(--blue);opacity:.35}
+.w-split b{border-radius:2cqw;background:var(--ph2)}
+.w-text{padding:8cqw 5cqw 0;display:grid;gap:1.8cqw}
+.w-text i{display:block;height:1.3cqw;border-radius:1cqw;background:var(--ph2)}
+.w-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:3cqw;padding:7cqw 5cqw 0}
+.w-cards b{aspect-ratio:4/5;border-radius:1.5cqw;background:var(--ph2)}
+.w-band{height:30cqw;background:var(--ph2);margin-top:8cqw}
+.w-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2cqw;padding:7cqw 5cqw 0}
+.w-grid b{aspect-ratio:1;border-radius:1.5cqw;background:var(--ph2)}
+.w-foot{height:20cqw;background:var(--ph3);margin-top:9cqw}
+.w-mhero{height:120cqw;margin:0 5cqw;border-radius:4cqw;background:var(--ph2)}
+.w-mcard{aspect-ratio:4/3;margin:6cqw 5cqw 0;border-radius:4cqw;background:var(--ph2)}
+.w-mtext{padding:7cqw 5cqw 0;display:grid;gap:3cqw}
+.w-mtext i{display:block;height:3cqw;border-radius:2cqw;background:var(--ph2)}
+.sites{display:grid;gap:clamp(56px,7vw,100px)}
+.site{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:28px 44px;align-items:center}
+.site .pill{margin-top:22px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.fp-h{display:flex;align-items:center;gap:14px;margin:clamp(44px,5vw,68px) 0 20px;color:var(--mute)}
+.fp-h::after{content:"";flex:1;height:1px;background:var(--line)}
+.fp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px 18px}
+.app{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px 32px;align-items:center;padding:clamp(20px,3vw,40px);border-radius:24px;background:var(--ph)}
+.phone{display:block;border-radius:30px;padding:8px;background:#fff;box-shadow:0 0 0 1px var(--line),0 24px 50px -30px rgba(14,18,32,.4)}
+.phone .scr{aspect-ratio:9/19.5;border-radius:22px}
+.app{grid-template-columns:minmax(0,4fr) minmax(0,7fr)}
+.app .phone{width:min(100%,290px);justify-self:center}
+.pgv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.site .k,.app .k{display:block;color:var(--blue);font-size:12.5px;letter-spacing:.04em;margin-bottom:12px}
+.app-b{grid-column:1/-1;margin-top:clamp(8px,1.5vw,20px)}
+.app-b .ph{border-radius:16px}
+.cg{gap:30px 20px}
+
+/* about + contact */
+.about{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:28px 48px;align-items:start;margin-top:clamp(96px,10vw,150px)}
+.about .portrait{aspect-ratio:4/5;position:sticky;top:calc(var(--hh) + 24px)}
+.bio{display:grid;gap:14px;color:var(--mute);max-width:46ch}
+.bio h2{font-size:clamp(28px,2.6vw,40px);color:var(--ink);margin-bottom:6px}
+.tools{grid-column:2;display:grid;gap:10px;align-content:start;margin-top:-8px}
+.tools>.mono{color:var(--mute)}
+.tools>.mono+.tg{margin-bottom:10px}
+.tg{display:flex;flex-wrap:wrap;gap:8px}
+.tl{display:inline-flex;align-items:center;gap:8px;padding:5px 12px 5px 5px;border-radius:12px;background:var(--ph);font-size:14.5px;white-space:nowrap;transition:background-color .35s,color .35s}
+.tl b{display:grid;place-items:center;width:28px;height:28px;border-radius:8px;background:var(--navy);color:#fff;font:600 13px/1 var(--disp);letter-spacing:-.01em}
+.tl b.dot{background:var(--sky)}
+.tl b.dot::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--blue)}
+.tl:hover{background:var(--blue);color:#fff}
+.used{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:16px}
+.used .mono{color:var(--mute);margin-right:4px}
+.used .tl{background:rgba(255,255,255,.85);box-shadow:inset 0 0 0 1px var(--line);font-size:13.5px;padding:4px 10px 4px 4px}
+.used .tl b{width:24px;height:24px;font-size:12px;border-radius:7px}
+.contact{position:relative;margin-top:clamp(56px,7vw,96px)}
+.contact .in{position:relative;border-radius:32px;background:radial-gradient(ellipse 80% 90% at 100% 100%,#d4dfff 0%,#eef2ff 55%,#f6f8ff 100%);box-shadow:inset 0 0 0 1px #e1e8fb;overflow:hidden;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:28px 40px;align-items:end;padding:clamp(28px,5vw,72px)}
+.contact h2{font-size:clamp(36px,5vw,76px);font-weight:600;letter-spacing:-.045em;max-width:14ch}
+.contact p{color:var(--mute);margin-top:14px;max-width:36ch}
+.cta{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
+.cta .pill{min-height:52px;padding:0 24px;font-size:16px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 32px;padding:22px 0 26px;color:var(--mute)}
+
+/* dialogs */
+dialog{border:0;padding:0;width:min(1120px,94vw);max-width:none;max-height:94vh;border-radius:24px;background:#fff;color:var(--ink);overflow:auto;box-shadow:0 40px 80px -30px rgba(14,18,32,.45)}
+dialog::backdrop{background:rgba(240,244,255,.94)}
+dialog[open]{animation:pop .55s var(--ease)}
+.dm{display:flex;justify-content:center;padding:clamp(14px,3vw,40px);background:var(--ph)}
+.dm>div{max-width:100%}
+.db{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 20px;padding:12px clamp(14px,2vw,22px)}
+.db p span{color:var(--mute);margin-left:10px}
+.db nav{display:flex;gap:8px}
+.db button{min-height:42px;padding:0 16px;border-radius:999px;background:var(--ph);transition:background-color .3s,color .3s}
+.db button:hover{background:var(--blue);color:#fff}
+
+/* motion */
+@keyframes rise{from{opacity:0;transform:translateY(22px)}}
+@keyframes letter{from{opacity:0;transform:translateY(.35em) rotate(4deg)}}
+@keyframes pop{from{opacity:0;transform:translateY(18px) scale(.94)}}
+@keyframes drift1{to{transform:translate(9vmax,-7vmax) scale(1.08)}}
+@keyframes drift2{to{transform:translate(-8vmax,6vmax) scale(.94)}}
+@keyframes drift3{to{transform:translate(-10vmax,-5vmax) scale(1.1)}}
+
+
+/* smooth scroll */
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain}
+.lenis.lenis-stopped{overflow:hidden}
+
+/* blue page wipe between categories */
+.wipe{position:fixed;inset:0;z-index:100;display:grid;place-items:center;overflow:hidden;background:var(--blue);color:#fff;visibility:hidden;clip-path:circle(0 at 50% 50%)}
+.wipe .fx .b1{background:radial-gradient(closest-side,rgba(255,255,255,.32),rgba(255,255,255,0))}
+.wipe .fx .b2{background:radial-gradient(closest-side,rgba(120,220,255,.5),rgba(120,220,255,0))}
+.wipe .fx .b3{background:radial-gradient(closest-side,rgba(16,26,150,.6),rgba(16,26,150,0))}
+.wipe .fx .grain{mix-blend-mode:overlay;opacity:.4}
+.wipe-t{position:relative;z-index:1;font:600 clamp(52px,9vw,140px)/1 var(--disp);letter-spacing:-.05em;text-align:center;padding:0 16px}
+.wipe-bar{position:absolute;z-index:1;left:50%;bottom:14%;width:140px;height:2px;margin-left:-70px;border-radius:2px;background:rgba(255,255,255,.25);overflow:hidden;opacity:0}
+.wipe-bar i{display:block;height:100%;background:#fff;transform:scaleX(0);transform-origin:left}
+html.boot .home *,html.boot .top .hchip{animation-play-state:paused}
+
+/* cursor ring */
+.ring{position:fixed;left:0;top:0;z-index:150;width:36px;height:36px;margin:-18px 0 0 -18px;border-radius:50%;border:1.5px solid rgba(36,80,255,.45);pointer-events:none;opacity:0;transition:opacity .3s,width .5s var(--ease),height .5s var(--ease),margin .5s var(--ease),background-color .5s,border-color .5s}
+.ring.on{opacity:1}
+.ring.big{width:68px;height:68px;margin:-34px 0 0 -34px;background:rgba(36,80,255,.08);border-color:rgba(36,80,255,.12)}
+
+/* words slide up out of a mask; pictures open from the bottom */
+span.w{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .1em .12em;margin:0 -.1em -.12em}
+.w>span{display:inline-block;transition:transform 1.1s var(--ease) calc(var(--wi) * .06s + var(--dl,0s))}
+.rp .w>span{transform:translateY(112%)}
+.rp.ri .w>span{transform:none}
+.view:not([hidden]) .vh h1 .w>span{animation:wordup 1.2s var(--ease) both;animation-delay:calc(var(--wi) * .08s + .35s)}
+@keyframes wordup{from{transform:translateY(112%)}}
+.rp .ph{clip-path:inset(18% 0 0 0 round var(--r));transform:scale(1.06)}
+.rp.ri .ph{clip-path:inset(0 0 0 0 round var(--r));transform:none;transition:clip-path 1.3s var(--ease) var(--dl,0s),transform 1.6s var(--ease) var(--dl,0s)}
+.rp{opacity:0;transform:translateY(44px)}
+.rp.ri{opacity:1;transform:none;transition:opacity 1.1s var(--ease) var(--dl,0s),transform 1.3s var(--ease) var(--dl,0s)}
+.cb,.pill,.circ,.sbtn button{will-change:transform}
+
+@media (max-width:1000px){.wall{grid-template-columns:repeat(3,minmax(0,1fr))}.aps-g{grid-template-columns:repeat(3,minmax(0,1fr))}.gg{columns:3}.g4{grid-template-columns:repeat(2,minmax(0,1fr))}.row5,.row4{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:8px;scrollbar-width:none}.row5>*,.row4>*{flex:0 0 30%;scroll-snap-align:start}.thumbs{grid-template-columns:repeat(4,minmax(0,1fr))}.about{grid-template-columns:minmax(0,1fr) minmax(0,2fr)}.tools{grid-column:1/-1}}
+@media (max-width:860px){.bk,.bk.land{grid-template-columns:minmax(0,1fr)}.bk-c{max-width:440px}.bk.land .bk-c{max-width:none}.bk.land .bk-h{grid-template-columns:repeat(2,minmax(0,1fr))}.strip.bkp.land>*{flex-basis:78%}.strip.bkp>*{flex-basis:calc((100% - 32px) / 2.6)}.ai4{display:block}.ai4 .ai4f{display:flex}.ait{padding:28px 0 0}.strip.tall>*{flex-basis:calc((100% - 32px) / 3.3)}.d3{grid-template-columns:repeat(2,minmax(0,1fr))}.d3t{grid-column:1/-1;padding:8px 0 0}.fp{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px}.ah{grid-template-columns:minmax(0,1fr)}.ah-r{order:-1;min-height:0;aspect-ratio:4/5;margin-top:var(--hh)}.ah-l{padding-top:32px}.ab2{grid-template-columns:minmax(0,1fr)}.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.tgrid{grid-template-columns:minmax(0,1fr)}.sb{grid-template-columns:minmax(0,1fr)}.sb>div:first-child{max-width:260px}.vh-row,.idf,.print,.site,.app,.contact .in{grid-template-columns:minmax(0,1fr)}.toc,.cta{justify-content:flex-start}.ssh{grid-template-columns:auto minmax(0,1fr)}.ssh p,.ssh .n{grid-column:2}.g3{grid-template-columns:repeat(2,minmax(0,1fr))}.strip>*{flex-basis:44%}.eq{grid-template-columns:repeat(3,minmax(0,1fr))}.eq>:first-child{grid-column:1/-1}.app .phone{max-width:240px}.cats a{padding:8px 12px}}
+@media (max-width:640px){.wall{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:12px}.wall .cap{padding-bottom:18px}.flt{gap:6px 20px}.flt button{font-size:16px;padding-bottom:10px}.feat .play{width:52px;height:52px;margin:-26px 0 0 -26px}.feat .play::after{left:21px;top:17px;border-left-width:14px;border-block-width:9px}.aps-g{grid-template-columns:repeat(2,minmax(0,1fr))}.gg{columns:2;column-gap:12px}.g2,.about{grid-template-columns:minmax(0,1fr)}.tools{grid-column:1}.row5>*,.row4>*{flex-basis:44%}.strip>*{flex-basis:64%}.cats .xl{display:none}.cats a{padding:8px 11px}.cats a svg{display:none}.steps{grid-template-columns:minmax(0,1fr)}.about .portrait{max-width:280px;position:static}.eq .pl,.row5 .pl,.row4 .pl,.thumbs .pl{display:none}.big{font-size:19.5vw}.hb{flex-direction:column;align-items:stretch;width:min(340px,100%)}.cb .ic{margin-left:auto}.guide span{display:none}.corner{font-size:12px}.corner.r{display:none}.corner.l{left:50%;transform:translateX(-50%)}}
+@media (max-width:420px){.g4{grid-template-columns:minmax(0,1fr)}body:not([data-view=home]) .tr .pill{display:none}body[data-view=home] .tr .pill{display:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rp{opacity:1;transform:none}.ring,.wipe{display:none}}
+</style>
+</head>
+<body data-view="home">
+<div class="wipe" aria-hidden="true"><div class="fx"><i class="b b1"></i><i class="b b2"></i><i class="b b3"></i><i class="grain"></i></div><span class="wipe-t">Portfolio</span><span class="wipe-bar"><i></i></span></div>
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="#home" aria-label="Yoga, home">Yoga<i aria-hidden="true"></i></a>
+    <span class="hchip"><i aria-hidden="true"></i>Open for new projects</span>
+    <span class="sp"></span>
+    <nav class="cats" aria-label="Categories">
+      <a href="#graphic" data-v="graphic"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128,48,68.32,70.38a8,8,0,0,0-5.08,6.17L40,216l139.45-23.24a8,8,0,0,0,6.17-5.08L208,128Zm-4,104a20,20,0,1,1,20-20A20,20,0,0,1,124,152Z" opacity="0.2"/><path d="M248,92.68a15.86,15.86,0,0,0-4.69-11.31L174.63,12.68a16,16,0,0,0-22.63,0L123.57,41.11l-58,21.77A16.06,16.06,0,0,0,55.35,75.23L32.11,214.68A8,8,0,0,0,40,224a8.4,8.4,0,0,0,1.32-.11l139.44-23.24a16,16,0,0,0,12.35-10.17l21.77-58L243.31,104A15.87,15.87,0,0,0,248,92.68Zm-69.87,92.19L63.32,204l47.37-47.37a28,28,0,1,0-11.32-11.32L52,192.7,71.13,77.86,126,57.29,198.7,130ZM112,132a12,12,0,1,1,12,12A12,12,0,0,1,112,132Zm96-15.32L139.31,48l24-24L232,92.68Z"/></svg>Graphic<span class="xl"> design</span></a>
+      <a href="#video" data-v="video"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M67.71,64.59l47.79,27.6L40.43,112,32.27,82a7.76,7.76,0,0,1,5.58-9.52ZM199.84,37.76a7.9,7.9,0,0,0-9.66-5.49L126.61,49.05,174.4,76.64,208,67.77Z" opacity="0.2"/><path d="M216,104H102.09L210,75.51a8,8,0,0,0,5.68-9.84l-8.16-30a15.93,15.93,0,0,0-19.42-11.13L35.81,64.74a15.75,15.75,0,0,0-9.7,7.4,15.51,15.51,0,0,0-1.55,12L32,111.56c0,.14,0,.29,0,.44v88a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V112A8,8,0,0,0,216,104ZM192.16,40l6,22.07-22.62,6L147.42,51.83Zm-66.69,17.6,28.12,16.24-36.94,9.75L88.53,67.37Zm-79.4,44.62-6-22.08,26.5-7L94.69,89.4ZM208,200H48V120H208v80Z"/></svg>Video<span class="xl"> editing</span></a>
+      <a href="#web" data-v="web"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224,56V96H32V56a8,8,0,0,1,8-8H216A8,8,0,0,1,224,56Z" opacity="0.2"/><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,16V88H40V56Zm0,144H40V104H216v96Z"/></svg>Web<span class="xl"> design</span></a>
+      <a href="#ai" data-v="ai"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M194.82,151.43l-55.09,20.3-20.3,55.09a7.92,7.92,0,0,1-14.86,0l-20.3-55.09-55.09-20.3a7.92,7.92,0,0,1,0-14.86l55.09-20.3,20.3-55.09a7.92,7.92,0,0,1,14.86,0l20.3,55.09,55.09,20.3A7.92,7.92,0,0,1,194.82,151.43Z" opacity="0.2"/><path d="M197.58,129.06,146,110l-19-51.62a15.92,15.92,0,0,0-29.88,0L78,110l-51.62,19a15.92,15.92,0,0,0,0,29.88L78,178l19,51.62a15.92,15.92,0,0,0,29.88,0L146,178l51.62-19a15.92,15.92,0,0,0,0-29.88ZM137,164.22a8,8,0,0,0-4.74,4.74L112,223.85,91.78,169A8,8,0,0,0,87,164.22L32.15,144,87,123.78A8,8,0,0,0,91.78,119L112,64.15,132.22,119a8,8,0,0,0,4.74,4.74L191.85,144ZM144,40a8,8,0,0,1,8-8h16V16a8,8,0,0,1,16,0V32h16a8,8,0,0,1,0,16H184V64a8,8,0,0,1-16,0V48H152A8,8,0,0,1,144,40ZM248,88a8,8,0,0,1-8,8h-8v8a8,8,0,0,1-16,0V96h-8a8,8,0,0,1,0-16h8V72a8,8,0,0,1,16,0v8h8A8,8,0,0,1,248,88Z"/></svg>AI<span class="xl"> films</span></a>
+    </nav>
+    <div class="tr">
+      <a class="ib" href="#about" aria-label="About me" title="About me"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M192,96a64,64,0,1,1-64-64A64,64,0,0,1,192,96Z" opacity="0.2"/><path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"/></svg></a>
+      <a class="pill b" href="https://wa.me/917816816963" target="_blank" rel="noopener">WhatsApp <span class="ar">↗</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="view home" id="v-home" data-view="home" aria-label="Portfolio, choose a category">
+  <div class="fx" aria-hidden="true"><i class="b b1"></i><i class="b b2"></i><i class="b b3"></i><i class="b4"></i><i class="grain"></i></div>
+  <div class="center">
+    <p class="kick">Graphic, video, web <span>and AI film making</span></p>
+    <div class="spec" id="spec">
+      <i class="guide" style="--k:0" aria-hidden="true"><span>cap height</span></i>
+      <i class="guide" style="--k:1" aria-hidden="true"><span>x-height</span></i>
+      <i class="guide" style="--k:2" aria-hidden="true"><span>baseline</span></i>
+      <h1 class="big" aria-label="Portfolio"><span class="l" style="--k:0">P</span><span class="l" style="--k:1">o</span><span class="l" style="--k:2">r</span><span class="l" style="--k:3">t</span><span class="l" style="--k:4">f</span><span class="l" style="--k:5">o</span><span class="l" style="--k:6">l</span><span class="l" style="--k:7">i</span><span class="l" style="--k:8">o</span></h1>
+    </div>
+    <nav class="hb" aria-label="Choose a category">
+      <a class="cb cb-graphic" href="#graphic" style="--k:0"><span class="tx"><b>Graphic design</b><small>70 works</small></span><span class="ic"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128,48,68.32,70.38a8,8,0,0,0-5.08,6.17L40,216l139.45-23.24a8,8,0,0,0,6.17-5.08L208,128Zm-4,104a20,20,0,1,1,20-20A20,20,0,0,1,124,152Z" opacity="0.2"/><path d="M248,92.68a15.86,15.86,0,0,0-4.69-11.31L174.63,12.68a16,16,0,0,0-22.63,0L123.57,41.11l-58,21.77A16.06,16.06,0,0,0,55.35,75.23L32.11,214.68A8,8,0,0,0,40,224a8.4,8.4,0,0,0,1.32-.11l139.44-23.24a16,16,0,0,0,12.35-10.17l21.77-58L243.31,104A15.87,15.87,0,0,0,248,92.68Zm-69.87,92.19L63.32,204l47.37-47.37a28,28,0,1,0-11.32-11.32L52,192.7,71.13,77.86,126,57.29,198.7,130ZM112,132a12,12,0,1,1,12,12A12,12,0,0,1,112,132Zm96-15.32L139.31,48l24-24L232,92.68Z"/></svg></span></a>
+      <a class="cb cb-video" href="#video" style="--k:1"><span class="tx"><b>Video editing</b><small>12 films</small></span><span class="ic"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M67.71,64.59l47.79,27.6L40.43,112,32.27,82a7.76,7.76,0,0,1,5.58-9.52ZM199.84,37.76a7.9,7.9,0,0,0-9.66-5.49L126.61,49.05,174.4,76.64,208,67.77Z" opacity="0.2"/><path d="M216,104H102.09L210,75.51a8,8,0,0,0,5.68-9.84l-8.16-30a15.93,15.93,0,0,0-19.42-11.13L35.81,64.74a15.75,15.75,0,0,0-9.7,7.4,15.51,15.51,0,0,0-1.55,12L32,111.56c0,.14,0,.29,0,.44v88a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V112A8,8,0,0,0,216,104ZM192.16,40l6,22.07-22.62,6L147.42,51.83Zm-66.69,17.6,28.12,16.24-36.94,9.75L88.53,67.37Zm-79.4,44.62-6-22.08,26.5-7L94.69,89.4ZM208,200H48V120H208v80Z"/></svg></span></a>
+      <a class="cb cb-web" href="#web" style="--k:2"><span class="tx"><b>Web design</b><small>14 projects</small></span><span class="ic"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224,56V96H32V56a8,8,0,0,1,8-8H216A8,8,0,0,1,224,56Z" opacity="0.2"/><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,16V88H40V56Zm0,144H40V104H216v96Z"/></svg></span></a>
+      <a class="cb cb-ai" href="#ai" style="--k:3"><span class="tx"><b>AI film making</b><small>13 works</small></span><span class="ic"><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M194.82,151.43l-55.09,20.3-20.3,55.09a7.92,7.92,0,0,1-14.86,0l-20.3-55.09-55.09-20.3a7.92,7.92,0,0,1,0-14.86l55.09-20.3,20.3-55.09a7.92,7.92,0,0,1,14.86,0l20.3,55.09,55.09,20.3A7.92,7.92,0,0,1,194.82,151.43Z" opacity="0.2"/><path d="M197.58,129.06,146,110l-19-51.62a15.92,15.92,0,0,0-29.88,0L78,110l-51.62,19a15.92,15.92,0,0,0,0,29.88L78,178l19,51.62a15.92,15.92,0,0,0,29.88,0L146,178l51.62-19a15.92,15.92,0,0,0,0-29.88ZM137,164.22a8,8,0,0,0-4.74,4.74L112,223.85,91.78,169A8,8,0,0,0,87,164.22L32.15,144,87,123.78A8,8,0,0,0,91.78,119L112,64.15,132.22,119a8,8,0,0,0,4.74,4.74L191.85,144ZM144,40a8,8,0,0,1,8-8h16V16a8,8,0,0,1,16,0V32h16a8,8,0,0,1,0,16H184V64a8,8,0,0,1-16,0V48H152A8,8,0,0,1,144,40ZM248,88a8,8,0,0,1-8,8h-8v8a8,8,0,0,1-16,0V96h-8a8,8,0,0,1,0-16h8V72a8,8,0,0,1,16,0v8h8A8,8,0,0,1,248,88Z"/></svg></span></a>
+    </nav>
+  </div>
+  <div class="corner l mono"><span>Bengaluru</span><b id="clk">--:--:-- IST</b></div>
+  <div class="corner r mono"><span>12.97° N, 77.59° E</span><span>Portfolio 2026</span></div>
+</section>
+
+<section class="view" id="v-graphic" data-view="graphic" aria-labelledby="g-h" hidden>
+<div class="vh"><div class="fx fx-soft" aria-hidden="true"><i class="b b1"></i><i class="b b2"></i><i class="b b3"></i><i class="grain"></i></div>
+  <div class="wrap">
+    <a class="crumb mono" href="#home">← All work</a>
+    <h1 id="g-h">Graphic design</h1>
+    <div class="vh-row"><div><p class="lede">Posters, brand identity, print and photo shoots.</p><p class="used"><span class="mono">Made with</span><span class="tl"><b>Ps</b>Photoshop</span><span class="tl"><b>Ai</b>Illustrator</span><span class="tl"><b>Id</b>InDesign</span><span class="tl"><b>Lr</b>Lightroom</span><span class="tl"><b class="dot"></b>Firefly</span><span class="tl"><b class="dot"></b>Express</span></p></div><nav class="toc" aria-label="On this page"><button type="button" data-jump="g-posters">Posters<sup>59</sup></button><button type="button" data-jump="g-identity">Brand identity<sup>3</sup></button><button type="button" data-jump="g-print">Print<sup>3</sup></button><button type="button" data-jump="g-shoots">Photo shoots<sup>5</sup></button></nav></div>
+  </div>
+</div>
+<div class="wrap">
+  <div class="ss">
+    <div class="ssh" id="g-posters" data-r><span class="k mono">01</span><h2>Posters</h2><p>Spec ads for top brands, product ads, launch campaigns, a Kannada campaign, real-estate ads, festive posts and Instagram feeds. Spec pieces are my own ideas for known brands.</p><span class="n mono">59 posters</span></div>
+    <nav class="flt" aria-label="Filter posters" data-r><button type="button" class="on" data-f="all">All<sup>59</sup></button><button type="button" class="" data-f="brands">Top brands<sup>20</sup></button><button type="button" class="" data-f="ads">Product ads<sup>11</sup></button><button type="button" class="" data-f="campaigns">Campaigns<sup>13</sup></button><button type="button" class="" data-f="estate">Real estate<sup>5</sup></button><button type="button" class="" data-f="festive">Festive<sup>8</sup></button><button type="button" class="" data-f="feeds">Instagram feeds<sup>2</sup></button></nav>
+    <div class="wall" data-lbg><div class="wi" data-cat="brands"><div data-r><button type="button" class="lbi" data-t="Apple · AirPods Pro" data-s="Cinematic spec ad" data-ar="0.8000" data-src="media/graphic/social/topbrands/01-airpods.webp" aria-label="Open Apple · AirPods Pro"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/topbrands/01-airpods.webp" alt="Apple · AirPods Pro, Cinematic spec ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>Apple · AirPods Pro</b><span>Cinematic spec ad</span></div></div></div><div class="wi wide" data-cat="ads"><div data-r><button type="button" class="lbi" data-t="OJAS · Glow Body Oil" data-s="Skincare, saffron body oil ad" data-ar="0.8000" data-src="media/graphic/social/premium/ojas-p3.webp" aria-label="Open OJAS · Glow Body Oil"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/premium/ojas-p3.webp" alt="OJAS · Glow Body Oil, Skincare, saffron body oil ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>OJAS · Glow Body Oil</b><span>Skincare, saffron body oil ad</span></div></div></div><div class="wi" data-cat="campaigns"><div data-r><button type="button" class="lbi" data-t="OHMI · Built Tough. Charged Up." data-s="Power banks, launch campaign, spec" data-ar="0.8000" data-src="media/graphic/social/ohmi/s2.webp" aria-label="Open OHMI · Built Tough. Charged Up."><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/ohmi/s2.webp" alt="OHMI · Built Tough. Charged Up., Power banks, launch campaign, spec" loading="lazy" decoding="async"></div></button><div class="cap"><b>OHMI · Built Tough. Charged Up.</b><span>Power banks, launch campaign, spec</span></div></div></div><div class="wi" data-cat="brands"><div data-r><button type="button" class="lbi" data-t="Nike · Pegasus" data-s="Cinematic spec ad" data-ar="0.8000" data-src="media/graphic/social/topbrands/02-nike.webp" aria-label="Open Nike · Pegasus"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/topbrands/02-nike.webp" alt="Nike · Pegasus, Cinematic spec ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>Nike · Pegasus</b><span>Cinematic spec ad</span></div></div></div><div class="wi" data-cat="ads"><div data-r><button type="button" class="lbi" data-t="OJAS · Glow, Bottled." data-s="Skincare, vitamin C serum ad" data-ar="0.8000" data-src="media/graphic/social/premium/ojas-p1.webp" aria-label="Open OJAS · Glow, Bottled."><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/premium/ojas-p1.webp" alt="OJAS · Glow, Bottled., Skincare, vitamin C serum ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>OJAS · Glow, Bottled.</b><span>Skincare, vitamin C serum ad</span></div></div></div><div class="wi" data-cat="estate"><div data-r><button type="button" class="lbi" data-t="NELA Skyline" data-s="Real-estate lead ad, story" data-ar="0.5625" data-src="media/graphic/estate-skyline.webp" aria-label="Open NELA Skyline"><div class="ph img" style="aspect-ratio:9/16"><img src="media/graphic/estate-skyline.webp" alt="NELA Skyline, Real-estate lead ad, story" loading="lazy" decoding="async"></div></button><div class="cap"><b>NELA Skyline</b><span>Real-estate lead ad, story</span></div></div></div><div class="wi" data-cat="festive"><div data-r><button type="button" class="lbi" data-t="Happy Dussehra" data-s="Festive post, MBBS consultancy" data-ar="0.8000" data-src="media/graphic/fest-dussehra.webp" aria-label="Open Happy Dussehra"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/fest-dussehra.webp" alt="Happy Dussehra, Festive post, MBBS consultancy" loading="lazy" decoding="async"></div></button><div class="cap"><b>Happy Dussehra</b><span>Festive post, MBBS consultancy</span></div></div></div><div class="wi" data-cat="campaigns"><div data-r><button type="button" class="lbi" data-t="OHMI · Power Beyond the Grid." data-s="Power banks, launch campaign, spec" data-ar="0.8000" data-src="media/graphic/social/ohmi/s3.webp" aria-label="Open OHMI · Power Beyond the Grid."><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/ohmi/s3.webp" alt="OHMI · Power Beyond the Grid., Power banks, launch campaign, spec" loading="lazy" decoding="async"></div></button><div class="cap"><b>OHMI · Power Beyond the Grid.</b><span>Power banks, launch campaign, spec</span></div></div></div><div class="wi" data-cat="feeds"><div data-r><button type="button" class="lbi" data-t="Third Wave Coffee" data-s="Instagram feed, 9 posts, spec" data-ar="0.8000" data-src="media/graphic/feed-twc.webp" aria-label="Open Third Wave Coffee"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/feed-twc.webp" alt="Third Wave Coffee, Instagram feed, 9 posts, spec" loading="lazy" decoding="async"></div></button><div class="cap"><b>Third Wave Coffee</b><span>Instagram feed, 9 posts, spec</span></div></div></div><div class="wi" data-cat="brands"><div data-r><button type="button" class="lbi" data-t="Coca-Cola · Original Taste" data-s="Cinematic spec ad" data-ar="0.8000" data-src="media/graphic/social/topbrands/03-cocacola.webp" aria-label="Open Coca-Cola · Original Taste"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/topbrands/03-cocacola.webp" alt="Coca-Cola · Original Taste, Cinematic spec ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>Coca-Cola · Original Taste</b><span>Cinematic spec ad</span></div></div></div><div class="wi" data-cat="ads"><div data-r><button type="button" class="lbi" data-t="OJAS · Made for the Sun" data-s="Skincare, SPF 50 sunscreen ad" data-ar="0.8000" data-src="media/graphic/social/premium/ojas-p2.webp" aria-label="Open OJAS · Made for the Sun"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/premium/ojas-p2.webp" alt="OJAS · Made for the Sun, Skincare, SPF 50 sunscreen ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>OJAS · Made for the Sun</b><span>Skincare, SPF 50 sunscreen ad</span></div></div></div><div class="wi" data-cat="campaigns"><div data-r><button type="button" class="lbi" data-t="OHMI · Small in Size. Huge on Power." data-s="Power banks, launch campaign, spec" data-ar="0.8000" data-src="media/graphic/social/ohmi/s4.webp" aria-label="Open OHMI · Small in Size. Huge on Power."><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/ohmi/s4.webp" alt="OHMI · Small in Size. Huge on Power., Power banks, launch campaign, spec" loading="lazy" decoding="async"></div></button><div class="cap"><b>OHMI · Small in Size. Huge on Power.</b><span>Power banks, launch campaign, spec</span></div></div></div><div class="wi wide" data-cat="brands"><div data-r><button type="button" class="lbi" data-t="Red Bull · Energy Drink" data-s="Cinematic spec ad" data-ar="0.8000" data-src="media/graphic/social/topbrands/04-redbull.webp" aria-label="Open Red Bull · Energy Drink"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/topbrands/04-redbull.webp" alt="Red Bull · Energy Drink, Cinematic spec ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>Red Bull · Energy Drink</b><span>Cinematic spec ad</span></div></div></div><div class="wi" data-cat="ads"><div data-r><button type="button" class="lbi" data-t="KADAM · Lighter than Air." data-s="Sneakers, running shoe ad" data-ar="0.8000" data-src="media/graphic/social/premium/kadam-p1.webp" aria-label="Open KADAM · Lighter than Air."><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/premium/kadam-p1.webp" alt="KADAM · Lighter than Air., Sneakers, running shoe ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>KADAM · Lighter than Air.</b><span>Sneakers, running shoe ad</span></div></div></div><div class="wi" data-cat="estate"><div data-r><button type="button" class="lbi" data-t="The Banyan Estates" data-s="Real-estate lead ad, story" data-ar="0.5625" data-src="media/graphic/estate-banyan.webp" aria-label="Open The Banyan Estates"><div class="ph img" style="aspect-ratio:9/16"><img src="media/graphic/estate-banyan.webp" alt="The Banyan Estates, Real-estate lead ad, story" loading="lazy" decoding="async"></div></button><div class="cap"><b>The Banyan Estates</b><span>Real-estate lead ad, story</span></div></div></div><div class="wi" data-cat="festive"><div data-r><button type="button" class="lbi" data-t="Diwali" data-s="Festive post, MBBS consultancy" data-ar="0.8000" data-src="media/graphic/medabroad-diwali.webp" aria-label="Open Diwali"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/medabroad-diwali.webp" alt="Diwali, Festive post, MBBS consultancy" loading="lazy" decoding="async"></div></button><div class="cap"><b>Diwali</b><span>Festive post, MBBS consultancy</span></div></div></div><div class="wi wide" data-cat="campaigns"><div data-r><button type="button" class="lbi" data-t="FYRO · Turn Up the Heat." data-s="Spicy chips, launch campaign, spec" data-ar="0.8000" data-src="media/graphic/social/fyro/s2.webp" aria-label="Open FYRO · Turn Up the Heat."><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/fyro/s2.webp" alt="FYRO · Turn Up the Heat., Spicy chips, launch campaign, spec" loading="lazy" decoding="async"></div></button><div class="cap"><b>FYRO · Turn Up the Heat.</b><span>Spicy chips, launch campaign, spec</span></div></div></div><div class="wi" data-cat="feeds"><div data-r><button type="button" class="lbi" data-t="SOBHA OneWorld" data-s="Instagram feed, 9 posts, spec" data-ar="0.8000" data-src="media/graphic/feed-sobha.webp" aria-label="Open SOBHA OneWorld"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/feed-sobha.webp" alt="SOBHA OneWorld, Instagram feed, 9 posts, spec" loading="lazy" decoding="async"></div></button><div class="cap"><b>SOBHA OneWorld</b><span>Instagram feed, 9 posts, spec</span></div></div></div><div class="wi" data-cat="brands"><div data-r><button type="button" class="lbi" data-t="Starbucks · Coffee" data-s="Cinematic spec ad" data-ar="0.8000" data-src="media/graphic/social/topbrands/05-starbucks.webp" aria-label="Open Starbucks · Coffee"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/topbrands/05-starbucks.webp" alt="Starbucks · Coffee, Cinematic spec ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>Starbucks · Coffee</b><span>Cinematic spec ad</span></div></div></div><div class="wi" data-cat="ads"><div data-r><button type="button" class="lbi" data-t="KADAM · Own the Trail" data-s="Sneakers, trail shoe ad" data-ar="0.8000" data-src="media/graphic/social/premium/kadam-p2.webp" aria-label="Open KADAM · Own the Trail"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/premium/kadam-p2.webp" alt="KADAM · Own the Trail, Sneakers, trail shoe ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>KADAM · Own the Trail</b><span>Sneakers, trail shoe ad</span></div></div></div><div class="wi" data-cat="campaigns"><div data-r><button type="button" class="lbi" data-t="FYRO · Born in the Fire." data-s="Spicy chips, launch campaign, spec" data-ar="0.8000" data-src="media/graphic/social/fyro/s3.webp" aria-label="Open FYRO · Born in the Fire."><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/fyro/s3.webp" alt="FYRO · Born in the Fire., Spicy chips, launch campaign, spec" loading="lazy" decoding="async"></div></button><div class="cap"><b>FYRO · Born in the Fire.</b><span>Spicy chips, launch campaign, spec</span></div></div></div><div class="wi" data-cat="brands"><div data-r><button type="button" class="lbi" data-t="Royal Enfield · Classic 350" data-s="Cinematic spec ad" data-ar="0.8000" data-src="media/graphic/social/topbrands/06-royalenfield.webp" aria-label="Open Royal Enfield · Classic 350"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/topbrands/06-royalenfield.webp" alt="Royal Enfield · Classic 350, Cinematic spec ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>Royal Enfield · Classic 350</b><span>Cinematic spec ad</span></div></div></div><div class="wi" data-cat="ads"><div data-r><button type="button" class="lbi" data-t="KSHAN · Every moment, measured." data-s="Watches, titanium smartwatch ad" data-ar="0.8000" data-src="media/graphic/social/premium/kshan-p1.webp" aria-label="Open KSHAN · Every moment, measured."><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/premium/kshan-p1.webp" alt="KSHAN · Every moment, measured., Watches, titanium smartwatch ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>KSHAN · Every moment, measured.</b><span>Watches, titanium smartwatch ad</span></div></div></div><div class="wi" data-cat="estate"><div data-r><button type="button" class="lbi" data-t="Hillside Plots" data-s="Real-estate lead ad, story" data-ar="0.5625" data-src="media/graphic/estate-hillside.webp" aria-label="Open Hillside Plots"><div class="ph img" style="aspect-ratio:9/16"><img src="media/graphic/estate-hillside.webp" alt="Hillside Plots, Real-estate lead ad, story" loading="lazy" decoding="async"></div></button><div class="cap"><b>Hillside Plots</b><span>Real-estate lead ad, story</span></div></div></div><div class="wi" data-cat="festive"><div data-r><button type="button" class="lbi" data-t="Gandhi Jayanti" data-s="Festive post, MBBS consultancy" data-ar="0.8000" data-src="media/graphic/fest-gandhi.webp" aria-label="Open Gandhi Jayanti"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/fest-gandhi.webp" alt="Gandhi Jayanti, Festive post, MBBS consultancy" loading="lazy" decoding="async"></div></button><div class="cap"><b>Gandhi Jayanti</b><span>Festive post, MBBS consultancy</span></div></div></div><div class="wi" data-cat="campaigns"><div data-r><button type="button" class="lbi" data-t="FYRO · One Chip. No Going Back." data-s="Spicy chips, launch campaign, spec" data-ar="0.8000" data-src="media/graphic/social/fyro/s4.webp" aria-label="Open FYRO · One Chip. No Going Back."><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/fyro/s4.webp" alt="FYRO · One Chip. No Going Back., Spicy chips, launch campaign, spec" loading="lazy" decoding="async"></div></button><div class="cap"><b>FYRO · One Chip. No Going Back.</b><span>Spicy chips, launch campaign, spec</span></div></div></div><div class="wi" data-cat="brands"><div data-r><button type="button" class="lbi" data-t="Amul · Butter" data-s="Cinematic spec ad" data-ar="0.8000" data-src="media/graphic/social/topbrands/07-amul.webp" aria-label="Open Amul · Butter"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/topbrands/07-amul.webp" alt="Amul · Butter, Cinematic spec ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>Amul · Butter</b><span>Cinematic spec ad</span></div></div></div><div class="wi" data-cat="ads"><div data-r><button type="button" class="lbi" data-t="KSHAN · Made for Golden Hours." data-s="Watches, titanium smartwatch ad" data-ar="0.8000" data-src="media/graphic/social/premium/kshan-p2.webp" aria-label="Open KSHAN · Made for Golden Hours."><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/premium/kshan-p2.webp" alt="KSHAN · Made for Golden Hours., Watches, titanium smartwatch ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>KSHAN · Made for Golden Hours.</b><span>Watches, titanium smartwatch ad</span></div></div></div><div class="wi" data-cat="campaigns"><div data-r><button type="button" class="lbi" data-t="KAVRO · Built for the Long Road." data-s="Motorcycle helmets, launch campaign, spec" data-ar="0.8000" data-src="media/graphic/social/kavro/s2.webp" aria-label="Open KAVRO · Built for the Long Road."><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/kavro/s2.webp" alt="KAVRO · Built for the Long Road., Motorcycle helmets, launch campaign, spec" loading="lazy" decoding="async"></div></button><div class="cap"><b>KAVRO · Built for the Long Road.</b><span>Motorcycle helmets, launch campaign, spec</span></div></div></div><div class="wi" data-cat="brands"><div data-r><button type="button" class="lbi" data-t="Tata Tea · Premium" data-s="Cinematic spec ad" data-ar="0.8000" data-src="media/graphic/social/topbrands/08-tatatea.webp" aria-label="Open Tata Tea · Premium"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/topbrands/08-tatatea.webp" alt="Tata Tea · Premium, Cinematic spec ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>Tata Tea · Premium</b><span>Cinematic spec ad</span></div></div></div><div class="wi" data-cat="ads"><div data-r><button type="button" class="lbi" data-t="Mysore Sandal" data-s="Ad creative, spec" data-ar="0.8000" data-src="media/graphic/mysore-sandal.webp" aria-label="Open Mysore Sandal"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/mysore-sandal.webp" alt="Mysore Sandal, Ad creative, spec" loading="lazy" decoding="async"></div></button><div class="cap"><b>Mysore Sandal</b><span>Ad creative, spec</span></div></div></div><div class="wi" data-cat="estate"><div data-r><button type="button" class="lbi" data-t="NELA Palm Grove" data-s="Real-estate lead ad, story" data-ar="0.5625" data-src="media/graphic/estate-palm.webp" aria-label="Open NELA Palm Grove"><div class="ph img" style="aspect-ratio:9/16"><img src="media/graphic/estate-palm.webp" alt="NELA Palm Grove, Real-estate lead ad, story" loading="lazy" decoding="async"></div></button><div class="cap"><b>NELA Palm Grove</b><span>Real-estate lead ad, story</span></div></div></div><div class="wi" data-cat="festive"><div data-r><button type="button" class="lbi" data-t="Merry Christmas" data-s="Festive post, study-abroad consultancy" data-ar="0.8000" data-src="media/graphic/fest-christmas-vsg.webp" aria-label="Open Merry Christmas"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/fest-christmas-vsg.webp" alt="Merry Christmas, Festive post, study-abroad consultancy" loading="lazy" decoding="async"></div></button><div class="cap"><b>Merry Christmas</b><span>Festive post, study-abroad consultancy</span></div></div></div><div class="wi" data-cat="campaigns"><div data-r><button type="button" class="lbi" data-t="KAVRO · Takes the Hit. So You Don&#x27;t." data-s="Motorcycle helmets, launch campaign, spec" data-ar="0.8000" data-src="media/graphic/social/kavro/s3.webp" aria-label="Open KAVRO · Takes the Hit. So You Don&#x27;t."><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/kavro/s3.webp" alt="KAVRO · Takes the Hit. So You Don&#x27;t., Motorcycle helmets, launch campaign, spec" loading="lazy" decoding="async"></div></button><div class="cap"><b>KAVRO · Takes the Hit. So You Don&#x27;t.</b><span>Motorcycle helmets, launch campaign, spec</span></div></div></div><div class="wi" data-cat="brands"><div data-r><button type="button" class="lbi" data-t="Titan · Analogue watches" data-s="Cinematic spec ad" data-ar="0.8000" data-src="media/graphic/social/topbrands/09-titan.webp" aria-label="Open Titan · Analogue watches"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/topbrands/09-titan.webp" alt="Titan · Analogue watches, Cinematic spec ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>Titan · Analogue watches</b><span>Cinematic spec ad</span></div></div></div><div class="wi" data-cat="ads"><div data-r><button type="button" class="lbi" data-t="Nandini" data-s="Ad creative in Kannada, spec" data-ar="0.8000" data-src="media/graphic/nandini.webp" aria-label="Open Nandini"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/nandini.webp" alt="Nandini, Ad creative in Kannada, spec" loading="lazy" decoding="async"></div></button><div class="cap"><b>Nandini</b><span>Ad creative in Kannada, spec</span></div></div></div><div class="wi" data-cat="campaigns"><div data-r><button type="button" class="lbi" data-t="KAVRO · Clear Vision. Any Weather." data-s="Motorcycle helmets, launch campaign, spec" data-ar="0.8000" data-src="media/graphic/social/kavro/s4.webp" aria-label="Open KAVRO · Clear Vision. Any Weather."><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/kavro/s4.webp" alt="KAVRO · Clear Vision. Any Weather., Motorcycle helmets, launch campaign, spec" loading="lazy" decoding="async"></div></button><div class="cap"><b>KAVRO · Clear Vision. Any Weather.</b><span>Motorcycle helmets, launch campaign, spec</span></div></div></div><div class="wi" data-cat="brands"><div data-r><button type="button" class="lbi" data-t="Cadbury · Dairy Milk" data-s="Cinematic spec ad" data-ar="0.8000" data-src="media/graphic/social/topbrands/10-cadbury.webp" aria-label="Open Cadbury · Dairy Milk"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/topbrands/10-cadbury.webp" alt="Cadbury · Dairy Milk, Cinematic spec ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>Cadbury · Dairy Milk</b><span>Cinematic spec ad</span></div></div></div><div class="wi" data-cat="ads"><div data-r><button type="button" class="lbi" data-t="MTR" data-s="Ad creative, spec" data-ar="0.8000" data-src="media/graphic/mtr.webp" aria-label="Open MTR"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/mtr.webp" alt="MTR, Ad creative, spec" loading="lazy" decoding="async"></div></button><div class="cap"><b>MTR</b><span>Ad creative, spec</span></div></div></div><div class="wi" data-cat="estate"><div data-r><button type="button" class="lbi" data-t="Green Meadows" data-s="Real-estate lead ad, story" data-ar="0.5625" data-src="media/graphic/estate-meadows.webp" aria-label="Open Green Meadows"><div class="ph img" style="aspect-ratio:9/16"><img src="media/graphic/estate-meadows.webp" alt="Green Meadows, Real-estate lead ad, story" loading="lazy" decoding="async"></div></button><div class="cap"><b>Green Meadows</b><span>Real-estate lead ad, story</span></div></div></div><div class="wi" data-cat="festive"><div data-r><button type="button" class="lbi" data-t="Happy New Year 2026" data-s="Festive post, MBBS consultancy" data-ar="0.8000" data-src="media/graphic/medabroad-newyear.webp" aria-label="Open Happy New Year 2026"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/medabroad-newyear.webp" alt="Happy New Year 2026, Festive post, MBBS consultancy" loading="lazy" decoding="async"></div></button><div class="cap"><b>Happy New Year 2026</b><span>Festive post, MBBS consultancy</span></div></div></div><div class="wi wide" data-cat="campaigns"><div data-r><button type="button" class="lbi" data-t="Akshayakalpa · From our farm to your home" data-s="Kannada campaign, spec" data-ar="0.8000" data-src="media/graphic/social/akshayakalpa/akk-p2.webp" aria-label="Open Akshayakalpa · From our farm to your home"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/akshayakalpa/akk-p2.webp" alt="Akshayakalpa · From our farm to your home, Kannada campaign, spec" loading="lazy" decoding="async"></div></button><div class="cap"><b>Akshayakalpa · From our farm to your home</b><span>Kannada campaign, spec</span></div></div></div><div class="wi" data-cat="brands"><div data-r><button type="button" class="lbi" data-t="Maggi · 2-Minute Noodles" data-s="Cinematic spec ad" data-ar="0.8000" data-src="media/graphic/social/topbrands/11-maggi.webp" aria-label="Open Maggi · 2-Minute Noodles"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/topbrands/11-maggi.webp" alt="Maggi · 2-Minute Noodles, Cinematic spec ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>Maggi · 2-Minute Noodles</b><span>Cinematic spec ad</span></div></div></div><div class="wi" data-cat="ads"><div data-r><button type="button" class="lbi" data-t="Blinkit" data-s="Ad creative, spec" data-ar="0.8000" data-src="media/graphic/blinkit.webp" aria-label="Open Blinkit"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/blinkit.webp" alt="Blinkit, Ad creative, spec" loading="lazy" decoding="async"></div></button><div class="cap"><b>Blinkit</b><span>Ad creative, spec</span></div></div></div><div class="wi" data-cat="campaigns"><div data-r><button type="button" class="lbi" data-t="Akshayakalpa · Farm freshness for Bengaluru" data-s="Kannada campaign, spec" data-ar="0.8000" data-src="media/graphic/social/akshayakalpa/akk-p3.webp" aria-label="Open Akshayakalpa · Farm freshness for Bengaluru"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/akshayakalpa/akk-p3.webp" alt="Akshayakalpa · Farm freshness for Bengaluru, Kannada campaign, spec" loading="lazy" decoding="async"></div></button><div class="cap"><b>Akshayakalpa · Farm freshness for Bengaluru</b><span>Kannada campaign, spec</span></div></div></div><div class="wi" data-cat="brands"><div data-r><button type="button" class="lbi" data-t="Lakmé · 9to5 lipstick" data-s="Cinematic spec ad" data-ar="0.8000" data-src="media/graphic/social/topbrands/12-lakme.webp" aria-label="Open Lakmé · 9to5 lipstick"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/topbrands/12-lakme.webp" alt="Lakmé · 9to5 lipstick, Cinematic spec ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>Lakmé · 9to5 lipstick</b><span>Cinematic spec ad</span></div></div></div><div class="wi" data-cat="festive"><div data-r><button type="button" class="lbi" data-t="Makara Sankranti" data-s="Festive post in Kannada, study-abroad consultancy" data-ar="0.8000" data-src="media/graphic/fest-sankranti.webp" aria-label="Open Makara Sankranti"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/fest-sankranti.webp" alt="Makara Sankranti, Festive post in Kannada, study-abroad consultancy" loading="lazy" decoding="async"></div></button><div class="cap"><b>Makara Sankranti</b><span>Festive post in Kannada, study-abroad consultancy</span></div></div></div><div class="wi" data-cat="campaigns"><div data-r><button type="button" class="lbi" data-t="Akshayakalpa · From the cow, straight to you" data-s="Kannada campaign, spec" data-ar="0.8000" data-src="media/graphic/social/akshayakalpa/akk-p4.webp" aria-label="Open Akshayakalpa · From the cow, straight to you"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/akshayakalpa/akk-p4.webp" alt="Akshayakalpa · From the cow, straight to you, Kannada campaign, spec" loading="lazy" decoding="async"></div></button><div class="cap"><b>Akshayakalpa · From the cow, straight to you</b><span>Kannada campaign, spec</span></div></div></div><div class="wi" data-cat="brands"><div data-r><button type="button" class="lbi" data-t="boAt · Rockerz headphones" data-s="Cinematic spec ad" data-ar="0.8000" data-src="media/graphic/social/topbrands/13-boat.webp" aria-label="Open boAt · Rockerz headphones"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/topbrands/13-boat.webp" alt="boAt · Rockerz headphones, Cinematic spec ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>boAt · Rockerz headphones</b><span>Cinematic spec ad</span></div></div></div><div class="wi" data-cat="campaigns"><div data-r><button type="button" class="lbi" data-t="Akshayakalpa · Pure milk for little hands" data-s="Kannada campaign, spec" data-ar="0.8000" data-src="media/graphic/social/akshayakalpa/akk-p5.webp" aria-label="Open Akshayakalpa · Pure milk for little hands"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/akshayakalpa/akk-p5.webp" alt="Akshayakalpa · Pure milk for little hands, Kannada campaign, spec" loading="lazy" decoding="async"></div></button><div class="cap"><b>Akshayakalpa · Pure milk for little hands</b><span>Kannada campaign, spec</span></div></div></div><div class="wi" data-cat="brands"><div data-r><button type="button" class="lbi" data-t="Bisleri · Mineral water" data-s="Cinematic spec ad" data-ar="0.8000" data-src="media/graphic/social/topbrands/14-bisleri.webp" aria-label="Open Bisleri · Mineral water"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/topbrands/14-bisleri.webp" alt="Bisleri · Mineral water, Cinematic spec ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>Bisleri · Mineral water</b><span>Cinematic spec ad</span></div></div></div><div class="wi" data-cat="festive"><div data-r><button type="button" class="lbi" data-t="Christmas wishes" data-s="Festive post, MBBS consultancy" data-ar="0.8000" data-src="media/graphic/fest-christmas-mab.webp" aria-label="Open Christmas wishes"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/fest-christmas-mab.webp" alt="Christmas wishes, Festive post, MBBS consultancy" loading="lazy" decoding="async"></div></button><div class="cap"><b>Christmas wishes</b><span>Festive post, MBBS consultancy</span></div></div></div><div class="wi" data-cat="brands"><div data-r><button type="button" class="lbi" data-t="Parle-G · Biscuits" data-s="Cinematic spec ad" data-ar="0.8000" data-src="media/graphic/social/topbrands/15-parleg.webp" aria-label="Open Parle-G · Biscuits"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/topbrands/15-parleg.webp" alt="Parle-G · Biscuits, Cinematic spec ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>Parle-G · Biscuits</b><span>Cinematic spec ad</span></div></div></div><div class="wi" data-cat="brands"><div data-r><button type="button" class="lbi" data-t="Tanishq · Gold jewellery" data-s="Cinematic spec ad" data-ar="0.8000" data-src="media/graphic/social/topbrands/16-tanishq.webp" aria-label="Open Tanishq · Gold jewellery"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/topbrands/16-tanishq.webp" alt="Tanishq · Gold jewellery, Cinematic spec ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>Tanishq · Gold jewellery</b><span>Cinematic spec ad</span></div></div></div><div class="wi" data-cat="festive"><div data-r><button type="button" class="lbi" data-t="Independence Day" data-s="Festive post, MBBS consultancy" data-ar="0.8000" data-src="media/graphic/fest-independence.webp" aria-label="Open Independence Day"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/fest-independence.webp" alt="Independence Day, Festive post, MBBS consultancy" loading="lazy" decoding="async"></div></button><div class="cap"><b>Independence Day</b><span>Festive post, MBBS consultancy</span></div></div></div><div class="wi" data-cat="brands"><div data-r><button type="button" class="lbi" data-t="Mahindra · Thar" data-s="Cinematic spec ad" data-ar="0.8000" data-src="media/graphic/social/topbrands/17-thar.webp" aria-label="Open Mahindra · Thar"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/topbrands/17-thar.webp" alt="Mahindra · Thar, Cinematic spec ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>Mahindra · Thar</b><span>Cinematic spec ad</span></div></div></div><div class="wi" data-cat="brands"><div data-r><button type="button" class="lbi" data-t="The North Face · Summit Series" data-s="Cinematic spec ad" data-ar="0.8000" data-src="media/graphic/social/topbrands/18-northface.webp" aria-label="Open The North Face · Summit Series"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/topbrands/18-northface.webp" alt="The North Face · Summit Series, Cinematic spec ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>The North Face · Summit Series</b><span>Cinematic spec ad</span></div></div></div><div class="wi" data-cat="brands"><div data-r><button type="button" class="lbi" data-t="Sony · Alpha 7 IV" data-s="Cinematic spec ad" data-ar="0.8000" data-src="media/graphic/social/topbrands/19-sony.webp" aria-label="Open Sony · Alpha 7 IV"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/topbrands/19-sony.webp" alt="Sony · Alpha 7 IV, Cinematic spec ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>Sony · Alpha 7 IV</b><span>Cinematic spec ad</span></div></div></div><div class="wi" data-cat="brands"><div data-r><button type="button" class="lbi" data-t="Himalaya · Neem Face Wash" data-s="Cinematic spec ad" data-ar="0.8000" data-src="media/graphic/social/topbrands/20-himalaya.webp" aria-label="Open Himalaya · Neem Face Wash"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/social/topbrands/20-himalaya.webp" alt="Himalaya · Neem Face Wash, Cinematic spec ad" loading="lazy" decoding="async"></div></button><div class="cap"><b>Himalaya · Neem Face Wash</b><span>Cinematic spec ad</span></div></div></div></div>
+  </div>
+  <div class="ss">
+    <div class="ssh" id="g-identity" data-r><span class="k mono">02</span><h2>Brand identity</h2><p>Complete brand identities: the logo and its idea, colours, type, and the brand on real things. Open any of them to see every slide.</p><span class="n mono">3 brands</span></div>
+    <div class="bcs"><article class="bc" data-r data-lbg>
+      <button type="button" class="bc-c" data-open="bk-bowlish-p01" aria-label="Open the Bowlish brand identity, 20 slides">
+        <div class="ph img"><img src="media/graphic/brand/bowlish/cover.webp" alt="Bowlish brand overview: logo, colours, type and mockups" loading="lazy" decoding="async"></div>
+        <span class="bc-go">View 20 slides →</span>
+      </button>
+      <div class="bc-m"><img class="bc-l" src="media/graphic/brand/bowlish/logo.png" alt="Bowlish" style="height:34px" loading="lazy" decoding="async"><span class="mono">Healthy food · 20 slides</span></div>
+      <div hidden><button type="button" class="lbi" id="bk-bowlish-p01" data-t="Bowlish" data-s="01 · Cover" data-ar="1.6000" data-src="media/graphic/brand/bowlish/p01.webp" aria-label="Page 1, Cover" tabindex="-1"></button><button type="button" class="lbi" id="bk-bowlish-p02" data-t="Bowlish" data-s="02 · Moodboard" data-ar="1.6000" data-src="media/graphic/brand/bowlish/p02.webp" aria-label="Page 2, Moodboard" tabindex="-1"></button><button type="button" class="lbi" id="bk-bowlish-p03" data-t="Bowlish" data-s="03 · Clear space" data-ar="1.6000" data-src="media/graphic/brand/bowlish/p03.webp" aria-label="Page 3, Clear space" tabindex="-1"></button><button type="button" class="lbi" id="bk-bowlish-p04" data-t="Bowlish" data-s="04 · Typography" data-ar="1.6000" data-src="media/graphic/brand/bowlish/p04.webp" aria-label="Page 4, Typography" tabindex="-1"></button><button type="button" class="lbi" id="bk-bowlish-p05" data-t="Bowlish" data-s="05 · Colour palette" data-ar="1.6000" data-src="media/graphic/brand/bowlish/p05.webp" aria-label="Page 5, Colour palette" tabindex="-1"></button><button type="button" class="lbi" id="bk-bowlish-p06" data-t="Bowlish" data-s="06 · Logo construction" data-ar="1.6000" data-src="media/graphic/brand/bowlish/p06.webp" aria-label="Page 6, Logo construction" tabindex="-1"></button><button type="button" class="lbi" id="bk-bowlish-p07" data-t="Bowlish" data-s="07 · Food photography" data-ar="1.6000" data-src="media/graphic/brand/bowlish/p07.webp" aria-label="Page 7, Food photography" tabindex="-1"></button><button type="button" class="lbi" id="bk-bowlish-p08" data-t="Bowlish" data-s="08 · Logo variations" data-ar="1.6000" data-src="media/graphic/brand/bowlish/p08.webp" aria-label="Page 8, Logo variations" tabindex="-1"></button><button type="button" class="lbi" id="bk-bowlish-p09" data-t="Bowlish" data-s="09 · Stickers" data-ar="1.6000" data-src="media/graphic/brand/bowlish/p09.webp" aria-label="Page 9, Stickers" tabindex="-1"></button><button type="button" class="lbi" id="bk-bowlish-p10" data-t="Bowlish" data-s="10 · Social stories" data-ar="1.6000" data-src="media/graphic/brand/bowlish/p10.webp" aria-label="Page 10, Social stories" tabindex="-1"></button><button type="button" class="lbi" id="bk-bowlish-p11" data-t="Bowlish" data-s="11 · Packaging" data-ar="1.6000" data-src="media/graphic/brand/bowlish/p11.webp" aria-label="Page 11, Packaging" tabindex="-1"></button><button type="button" class="lbi" id="bk-bowlish-p12" data-t="Bowlish" data-s="12 · Stationery" data-ar="1.6000" data-src="media/graphic/brand/bowlish/p12.webp" aria-label="Page 12, Stationery" tabindex="-1"></button><button type="button" class="lbi" id="bk-bowlish-p13" data-t="Bowlish" data-s="13 · Instagram posts" data-ar="1.6000" data-src="media/graphic/brand/bowlish/p13.webp" aria-label="Page 13, Instagram posts" tabindex="-1"></button><button type="button" class="lbi" id="bk-bowlish-p14" data-t="Bowlish" data-s="14 · Uniform" data-ar="1.6000" data-src="media/graphic/brand/bowlish/p14.webp" aria-label="Page 14, Uniform" tabindex="-1"></button><button type="button" class="lbi" id="bk-bowlish-p15" data-t="Bowlish" data-s="15 · Web banner" data-ar="1.6000" data-src="media/graphic/brand/bowlish/p15.webp" aria-label="Page 15, Web banner" tabindex="-1"></button><button type="button" class="lbi" id="bk-bowlish-p16" data-t="Bowlish" data-s="16 · Store front" data-ar="1.6000" data-src="media/graphic/brand/bowlish/p16.webp" aria-label="Page 16, Store front" tabindex="-1"></button><button type="button" class="lbi" id="bk-bowlish-p17" data-t="Bowlish" data-s="17 · Posters" data-ar="1.6000" data-src="media/graphic/brand/bowlish/p17.webp" aria-label="Page 17, Posters" tabindex="-1"></button><button type="button" class="lbi" id="bk-bowlish-p18" data-t="Bowlish" data-s="18 · Tape and stickers" data-ar="1.6000" data-src="media/graphic/brand/bowlish/p18.webp" aria-label="Page 18, Tape and stickers" tabindex="-1"></button><button type="button" class="lbi" id="bk-bowlish-p19" data-t="Bowlish" data-s="19 · Interior and delivery" data-ar="1.6000" data-src="media/graphic/brand/bowlish/p19.webp" aria-label="Page 19, Interior and delivery" tabindex="-1"></button><button type="button" class="lbi" id="bk-bowlish-p20" data-t="Bowlish" data-s="20 · Thank you" data-ar="1.6000" data-src="media/graphic/brand/bowlish/p20.webp" aria-label="Page 20, Thank you" tabindex="-1"></button></div>
+    </article><article class="bc" data-r data-lbg>
+      <button type="button" class="bc-c" data-open="bk-toffe-p01" aria-label="Open the TOFFÉ brand identity, 22 slides">
+        <div class="ph img"><img src="media/graphic/brand/toffe/cover.webp" alt="TOFFÉ brand overview: logo, colours, type and mockups" loading="lazy" decoding="async"></div>
+        <span class="bc-go">View 22 slides →</span>
+      </button>
+      <div class="bc-m"><img class="bc-l" src="media/graphic/brand/toffe/logo.png" alt="TOFFÉ" style="height:46px" loading="lazy" decoding="async"><span class="mono">Coffee and bakery · 22 slides</span></div>
+      <div hidden><button type="button" class="lbi" id="bk-toffe-p01" data-t="TOFFÉ" data-s="01 · Hero" data-ar="1.6000" data-src="media/graphic/brand/toffe/p01.webp" aria-label="Page 1, Hero" tabindex="-1"></button><button type="button" class="lbi" id="bk-toffe-p02" data-t="TOFFÉ" data-s="02 · About" data-ar="1.6000" data-src="media/graphic/brand/toffe/p02.webp" aria-label="Page 2, About" tabindex="-1"></button><button type="button" class="lbi" id="bk-toffe-p03" data-t="TOFFÉ" data-s="03 · Primary logo" data-ar="1.6000" data-src="media/graphic/brand/toffe/p03.webp" aria-label="Page 3, Primary logo" tabindex="-1"></button><button type="button" class="lbi" id="bk-toffe-p04" data-t="TOFFÉ" data-s="04 · Logo on colour" data-ar="1.6000" data-src="media/graphic/brand/toffe/p04.webp" aria-label="Page 4, Logo on colour" tabindex="-1"></button><button type="button" class="lbi" id="bk-toffe-p05" data-t="TOFFÉ" data-s="05 · Colours" data-ar="1.6000" data-src="media/graphic/brand/toffe/p05.webp" aria-label="Page 5, Colours" tabindex="-1"></button><button type="button" class="lbi" id="bk-toffe-p06" data-t="TOFFÉ" data-s="06 · Typography" data-ar="1.6000" data-src="media/graphic/brand/toffe/p06.webp" aria-label="Page 6, Typography" tabindex="-1"></button><button type="button" class="lbi" id="bk-toffe-p07" data-t="TOFFÉ" data-s="07 · Doodle icons" data-ar="1.6000" data-src="media/graphic/brand/toffe/p07.webp" aria-label="Page 7, Doodle icons" tabindex="-1"></button><button type="button" class="lbi" id="bk-toffe-p08" data-t="TOFFÉ" data-s="08 · Pattern" data-ar="1.6000" data-src="media/graphic/brand/toffe/p08.webp" aria-label="Page 8, Pattern" tabindex="-1"></button><button type="button" class="lbi" id="bk-toffe-p09" data-t="TOFFÉ" data-s="09 · TF badge" data-ar="1.6000" data-src="media/graphic/brand/toffe/p09.webp" aria-label="Page 9, TF badge" tabindex="-1"></button><button type="button" class="lbi" id="bk-toffe-p10" data-t="TOFFÉ" data-s="10 · Shop awning" data-ar="1.6000" data-src="media/graphic/brand/toffe/p10.webp" aria-label="Page 10, Shop awning" tabindex="-1"></button><button type="button" class="lbi" id="bk-toffe-p11" data-t="TOFFÉ" data-s="11 · Cup carrier" data-ar="1.6000" data-src="media/graphic/brand/toffe/p11.webp" aria-label="Page 11, Cup carrier" tabindex="-1"></button><button type="button" class="lbi" id="bk-toffe-p12" data-t="TOFFÉ" data-s="12 · Pastry box" data-ar="1.6000" data-src="media/graphic/brand/toffe/p12.webp" aria-label="Page 12, Pastry box" tabindex="-1"></button><button type="button" class="lbi" id="bk-toffe-p13" data-t="TOFFÉ" data-s="13 · Paper bag" data-ar="1.6000" data-src="media/graphic/brand/toffe/p13.webp" aria-label="Page 13, Paper bag" tabindex="-1"></button><button type="button" class="lbi" id="bk-toffe-p14" data-t="TOFFÉ" data-s="14 · Uniform" data-ar="1.6000" data-src="media/graphic/brand/toffe/p14.webp" aria-label="Page 14, Uniform" tabindex="-1"></button><button type="button" class="lbi" id="bk-toffe-p15" data-t="TOFFÉ" data-s="15 · Cards" data-ar="1.6000" data-src="media/graphic/brand/toffe/p15.webp" aria-label="Page 15, Cards" tabindex="-1"></button><button type="button" class="lbi" id="bk-toffe-p16" data-t="TOFFÉ" data-s="16 · Cups" data-ar="1.6000" data-src="media/graphic/brand/toffe/p16.webp" aria-label="Page 16, Cups" tabindex="-1"></button><button type="button" class="lbi" id="bk-toffe-p17" data-t="TOFFÉ" data-s="17 · Instagram posts" data-ar="1.6000" data-src="media/graphic/brand/toffe/p17.webp" aria-label="Page 17, Instagram posts" tabindex="-1"></button><button type="button" class="lbi" id="bk-toffe-p18" data-t="TOFFÉ" data-s="18 · Wrapping paper" data-ar="1.6000" data-src="media/graphic/brand/toffe/p18.webp" aria-label="Page 18, Wrapping paper" tabindex="-1"></button><button type="button" class="lbi" id="bk-toffe-p19" data-t="TOFFÉ" data-s="19 · A-board sign" data-ar="1.6000" data-src="media/graphic/brand/toffe/p19.webp" aria-label="Page 19, A-board sign" tabindex="-1"></button><button type="button" class="lbi" id="bk-toffe-p20" data-t="TOFFÉ" data-s="20 · Stickers" data-ar="1.6000" data-src="media/graphic/brand/toffe/p20.webp" aria-label="Page 20, Stickers" tabindex="-1"></button><button type="button" class="lbi" id="bk-toffe-p21" data-t="TOFFÉ" data-s="21 · Menu" data-ar="1.6000" data-src="media/graphic/brand/toffe/p21.webp" aria-label="Page 21, Menu" tabindex="-1"></button><button type="button" class="lbi" id="bk-toffe-p22" data-t="TOFFÉ" data-s="22 · Thank you" data-ar="1.6000" data-src="media/graphic/brand/toffe/p22.webp" aria-label="Page 22, Thank you" tabindex="-1"></button></div>
+    </article><article class="bc" data-r data-lbg>
+      <button type="button" class="bc-c" data-open="bk-sowra-p01" aria-label="Open the sowra brand identity, 16 slides">
+        <div class="ph img"><img src="media/graphic/brand/sowra/cover.webp" alt="sowra brand overview: logo, colours, type and mockups" loading="lazy" decoding="async"></div>
+        <span class="bc-go">View 16 slides →</span>
+      </button>
+      <div class="bc-m"><img class="bc-l" src="media/graphic/brand/sowra/logo.png" alt="sowra" style="height:34px" loading="lazy" decoding="async"><span class="mono">Agriculture · 16 slides</span></div>
+      <div hidden><button type="button" class="lbi" id="bk-sowra-p01" data-t="sowra" data-s="01 · Cover" data-ar="0.8000" data-src="media/graphic/brand/sowra/p01.webp" aria-label="Page 1, Cover" tabindex="-1"></button><button type="button" class="lbi" id="bk-sowra-p02" data-t="sowra" data-s="02 · Hero" data-ar="0.8000" data-src="media/graphic/brand/sowra/p02.webp" aria-label="Page 2, Hero" tabindex="-1"></button><button type="button" class="lbi" id="bk-sowra-p03" data-t="sowra" data-s="03 · Farmer" data-ar="0.8000" data-src="media/graphic/brand/sowra/p03.webp" aria-label="Page 3, Farmer" tabindex="-1"></button><button type="button" class="lbi" id="bk-sowra-p04" data-t="sowra" data-s="04 · Logo in the field" data-ar="0.8000" data-src="media/graphic/brand/sowra/p04.webp" aria-label="Page 4, Logo in the field" tabindex="-1"></button><button type="button" class="lbi" id="bk-sowra-p05" data-t="sowra" data-s="05 · Primary logo" data-ar="0.8000" data-src="media/graphic/brand/sowra/p05.webp" aria-label="Page 5, Primary logo" tabindex="-1"></button><button type="button" class="lbi" id="bk-sowra-p06" data-t="sowra" data-s="06 · The idea" data-ar="0.8000" data-src="media/graphic/brand/sowra/p06.webp" aria-label="Page 6, The idea" tabindex="-1"></button><button type="button" class="lbi" id="bk-sowra-p07" data-t="sowra" data-s="07 · Colours" data-ar="0.8000" data-src="media/graphic/brand/sowra/p07.webp" aria-label="Page 7, Colours" tabindex="-1"></button><button type="button" class="lbi" id="bk-sowra-p08" data-t="sowra" data-s="08 · Typeface" data-ar="0.8000" data-src="media/graphic/brand/sowra/p08.webp" aria-label="Page 8, Typeface" tabindex="-1"></button><button type="button" class="lbi" id="bk-sowra-p09" data-t="sowra" data-s="09 · The field" data-ar="0.8000" data-src="media/graphic/brand/sowra/p09.webp" aria-label="Page 9, The field" tabindex="-1"></button><button type="button" class="lbi" id="bk-sowra-p10" data-t="sowra" data-s="10 · Tote bag" data-ar="0.8000" data-src="media/graphic/brand/sowra/p10.webp" aria-label="Page 10, Tote bag" tabindex="-1"></button><button type="button" class="lbi" id="bk-sowra-p11" data-t="sowra" data-s="11 · Billboard" data-ar="0.8000" data-src="media/graphic/brand/sowra/p11.webp" aria-label="Page 11, Billboard" tabindex="-1"></button><button type="button" class="lbi" id="bk-sowra-p12" data-t="sowra" data-s="12 · Business card" data-ar="0.8000" data-src="media/graphic/brand/sowra/p12.webp" aria-label="Page 12, Business card" tabindex="-1"></button><button type="button" class="lbi" id="bk-sowra-p13" data-t="sowra" data-s="13 · Seed sacks" data-ar="0.8000" data-src="media/graphic/brand/sowra/p13.webp" aria-label="Page 13, Seed sacks" tabindex="-1"></button><button type="button" class="lbi" id="bk-sowra-p14" data-t="sowra" data-s="14 · Cap" data-ar="0.8000" data-src="media/graphic/brand/sowra/p14.webp" aria-label="Page 14, Cap" tabindex="-1"></button><button type="button" class="lbi" id="bk-sowra-p15" data-t="sowra" data-s="15 · Nursery tags" data-ar="0.8000" data-src="media/graphic/brand/sowra/p15.webp" aria-label="Page 15, Nursery tags" tabindex="-1"></button><button type="button" class="lbi" id="bk-sowra-p16" data-t="sowra" data-s="16 · Grown with you" data-ar="0.8000" data-src="media/graphic/brand/sowra/p16.webp" aria-label="Page 16, Grown with you" tabindex="-1"></button></div>
+    </article></div>
+  </div>
+  <div class="ss">
+    <div class="ssh" id="g-print" data-r><span class="k mono">03</span><h2>Print</h2><p>Brochures, menus and booklets: anything that gets printed and handed over.</p><span class="n mono">3 pieces</span></div>
+    <div class="print pm" data-lbg>
+      <div data-r><button type="button" class="pr-open" data-open="pr-sowra-0" aria-label="Open the sowra brochure"><div class="spread"><div class="ph img" style="aspect-ratio:794/1123"><img src="media/graphic/print/sowra/p01.webp" alt="" loading="lazy" decoding="async"></div><div class="ph img" style="aspect-ratio:794/1123"><img src="media/graphic/print/sowra/p03.webp" alt="" loading="lazy" decoding="async"></div></div></button>
+        <div class="thumbs"><button type="button" class="lbi" id="pr-sowra-0" data-t="sowra" data-s="Cover" data-ar="0.7070" data-src="media/graphic/print/sowra/p01.webp" aria-label="Open sowra, Cover"><div class="ph img" style="aspect-ratio:794/1123"><img src="media/graphic/print/sowra/p01.webp" alt="sowra, Cover" loading="lazy" decoding="async"></div></button><button type="button" class="lbi" id="pr-sowra-1" data-t="sowra" data-s="About" data-ar="0.7070" data-src="media/graphic/print/sowra/p02.webp" aria-label="Open sowra, About"><div class="ph img" style="aspect-ratio:794/1123"><img src="media/graphic/print/sowra/p02.webp" alt="sowra, About" loading="lazy" decoding="async"></div></button><button type="button" class="lbi" id="pr-sowra-2" data-t="sowra" data-s="The idea" data-ar="0.7070" data-src="media/graphic/print/sowra/p03.webp" aria-label="Open sowra, The idea"><div class="ph img" style="aspect-ratio:794/1123"><img src="media/graphic/print/sowra/p03.webp" alt="sowra, The idea" loading="lazy" decoding="async"></div></button><button type="button" class="lbi" id="pr-sowra-3" data-t="sowra" data-s="What we do" data-ar="0.7070" data-src="media/graphic/print/sowra/p04.webp" aria-label="Open sowra, What we do"><div class="ph img" style="aspect-ratio:794/1123"><img src="media/graphic/print/sowra/p04.webp" alt="sowra, What we do" loading="lazy" decoding="async"></div></button><button type="button" class="lbi" id="pr-sowra-4" data-t="sowra" data-s="How we work" data-ar="0.7070" data-src="media/graphic/print/sowra/p05.webp" aria-label="Open sowra, How we work"><div class="ph img" style="aspect-ratio:794/1123"><img src="media/graphic/print/sowra/p05.webp" alt="sowra, How we work" loading="lazy" decoding="async"></div></button><button type="button" class="lbi" id="pr-sowra-5" data-t="sowra" data-s="Through the season" data-ar="0.7070" data-src="media/graphic/print/sowra/p06.webp" aria-label="Open sowra, Through the season"><div class="ph img" style="aspect-ratio:794/1123"><img src="media/graphic/print/sowra/p06.webp" alt="sowra, Through the season" loading="lazy" decoding="async"></div></button><button type="button" class="lbi" id="pr-sowra-6" data-t="sowra" data-s="Our range" data-ar="0.7070" data-src="media/graphic/print/sowra/p07.webp" aria-label="Open sowra, Our range"><div class="ph img" style="aspect-ratio:794/1123"><img src="media/graphic/print/sowra/p07.webp" alt="sowra, Our range" loading="lazy" decoding="async"></div></button><button type="button" class="lbi" id="pr-sowra-7" data-t="sowra" data-s="Back cover" data-ar="0.7070" data-src="media/graphic/print/sowra/p08.webp" aria-label="Open sowra, Back cover"><div class="ph img" style="aspect-ratio:794/1123"><img src="media/graphic/print/sowra/p08.webp" alt="sowra, Back cover" loading="lazy" decoding="async"></div></button></div></div>
+      <div data-r><h3>sowra</h3><p>An 8-page company profile for an agriculture brand: who they are, the idea behind the mark, their services, how they work with a farmer through the season, and their range.</p><dl class="dl"><div><dt>Format</dt><dd>A4 portrait, 8 pages</dd></div><div><dt>Made</dt><dd>Layout, copy, photo edit, print PDF</dd></div><div><dt>Brand</dt><dd>sowra, own spec brand</dd></div></dl></div>
+    </div><div class="print pm" data-lbg>
+      <div data-r><button type="button" class="pr-open" data-open="pr-bowlish-0" aria-label="Open the Bowlish brochure"><div class="spread land"><div class="ph img" style="aspect-ratio:1123/794"><img src="media/graphic/print/bowlish/out.webp" alt="" loading="lazy" decoding="async"></div></div></button>
+        <div class="thumbs two"><button type="button" class="lbi" id="pr-bowlish-0" data-t="Bowlish" data-s="Outside" data-ar="1.4144" data-src="media/graphic/print/bowlish/out.webp" aria-label="Open Bowlish, Outside"><div class="ph img" style="aspect-ratio:1123/794"><img src="media/graphic/print/bowlish/out.webp" alt="Bowlish, Outside" loading="lazy" decoding="async"></div></button><button type="button" class="lbi" id="pr-bowlish-1" data-t="Bowlish" data-s="Inside" data-ar="1.4144" data-src="media/graphic/print/bowlish/in.webp" aria-label="Open Bowlish, Inside"><div class="ph img" style="aspect-ratio:1123/794"><img src="media/graphic/print/bowlish/in.webp" alt="Bowlish, Inside" loading="lazy" decoding="async"></div></button></div></div>
+      <div data-r><h3>Bowlish</h3><p>A tri-fold takeaway menu for a healthy-bowl brand: build-your-own steps and the store details outside, three menu panels inside with veg and non-veg marks and prices.</p><dl class="dl"><div><dt>Format</dt><dd>A4 landscape, tri-fold, 2 sides</dd></div><div><dt>Made</dt><dd>Layout, menu copy, print PDF</dd></div><div><dt>Brand</dt><dd>Bowlish, own spec brand</dd></div></dl></div>
+    </div>
+    <div class="print pm" data-lbg>
+      <div data-r><button type="button" class="lbi" data-t="V-Shine Studio" data-s="Cover" data-ar="1.4204" data-src="media/graphic/vshine-01.webp" aria-label="Open the V-Shine Studio menu cover"><div class="spread"><div class="ph img" style="aspect-ratio:1588/1118"><img src="media/graphic/vshine-01.webp" alt="V-Shine Studio service menu cover" loading="lazy" decoding="async"></div></div></button>
+        <div class="thumbs"><button type="button" class="lbi" data-t="V-Shine Studio" data-s="Page 3" data-ar="1.4204" data-src="media/graphic/vshine-03.webp" aria-label="Open page 3"><div class="ph img" style="aspect-ratio:1588/1118"><img src="media/graphic/vshine-03.webp" alt="V-Shine menu, page 3" loading="lazy" decoding="async"></div></button><button type="button" class="lbi" data-t="V-Shine Studio" data-s="Page 4" data-ar="1.4204" data-src="media/graphic/vshine-04.webp" aria-label="Open page 4"><div class="ph img" style="aspect-ratio:1588/1118"><img src="media/graphic/vshine-04.webp" alt="V-Shine menu, page 4" loading="lazy" decoding="async"></div></button><button type="button" class="lbi" data-t="V-Shine Studio" data-s="Page 5" data-ar="1.4204" data-src="media/graphic/vshine-05.webp" aria-label="Open page 5"><div class="ph img" style="aspect-ratio:1588/1118"><img src="media/graphic/vshine-05.webp" alt="V-Shine menu, page 5" loading="lazy" decoding="async"></div></button><button type="button" class="lbi" data-t="V-Shine Studio" data-s="Page 6" data-ar="1.4204" data-src="media/graphic/vshine-06.webp" aria-label="Open page 6"><div class="ph img" style="aspect-ratio:1588/1118"><img src="media/graphic/vshine-06.webp" alt="V-Shine menu, page 6" loading="lazy" decoding="async"></div></button><button type="button" class="lbi" data-t="V-Shine Studio" data-s="Page 7" data-ar="1.4204" data-src="media/graphic/vshine-07.webp" aria-label="Open page 7"><div class="ph img" style="aspect-ratio:1588/1118"><img src="media/graphic/vshine-07.webp" alt="V-Shine menu, page 7" loading="lazy" decoding="async"></div></button><button type="button" class="lbi" data-t="V-Shine Studio" data-s="Page 8" data-ar="1.4204" data-src="media/graphic/vshine-08.webp" aria-label="Open page 8"><div class="ph img" style="aspect-ratio:1588/1118"><img src="media/graphic/vshine-08.webp" alt="V-Shine menu, page 8" loading="lazy" decoding="async"></div></button><button type="button" class="lbi" data-t="V-Shine Studio" data-s="Page 9" data-ar="1.4204" data-src="media/graphic/vshine-09.webp" aria-label="Open page 9"><div class="ph img" style="aspect-ratio:1588/1118"><img src="media/graphic/vshine-09.webp" alt="V-Shine menu, page 9" loading="lazy" decoding="async"></div></button><button type="button" class="lbi" data-t="V-Shine Studio" data-s="Page 10" data-ar="1.4204" data-src="media/graphic/vshine-10.webp" aria-label="Open page 10"><div class="ph img" style="aspect-ratio:1588/1118"><img src="media/graphic/vshine-10.webp" alt="V-Shine menu, page 10" loading="lazy" decoding="async"></div></button><button type="button" class="lbi" data-t="V-Shine Studio" data-s="Page 11" data-ar="1.4204" data-src="media/graphic/vshine-11.webp" aria-label="Open page 11"><div class="ph img" style="aspect-ratio:1588/1118"><img src="media/graphic/vshine-11.webp" alt="V-Shine menu, page 11" loading="lazy" decoding="async"></div></button><button type="button" class="lbi" data-t="V-Shine Studio" data-s="Page 13" data-ar="1.4204" data-src="media/graphic/vshine-13.webp" aria-label="Open page 13"><div class="ph img" style="aspect-ratio:1588/1118"><img src="media/graphic/vshine-13.webp" alt="V-Shine menu, page 13" loading="lazy" decoding="async"></div></button><button type="button" class="lbi" data-t="V-Shine Studio" data-s="Page 14" data-ar="1.4204" data-src="media/graphic/vshine-14.webp" aria-label="Open page 14"><div class="ph img" style="aspect-ratio:1588/1118"><img src="media/graphic/vshine-14.webp" alt="V-Shine menu, page 14" loading="lazy" decoding="async"></div></button><button type="button" class="lbi" data-t="V-Shine Studio" data-s="Page 15" data-ar="1.4204" data-src="media/graphic/vshine-15.webp" aria-label="Open page 15"><div class="ph img" style="aspect-ratio:1588/1118"><img src="media/graphic/vshine-15.webp" alt="V-Shine menu, page 15" loading="lazy" decoding="async"></div></button><button type="button" class="lbi" data-t="V-Shine Studio" data-s="Page 16" data-ar="1.4204" data-src="media/graphic/vshine-16.webp" aria-label="Open page 16"><div class="ph img" style="aspect-ratio:1588/1118"><img src="media/graphic/vshine-16.webp" alt="V-Shine menu, page 16" loading="lazy" decoding="async"></div></button></div></div>
+      <div data-r><h3>V-Shine Studio</h3><p>A 16-page service menu for a beauty studio and academy in Tumakuru: arches, lavender and gold, every price set in clean tables.</p><dl class="dl"><div><dt>Format</dt><dd>A5 booklet, 16 pages</dd></div><div><dt>Made</dt><dd>Layout, photo edit, print files</dd></div><div><dt>Client</dt><dd>V-Shine Studio, Tumakuru</dd></div></dl></div>
+    </div>
+  </div>
+  <div class="ss">
+    <div class="ssh" id="g-shoots" data-r><span class="k mono">04</span><h2>Photo shoots</h2><p>Studio shoots for catalogues and online stores: styling, light and framing kept the same across every look.</p><span class="n mono">5 photos</span></div>
+    <div class="aps" data-lbg>
+      <div class="aps-h" data-r><h3>Apsaraa collection, Sindhu Reddy</h3><p>Mid-close frames from a 27-look lehenga shoot for an online store.</p></div>
+      <div class="aps-g">
+<div data-r><button type="button" class="lbi" data-t="Arina" data-s="Apsaraa, Sindhu Reddy" data-ar="0.8000" data-src="media/graphic/apsaraa/00-ahrina-mid.webp" aria-label="Open Arina"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/apsaraa/00-ahrina-mid.webp" alt="Arina, Apsaraa, Sindhu Reddy" loading="lazy" decoding="async"></div></button><div class="cap"><b>Arina</b><span>Apsaraa, Sindhu Reddy</span></div></div><div data-r><button type="button" class="lbi" data-t="Yashvi" data-s="Apsaraa, Sindhu Reddy" data-ar="0.8000" data-src="media/graphic/apsaraa/01-yashvi-mid.webp" aria-label="Open Yashvi"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/apsaraa/01-yashvi-mid.webp" alt="Yashvi, Apsaraa, Sindhu Reddy" loading="lazy" decoding="async"></div></button><div class="cap"><b>Yashvi</b><span>Apsaraa, Sindhu Reddy</span></div></div><div data-r><button type="button" class="lbi" data-t="Tanvika" data-s="Apsaraa, Sindhu Reddy" data-ar="0.8000" data-src="media/graphic/apsaraa/02-aarini-mid.webp" aria-label="Open Tanvika"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/apsaraa/02-aarini-mid.webp" alt="Tanvika, Apsaraa, Sindhu Reddy" loading="lazy" decoding="async"></div></button><div class="cap"><b>Tanvika</b><span>Apsaraa, Sindhu Reddy</span></div></div><div data-r><button type="button" class="lbi" data-t="Aarhavi" data-s="Apsaraa, Sindhu Reddy" data-ar="0.8000" data-src="media/graphic/apsaraa/03-aarhavi-mid.webp" aria-label="Open Aarhavi"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/apsaraa/03-aarhavi-mid.webp" alt="Aarhavi, Apsaraa, Sindhu Reddy" loading="lazy" decoding="async"></div></button><div class="cap"><b>Aarhavi</b><span>Apsaraa, Sindhu Reddy</span></div></div><div data-r><button type="button" class="lbi" data-t="Meher" data-s="Apsaraa, Sindhu Reddy" data-ar="0.8000" data-src="media/graphic/apsaraa/04-meher-mid.webp" aria-label="Open Meher"><div class="ph img" style="aspect-ratio:4/5"><img src="media/graphic/apsaraa/04-meher-mid.webp" alt="Meher, Apsaraa, Sindhu Reddy" loading="lazy" decoding="async"></div></button><div class="cap"><b>Meher</b><span>Apsaraa, Sindhu Reddy</span></div></div>
+      </div>
+    </div>
+  </div>
+  <a class="next" href="#video"><span><small>Next</small><b>Video editing</b></span><span class="circ" aria-hidden="true">→</span></a>
+</div>
+</section>
+<section class="view" id="v-video" data-view="video" aria-labelledby="v-h" hidden>
+<div class="vh"><div class="fx fx-soft" aria-hidden="true"><i class="b b1"></i><i class="b b2"></i><i class="b b3"></i><i class="grain"></i></div>
+  <div class="wrap">
+    <a class="crumb mono" href="#home">← All work</a>
+    <h1 id="v-h">Video editing</h1>
+    <div class="vh-row"><div><p class="lede">Ad films, motion graphics, reels and 3D product films. Edit, motion, sound and colour.</p><p class="used"><span class="mono">Made with</span><span class="tl"><b>Pr</b>Premiere Pro</span><span class="tl"><b>Ae</b>After Effects</span><span class="tl"><b>Au</b>Audition</span><span class="tl"><b>Me</b>Media Encoder</span><span class="tl"><b class="dot"></b>Blender</span></p></div><nav class="toc" aria-label="On this page"><button type="button" data-jump="v-motion">Motion graphics<sup>4</sup></button><button type="button" data-jump="v-edits">Video editing<sup>5</sup></button><button type="button" data-jump="v-3d">3D product films<sup>2</sup></button></nav></div>
+  </div>
+</div>
+<div class="wrap">
+  <div class="ss">
+<div data-r class="feat"><button type="button" class="vt" data-t="Rapido" data-s="Spec ad film, animated map" data-ar="1.7778" data-src="media/video/rapido.mp4" data-pt="45.0" aria-label="Play Rapido"><div class="ph" style="aspect-ratio:16/9"><img src="media/video/rapido.webp" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><span class="play" aria-hidden="true"></span><span class="dur">1:00</span></div></button><div class="cap"><b>Rapido</b><span class="mono">Spec ad film, animated map  1:00</span></div></div>
+  </div>
+  <div class="ss">
+    <div class="ssh" id="v-motion" data-r><span class="k mono">01</span><h2>Motion graphics</h2><p>Explainers and ads built frame by frame, with voice-over and music timed to every move.</p><span class="n mono">4 films</span></div>
+    <div class="eq">
+<div data-r><button type="button" class="vt" data-t="Google Gemini" data-s="Spec explainer, motion graphics" data-ar="1.7778" data-src="media/video/gemini.mp4" data-pt="30.0" aria-label="Play Google Gemini"><div class="ph" style="aspect-ratio:16/9"><img src="media/video/gemini.webp" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><span class="play" aria-hidden="true"></span><span class="dur">0:40</span></div></button><div class="cap"><b>Google Gemini</b><span>Spec explainer, motion graphics</span></div></div><div data-r><button type="button" class="vt" data-t="Ownly: The Bill" data-s="Spec reel, motion graphics" data-ar="0.5625" data-src="media/video/ownly.mp4" data-pt="9.75" aria-label="Play Ownly: The Bill"><div class="ph" style="aspect-ratio:9/16"><img src="media/video/ownly.webp" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><span class="play" aria-hidden="true"></span><span class="dur">0:33</span></div></button><div class="cap"><b>Ownly: The Bill</b><span>Spec reel, motion graphics</span></div></div><div data-r><button type="button" class="vt" data-t="7 steps to the white coat" data-s="Explainer reel, MBBS consultancy" data-ar="0.5625" data-src="media/video/steps.mp4" data-pt="25.9" aria-label="Play 7 steps to the white coat"><div class="ph" style="aspect-ratio:9/16"><img src="media/video/steps.webp" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><span class="play" aria-hidden="true"></span><span class="dur">0:58</span></div></button><div class="cap"><b>7 steps to the white coat</b><span>Explainer reel, MBBS consultancy</span></div></div><div data-r><button type="button" class="vt" data-t="The minimum due trap" data-s="Finance explainer, After Effects" data-ar="0.5625" data-src="media/video/mindue.mp4" data-pt="48.1" aria-label="Play The minimum due trap"><div class="ph" style="aspect-ratio:9/16"><img src="media/video/mindue.webp" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><span class="play" aria-hidden="true"></span><span class="dur">1:04</span></div></button><div class="cap"><b>The minimum due trap</b><span>Finance explainer, After Effects</span></div></div>
+    </div>
+  </div>
+  <div class="ss">
+    <div class="ssh" id="v-edits" data-r><span class="k mono">02</span><h2>Video editing</h2><p>Reels, testimonials and TV-style ads cut for sound-on and sound-off viewing.</p><span class="n mono">5 films</span></div>
+    <div class="row5">
+<div data-r><button type="button" class="vt" data-t="Sarthak&#x27;s story" data-s="Student testimonial, MBBS consultancy" data-ar="0.5625" data-src="media/video/sarthak.mp4" data-pt="1.7" aria-label="Play Sarthak&#x27;s story"><div class="ph" style="aspect-ratio:9/16"><img src="media/video/sarthak.webp" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><span class="play" aria-hidden="true"></span><span class="dur">0:56</span></div></button><div class="cap"><b>Sarthak&#x27;s story</b><span>Student testimonial, MBBS consultancy</span></div></div><div data-r><button type="button" class="vt" data-t="Free health camp" data-s="Event reel, MBBS consultancy" data-ar="0.5625" data-src="media/video/camp.mp4" data-pt="1.45" aria-label="Play Free health camp"><div class="ph" style="aspect-ratio:9/16"><img src="media/video/camp.webp" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><span class="play" aria-hidden="true"></span><span class="dur">0:48</span></div></button><div class="cap"><b>Free health camp</b><span>Event reel, MBBS consultancy</span></div></div><div data-r><button type="button" class="vt" data-t="Fees, explained in Marathi" data-s="Talking-head reel, MBBS consultancy" data-ar="0.5625" data-src="media/video/marathi.mp4" data-pt="6.55" aria-label="Play Fees, explained in Marathi"><div class="ph" style="aspect-ratio:9/16"><img src="media/video/marathi.webp" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><span class="play" aria-hidden="true"></span><span class="dur">0:44</span></div></button><div class="cap"><b>Fees, explained in Marathi</b><span>Talking-head reel, MBBS consultancy</span></div></div><div data-r><button type="button" class="vt" data-t="The saas-bahu ad" data-s="Rigi TV, ad edit" data-ar="0.5625" data-src="media/video/rigi.mp4" data-pt="16.8" aria-label="Play The saas-bahu ad"><div class="ph" style="aspect-ratio:9/16"><img src="media/video/rigi.webp" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><span class="play" aria-hidden="true"></span><span class="dur">1:52</span></div></button><div class="cap"><b>The saas-bahu ad</b><span>Rigi TV, ad edit</span></div></div><div data-r><button type="button" class="vt" data-t="The arrival" data-s="Car reel, speed ramps and grade" data-ar="0.5625" data-src="media/video/ranju.mp4" data-pt="9.0" aria-label="Play The arrival"><div class="ph" style="aspect-ratio:9/16"><img src="media/video/ranju.webp" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><span class="play" aria-hidden="true"></span><span class="dur">0:15</span></div></button><div class="cap"><b>The arrival</b><span>Car reel, speed ramps and grade</span></div></div>
+    </div>
+  </div>
+  <div class="ss">
+    <div class="ssh" id="v-3d" data-r><span class="k mono">03</span><h2>3D product films</h2><p>Product films modelled, lit and rendered in Blender.</p><span class="n mono">2 films</span></div>
+    <div class="d3">
+<div data-r><button type="button" class="vt" data-t="iPhone 13 mini" data-s="3D product film, spec" data-ar="0.5625" data-src="media/video/iphone.mp4" data-pt="4.5" aria-label="Play iPhone 13 mini"><div class="ph" style="aspect-ratio:9/16"><img src="media/video/iphone.webp" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><span class="play" aria-hidden="true"></span><span class="dur">0:30</span></div></button><div class="cap"><b>iPhone 13 mini</b><span>3D product film, spec</span></div></div><div data-r><button type="button" class="vt" data-t="Air Stride" data-s="3D sneaker spot, spec" data-ar="0.5625" data-src="media/video/nike.mp4" data-pt="5.4" aria-label="Play Air Stride"><div class="ph" style="aspect-ratio:9/16"><img src="media/video/nike.webp" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><span class="play" aria-hidden="true"></span><span class="dur">0:12</span></div></button><div class="cap"><b>Air Stride</b><span>3D sneaker spot, spec</span></div></div>
+      <div data-r class="d3t"><h3>Built from scratch in Blender</h3><p>Both products are modelled from simple shapes, not bought or AI models. Light, camera moves and cuts are planned shot by shot, then rendered and finished with type.</p><dl class="dl"><div><dt>Made</dt><dd>Model, light, camera moves, render</dd></div><div><dt>Tool</dt><dd>Blender</dd></div><div><dt>Type</dt><dd>Spec films, not made for the brands</dd></div></dl></div>
+    </div>
+  </div>
+  <a class="next" href="#web"><span><small>Next</small><b>Web design</b></span><span class="circ" aria-hidden="true">→</span></a>
+</div>
+</section>
+<section class="view" id="v-web" data-view="web" aria-labelledby="w-h" hidden>
+<div class="vh"><div class="fx fx-soft" aria-hidden="true"><i class="b b1"></i><i class="b b2"></i><i class="b b3"></i><i class="grain"></i></div>
+  <div class="wrap">
+    <a class="crumb mono" href="#home">← All work</a>
+    <h1 id="w-h">Web design</h1>
+    <div class="vh-row"><div><p class="lede">Business websites, online stores and web apps, designed and built to work well on a phone first.</p><p class="used"><span class="mono">Made with</span><span class="tl"><b>Ps</b>Photoshop</span><span class="tl"><b>Ai</b>Illustrator</span><span class="tl"><b class="dot"></b>Framer</span><span class="tl"><b class="dot"></b>Shopify</span></p></div><nav class="toc" aria-label="On this page"><button type="button" data-jump="w-sites">Websites<sup>5</sup></button><button type="button" data-jump="w-concepts">Concept sites<sup>8</sup></button><button type="button" data-jump="w-apps">Web app<sup>3</sup></button></nav></div>
+  </div>
+</div>
+<div class="wrap">
+  <div class="ss">
+    <div class="ssh" id="w-sites" data-r><span class="k mono">01</span><h2>Websites</h2><p>Client sites, an online store and a brand concept. Point at a screen to scroll the page.</p><span class="n mono">5 sites</span></div>
+    <div class="sites">
+    <article class="site">
+      <div data-r><a class="frame" href="https://medabroad.in" target="_blank" rel="noopener" aria-label="MedAbroad website"><div class="fbar"><span>medabroad.in</span></div><div class="scr"><img class="pg" src="media/web/medabroad.webp" alt="" loading="lazy"></div></a></div>
+      <div data-r><span class="k mono">01</span><h3>MedAbroad</h3><p>Website for an MBBS-abroad consultancy run by doctors: university pages, a doctor-mentor section and 15 guides for parents.</p><dl class="dl"><div><dt>Type</dt><dd>Consultancy website, 41 pages</dd></div><div><dt>Role</dt><dd>Design, build, SEO</dd></div><div><dt>Built with</dt><dd>Framer</dd></div></dl><br><a class="pill w" href="https://medabroad.in" target="_blank" rel="noopener">Visit medabroad.in <span class="ar">↗</span></a></div>
+    </article>
+    <article class="site">
+      <div data-r><a class="frame" href="https://www.vidyashekharinstitutions.in" target="_blank" rel="noopener" aria-label="Vidhya Shekhar Institutions website"><div class="fbar"><span>vidyashekharinstitutions.in</span></div><div class="scr"><img class="pg" src="media/web/vidhya.webp" alt="" loading="lazy"></div></a></div>
+      <div data-r><span class="k mono">02</span><h3>Vidhya Shekhar Institutions</h3><p>Colleges in Nelamangala teaching nursing, allied health, BBA, BCA, MBA and law, with an apply form on every page.</p><dl class="dl"><div><dt>Type</dt><dd>College website, 21 pages</dd></div><div><dt>Role</dt><dd>Design, build, SEO</dd></div><div><dt>Built with</dt><dd>HTML, CSS, JavaScript</dd></div></dl><br><a class="pill w" href="https://www.vidyashekharinstitutions.in" target="_blank" rel="noopener">Visit vidyashekharinstitutions.in <span class="ar">↗</span></a></div>
+    </article>
+    <article class="site">
+      <div data-r><a class="frame" href="#web" aria-label="Sindhu Reddy website"><div class="fbar"><span>sindhureddyofficial.com</span></div><div class="scr"><img class="pg" src="media/web/sindhu.webp" alt="" loading="lazy"></div></a></div>
+      <div data-r><span class="k mono">03</span><h3>Sindhu Reddy</h3><p>Homepage for a designer label&#x27;s online store: an expanding hero, quick view, size picker and custom sizing, fed by the live catalogue.</p><dl class="dl"><div><dt>Type</dt><dd>Online store homepage</dd></div><div><dt>Role</dt><dd>Design, build</dd></div><div><dt>Built with</dt><dd>Shopify</dd></div></dl></div>
+    </article>
+    <article class="site">
+      <div data-r><a class="frame" href="#web" aria-label="VS Global Study website"><div class="fbar"><span>vsglobalstudyconsultant.in</span></div><div class="scr"><img class="pg" src="media/web/vsg.webp" alt="" loading="lazy"></div></a></div>
+      <div data-r><span class="k mono">04</span><h3>VS Global Study</h3><p>Redesign for an MBBS-abroad consultancy run by doctors in Tumakuru and Bijapur: country guides, students&#x27; own photos and the full fee, line by line.</p><dl class="dl"><div><dt>Type</dt><dd>Consultancy website, redesign</dd></div><div><dt>Role</dt><dd>Design, build</dd></div><div><dt>Built with</dt><dd>HTML, CSS, JavaScript</dd></div></dl></div>
+    </article>
+    <article class="site">
+      <div data-r><a class="frame" href="#web" aria-label="Kairo website"><div class="fbar"><span>Kairo, concept</span></div><div class="scr"><img class="pg" src="media/web/kairo.webp" alt="" loading="lazy"></div></a></div>
+      <div data-r><span class="k mono">05</span><h3>Kairo</h3><p>Concept site for a fine-jewellery label: navy and white, a crossfading hero and collections on a strict four-column grid.</p><dl class="dl"><div><dt>Type</dt><dd>Brand website, concept</dd></div><div><dt>Role</dt><dd>Design, build</dd></div><div><dt>Built with</dt><dd>HTML, CSS, JavaScript</dd></div></dl></div>
+    </article>
+    </div>
+  </div>
+  <div class="ss">
+    <div class="ssh" id="w-concepts" data-r><span class="k mono">02</span><h2>Concept sites</h2><p>Self-initiated sites for different trades, each with its own type, colour and layout.</p><span class="n mono">8 sites</span></div>
+    <div class="g4 cg"><div data-r><a class="frame" href="#web" aria-label="Smoke + Salt, concept site"><div class="fbar"><span>Smoke + Salt</span></div><div class="scr"><img class="pg" src="media/web/demo-smokesalt.webp" alt="" loading="lazy"></div></a><div class="cap"><b>Smoke + Salt</b><span>Restaurant</span></div></div><div data-r><a class="frame" href="#web" aria-label="Soane Studio, concept site"><div class="fbar"><span>Soane Studio</span></div><div class="scr"><img class="pg" src="media/web/demo-soane.webp" alt="" loading="lazy"></div></a><div class="cap"><b>Soane Studio</b><span>Interior design</span></div></div><div data-r><a class="frame" href="#web" aria-label="Aerie, concept site"><div class="fbar"><span>Aerie</span></div><div class="scr"><img class="pg" src="media/web/demo-aerie.webp" alt="" loading="lazy"></div></a><div class="cap"><b>Aerie</b><span>Skincare store</span></div></div><div data-r><a class="frame" href="#web" aria-label="Quiet Hour, concept site"><div class="fbar"><span>Quiet Hour</span></div><div class="scr"><img class="pg" src="media/web/demo-quiethour.webp" alt="" loading="lazy"></div></a><div class="cap"><b>Quiet Hour</b><span>Wedding photography</span></div></div><div data-r><a class="frame" href="#web" aria-label="Lumin Dental, concept site"><div class="fbar"><span>Lumin Dental</span></div><div class="scr"><img class="pg" src="media/web/demo-lumin.webp" alt="" loading="lazy"></div></a><div class="cap"><b>Lumin Dental</b><span>Dental clinic</span></div></div><div data-r><a class="frame" href="#web" aria-label="PRIMAL, concept site"><div class="fbar"><span>PRIMAL</span></div><div class="scr"><img class="pg" src="media/web/demo-primal.webp" alt="" loading="lazy"></div></a><div class="cap"><b>PRIMAL</b><span>Gym and coaching</span></div></div><div data-r><a class="frame" href="#web" aria-label="Bailey + Rohe, concept site"><div class="fbar"><span>Bailey + Rohe</span></div><div class="scr"><img class="pg" src="media/web/demo-baileyrohe.webp" alt="" loading="lazy"></div></a><div class="cap"><b>Bailey + Rohe</b><span>Real-estate agency</span></div></div><div data-r><a class="frame" href="#web" aria-label="Drift, concept site"><div class="fbar"><span>Drift</span></div><div class="scr"><img class="pg" src="media/web/demo-drift.webp" alt="" loading="lazy"></div></a><div class="cap"><b>Drift</b><span>Software product</span></div></div></div>
+  </div>
+  <div class="ss" data-lbg>
+    <div class="ssh" id="w-apps" data-r><span class="k mono">03</span><h2>Web app</h2><p>A working marketplace, designed for a phone in the hand.</p><span class="n mono">3 apps</span></div>
+    <div class="app" data-r>
+      <div class="phone"><div class="scr"><video class="pgv" src="media/web/spickit-tracking.mp4" poster="media/web/spickit-tracking.webp" muted loop playsinline preload="metadata" aria-label="Spickit customer app, live tracking"></video></div></div>
+      <div><span class="k mono">Home-cleaning marketplace</span><h3>Spickit</h3><p>Book a cleaner in a few taps and watch them arrive on a live map. A second app lets cleaners take jobs, check in with a code and upload before and after photos, and an admin panel runs it all.</p><dl class="dl"><div><dt>Apps</dt><dd>Customer, cleaner, admin</dd></div><div><dt>Made</dt><dd>Brand, design, build</dd></div><div><dt>Built with</dt><dd>Node, Express, SQLite, live map</dd></div></dl></div>
+      <div class="app-b"><button type="button" class="lbi" data-t="Spickit" data-s="Customer app, cleaner app and admin panel" data-ar="1.2796" data-src="media/web/spickit-screens.webp" aria-label="Open all Spickit screens"><div class="ph img" style="aspect-ratio:2000/1563"><img src="media/web/spickit-screens.webp" alt="Spickit screens: customer app, cleaner app and admin panel" loading="lazy" decoding="async"></div></button>
+        <div class="cap"><b>All screens</b><span>Customer app, cleaner app and admin panel</span></div></div>
+    </div>
+  </div>
+  <a class="next" href="#ai"><span><small>Next</small><b>AI film making</b></span><span class="circ" aria-hidden="true">→</span></a>
+</div>
+</section>
+<section class="view" id="v-ai" data-view="ai" aria-labelledby="a-h" hidden>
+<div class="vh"><div class="fx fx-soft" aria-hidden="true"><i class="b b1"></i><i class="b b2"></i><i class="b b3"></i><i class="grain"></i></div>
+  <div class="wrap">
+    <a class="crumb mono" href="#home">← All work</a>
+    <h1 id="a-h">AI film making</h1>
+    <div class="vh-row"><div><p class="lede">Films, realistic photos and storyboards made with AI video and image models, planned shot by shot and finished by hand.</p><p class="used"><span class="mono">Made with</span><span class="tl"><b class="dot"></b>Google Flow (Veo)</span><span class="tl"><b class="dot"></b>Kling</span><span class="tl"><b class="dot"></b>Seedance</span><span class="tl"><b class="dot"></b>Midjourney</span><span class="tl"><b class="dot"></b>ElevenLabs</span><span class="tl"><b>Pr</b>Premiere Pro</span></p></div><nav class="toc" aria-label="On this page"><button type="button" data-jump="a-films">AI films<sup>3</sup></button><button type="button" data-jump="a-photos">AI photos<sup>8</sup></button><button type="button" data-jump="a-how">How I make them<sup>5</sup></button><button type="button" data-jump="a-board">Storyboards<sup>20</sup></button><button type="button" data-jump="a-tools">AI tools<sup>19</sup></button></nav></div>
+  </div>
+</div>
+<div class="wrap">
+  <div class="ss">
+    <div class="ssh" id="a-films" data-r><span class="k mono">01</span><h2>AI films</h2><p>Devotional films, ad films and explainers made with AI, from the first frame to the final mix.</p><span class="n mono">3 films</span></div>
+    <div class="ai4">
+      <div class="ai4f row4"><div data-r><button type="button" class="vt" data-t="Hanuman: Dhyana" data-s="AI devotional film" data-ar="0.5625" data-src="media/video/ai-dhyana.mp4" data-pt="26.0" aria-label="Play Hanuman: Dhyana"><div class="ph" style="aspect-ratio:9/16"><img src="media/video/ai-dhyana.webp" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><span class="play" aria-hidden="true"></span><span class="dur">0:33</span></div></button><div class="cap"><b>Hanuman: Dhyana</b><span>AI devotional film</span></div></div><div data-r><button type="button" class="vt" data-t="Only food" data-s="AI ad film for Ownly, spec" data-ar="0.5625" data-src="media/video/ai-onlyfood.mp4" data-pt="8.0" aria-label="Play Only food"><div class="ph" style="aspect-ratio:9/16"><img src="media/video/ai-onlyfood.webp" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><span class="play" aria-hidden="true"></span><span class="dur">0:46</span></div></button><div class="cap"><b>Only food</b><span>AI ad film for Ownly, spec</span></div></div><div data-r><button type="button" class="vt" data-t="4 checks before you go" data-s="AI presenter explainer, MBBS consultancy" data-ar="0.5625" data-src="media/video/ai-checks.mp4" data-pt="8.0" aria-label="Play 4 checks before you go"><div class="ph" style="aspect-ratio:9/16"><img src="media/video/ai-checks.webp" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><span class="play" aria-hidden="true"></span><span class="dur">0:55</span></div></button><div class="cap"><b>4 checks before you go</b><span>AI presenter explainer, MBBS consultancy</span></div></div></div>
+      <div data-r class="ait"><h3>Made with AI, finished by hand</h3><p>Each film starts as a script and a shot list. Frames are made and picked first, then animated, cut, scored and graded.</p><dl class="dl"><div><dt>Made</dt><dd>Script, frames, video, edit, sound</dd></div><div><dt>Video</dt><dd>Google Flow (Veo)</dd></div><div><dt>Finish</dt><dd>Premiere Pro, After Effects</dd></div></dl></div>
+    </div>
+  </div>
+  <div class="ss" data-lbg>
+    <div class="ssh" id="a-photos" data-r><span class="k mono">02</span><h2>Realistic AI photos</h2><p>Model, fashion and product photos made with AI that read like a real shoot: real skin, real light, real fabric.</p><span class="n mono">8 photos</span></div>
+    <div class="g4 aig">
+<div data-r><button type="button" class="lbi" data-t="Brown gown, close-up" data-s="AI catalogue photo, Sindhu Reddy" data-ar="0.7500" data-src="media/graphic/shoot-brown-close.webp" aria-label="Open Brown gown, close-up"><div class="ph img" style="aspect-ratio:3/4"><img src="media/graphic/shoot-brown-close.webp" alt="Brown gown, close-up, AI catalogue photo, Sindhu Reddy" loading="lazy" decoding="async"></div></button><div class="cap"><b>Brown gown, close-up</b><span>AI catalogue photo, Sindhu Reddy</span></div></div><div data-r><button type="button" class="lbi" data-t="Brown gown, twirl" data-s="AI catalogue photo, Sindhu Reddy" data-ar="0.7500" data-src="media/graphic/shoot-brown-twirl.webp" aria-label="Open Brown gown, twirl"><div class="ph img" style="aspect-ratio:3/4"><img src="media/graphic/shoot-brown-twirl.webp" alt="Brown gown, twirl, AI catalogue photo, Sindhu Reddy" loading="lazy" decoding="async"></div></button><div class="cap"><b>Brown gown, twirl</b><span>AI catalogue photo, Sindhu Reddy</span></div></div><div data-r><button type="button" class="lbi" data-t="Lehenga, Saesha" data-s="AI catalogue photo, Sindhu Reddy" data-ar="0.7500" data-src="media/graphic/shoot-lehenga-saesha.webp" aria-label="Open Lehenga, Saesha"><div class="ph img" style="aspect-ratio:3/4"><img src="media/graphic/shoot-lehenga-saesha.webp" alt="Lehenga, Saesha, AI catalogue photo, Sindhu Reddy" loading="lazy" decoding="async"></div></button><div class="cap"><b>Lehenga, Saesha</b><span>AI catalogue photo, Sindhu Reddy</span></div></div><div data-r><button type="button" class="lbi" data-t="Yellow kurta" data-s="AI model photo for reels" data-ar="0.7500" data-src="media/graphic/shoot-kurta-yellow.webp" aria-label="Open Yellow kurta"><div class="ph img" style="aspect-ratio:3/4"><img src="media/graphic/shoot-kurta-yellow.webp" alt="Yellow kurta, AI model photo for reels" loading="lazy" decoding="async"></div></button><div class="cap"><b>Yellow kurta</b><span>AI model photo for reels</span></div></div><div data-r><button type="button" class="lbi" data-t="Brown gown, seated" data-s="AI catalogue photo, Sindhu Reddy" data-ar="0.7500" data-src="media/graphic/shoot-brown-sit.webp" aria-label="Open Brown gown, seated"><div class="ph img" style="aspect-ratio:3/4"><img src="media/graphic/shoot-brown-sit.webp" alt="Brown gown, seated, AI catalogue photo, Sindhu Reddy" loading="lazy" decoding="async"></div></button><div class="cap"><b>Brown gown, seated</b><span>AI catalogue photo, Sindhu Reddy</span></div></div><div data-r><button type="button" class="lbi" data-t="Lehenga, Aarini" data-s="AI catalogue photo, Sindhu Reddy" data-ar="0.7500" data-src="media/graphic/shoot-lehenga-aarini.webp" aria-label="Open Lehenga, Aarini"><div class="ph img" style="aspect-ratio:3/4"><img src="media/graphic/shoot-lehenga-aarini.webp" alt="Lehenga, Aarini, AI catalogue photo, Sindhu Reddy" loading="lazy" decoding="async"></div></button><div class="cap"><b>Lehenga, Aarini</b><span>AI catalogue photo, Sindhu Reddy</span></div></div><div data-r><button type="button" class="lbi" data-t="Lilac kurta" data-s="AI model photo for reels" data-ar="0.7500" data-src="media/graphic/shoot-kurta-lilac.webp" aria-label="Open Lilac kurta"><div class="ph img" style="aspect-ratio:3/4"><img src="media/graphic/shoot-kurta-lilac.webp" alt="Lilac kurta, AI model photo for reels" loading="lazy" decoding="async"></div></button><div class="cap"><b>Lilac kurta</b><span>AI model photo for reels</span></div></div><div data-r><button type="button" class="lbi" data-t="Brown gown, dupatta" data-s="AI catalogue photo, Sindhu Reddy" data-ar="0.7500" data-src="media/graphic/shoot-brown-drapes.webp" aria-label="Open Brown gown, dupatta"><div class="ph img" style="aspect-ratio:3/4"><img src="media/graphic/shoot-brown-drapes.webp" alt="Brown gown, dupatta, AI catalogue photo, Sindhu Reddy" loading="lazy" decoding="async"></div></button><div class="cap"><b>Brown gown, dupatta</b><span>AI catalogue photo, Sindhu Reddy</span></div></div>
+    </div>
+  </div>
+  <div class="ss">
+    <div class="ssh" id="a-how" data-r><span class="k mono">03</span><h2>How I make an AI film</h2><p>Every film is planned on paper first, so the faces, the light and the story stay the same from shot to shot.</p><span class="n mono">5 steps</span></div>
+    <ol class="steps"><li data-r><span class="mono">01</span><h3>Story and shot plan</h3><p>The idea, a short script and a shot list with timing, lens and camera move for every shot.</p></li><li data-r><span class="mono">02</span><h3>Characters and look</h3><p>Faces, clothes and places are locked first, so every shot matches the last.</p></li><li data-r><span class="mono">03</span><h3>Storyboard frames</h3><p>A still image for each shot, picked from several takes before any video is made.</p></li><li data-r><span class="mono">04</span><h3>Image to video</h3><p>Each frame is animated with the video model that suits the shot best.</p></li><li data-r><span class="mono">05</span><h3>Edit, sound and colour</h3><p>Cut in Premiere Pro, titles in After Effects, voice and music timed to every move.</p></li></ol>
+  </div>
+  <div class="ss" data-lbg>
+    <div class="ssh" id="a-board" data-r><span class="k mono">04</span><h2>Storyboards</h2><p>Shot-by-shot plans with lens, camera move and timing, and key frames locked before any video is made. The faces are AI stand-ins.</p><span class="n mono">20 pieces</span></div>
+    <div class="sb">
+<div data-r><button type="button" class="vt" data-t="Plan vs result" data-s="Hanuman: Dhyana, storyboard next to the final shot" data-ar="0.5625" data-src="media/video/ai-plan.mp4" data-pt="12.0" aria-label="Play Plan vs result"><div class="ph" style="aspect-ratio:9/16"><img src="media/video/ai-plan.webp" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><span class="play" aria-hidden="true"></span><span class="dur">0:36</span></div></button><div class="cap"><b>Plan vs result</b><span>Hanuman: Dhyana, storyboard next to the final shot</span></div></div>
+      <div class="g3"><div data-r><button type="button" class="lbi" data-t="1A, office" data-s="ECU, 100mm macro, static, 2 s" data-ar="1.7778" data-src="media/ai/board-1A.webp" aria-label="Open 1A, office"><div class="ph img" style="aspect-ratio:16/9"><img src="media/ai/board-1A.webp" alt="1A, office, ECU, 100mm macro, static, 2 s" loading="lazy" decoding="async"></div></button><div class="cap"><b>1A, office</b><span>ECU, 100mm macro, static, 2 s</span></div></div><div data-r><button type="button" class="lbi" data-t="3C, home" data-s="Close two-shot, 50mm, static, 3 s" data-ar="1.7778" data-src="media/ai/board-3C.webp" aria-label="Open 3C, home"><div class="ph img" style="aspect-ratio:16/9"><img src="media/ai/board-3C.webp" alt="3C, home, Close two-shot, 50mm, static, 3 s" loading="lazy" decoding="async"></div></button><div class="cap"><b>3C, home</b><span>Close two-shot, 50mm, static, 3 s</span></div></div><div data-r><button type="button" class="lbi" data-t="7A, car at night" data-s="Two-shot from the back seat, 28mm, 4 s" data-ar="1.7778" data-src="media/ai/board-7A.webp" aria-label="Open 7A, car at night"><div class="ph img" style="aspect-ratio:16/9"><img src="media/ai/board-7A.webp" alt="7A, car at night, Two-shot from the back seat, 28mm, 4 s" loading="lazy" decoding="async"></div></button><div class="cap"><b>7A, car at night</b><span>Two-shot from the back seat, 28mm, 4 s</span></div></div><div data-r><button type="button" class="lbi" data-t="10A, hospital" data-s="Aerial, 16mm, slow drone descent, 3 s" data-ar="1.7778" data-src="media/ai/board-10A.webp" aria-label="Open 10A, hospital"><div class="ph img" style="aspect-ratio:16/9"><img src="media/ai/board-10A.webp" alt="10A, hospital, Aerial, 16mm, slow drone descent, 3 s" loading="lazy" decoding="async"></div></button><div class="cap"><b>10A, hospital</b><span>Aerial, 16mm, slow drone descent, 3 s</span></div></div><div data-r><button type="button" class="lbi" data-t="10D, corridor" data-s="Super-wide, 14mm, symmetrical, 3 s" data-ar="1.7778" data-src="media/ai/board-10D.webp" aria-label="Open 10D, corridor"><div class="ph img" style="aspect-ratio:16/9"><img src="media/ai/board-10D.webp" alt="10D, corridor, Super-wide, 14mm, symmetrical, 3 s" loading="lazy" decoding="async"></div></button><div class="cap"><b>10D, corridor</b><span>Super-wide, 14mm, symmetrical, 3 s</span></div></div><div data-r><button type="button" class="lbi" data-t="11M, naming day" data-s="Wide, 24mm, slow crane up, 4 s" data-ar="1.7778" data-src="media/ai/board-11M.webp" aria-label="Open 11M, naming day"><div class="ph img" style="aspect-ratio:16/9"><img src="media/ai/board-11M.webp" alt="11M, naming day, Wide, 24mm, slow crane up, 4 s" loading="lazy" decoding="async"></div></button><div class="cap"><b>11M, naming day</b><span>Wide, 24mm, slow crane up, 4 s</span></div></div></div>
+    </div>
+    <p class="fp-h mono" data-r>Key frames: Hanuman, The Leap</p>
+    <p class="kf-note" data-r>13 shots, each picked from two takes, with the same Hanuman, Sita and ring in every frame. The look changes with the story: dawn gold, a storm, moonlight, then the lamps of Lanka.</p>
+    <div class="strip-w">
+      <div class="strip tall"><div data-r><button type="button" class="lbi" data-t="Shot 01" data-s="Dawn on the cliff" data-ar="0.5625" data-src="media/ai/leap-01.webp" aria-label="Open Shot 01"><div class="ph img" style="aspect-ratio:9/16"><img src="media/ai/leap-01.webp" alt="Shot 01, Dawn on the cliff" loading="lazy" decoding="async"></div></button><div class="cap"><b>Shot 01</b><span>Dawn on the cliff</span></div></div><div data-r><button type="button" class="lbi" data-t="Shot 02" data-s="Prayer" data-ar="0.5625" data-src="media/ai/leap-02.webp" aria-label="Open Shot 02"><div class="ph img" style="aspect-ratio:9/16"><img src="media/ai/leap-02.webp" alt="Shot 02, Prayer" loading="lazy" decoding="async"></div></button><div class="cap"><b>Shot 02</b><span>Prayer</span></div></div><div data-r><button type="button" class="lbi" data-t="Shot 03" data-s="Rama&#x27;s ring" data-ar="0.5625" data-src="media/ai/leap-03.webp" aria-label="Open Shot 03"><div class="ph img" style="aspect-ratio:9/16"><img src="media/ai/leap-03.webp" alt="Shot 03, Rama&#x27;s ring" loading="lazy" decoding="async"></div></button><div class="cap"><b>Shot 03</b><span>Rama&#x27;s ring</span></div></div><div data-r><button type="button" class="lbi" data-t="Shot 04" data-s="Getting ready" data-ar="0.5625" data-src="media/ai/leap-04.webp" aria-label="Open Shot 04"><div class="ph img" style="aspect-ratio:9/16"><img src="media/ai/leap-04.webp" alt="Shot 04, Getting ready" loading="lazy" decoding="async"></div></button><div class="cap"><b>Shot 04</b><span>Getting ready</span></div></div><div data-r><button type="button" class="lbi" data-t="Shot 05" data-s="The leap" data-ar="0.5625" data-src="media/ai/leap-05.webp" aria-label="Open Shot 05"><div class="ph img" style="aspect-ratio:9/16"><img src="media/ai/leap-05.webp" alt="Shot 05, The leap" loading="lazy" decoding="async"></div></button><div class="cap"><b>Shot 05</b><span>The leap</span></div></div><div data-r><button type="button" class="lbi" data-t="Shot 06" data-s="Over the sea" data-ar="0.5625" data-src="media/ai/leap-06.webp" aria-label="Open Shot 06"><div class="ph img" style="aspect-ratio:9/16"><img src="media/ai/leap-06.webp" alt="Shot 06, Over the sea" loading="lazy" decoding="async"></div></button><div class="cap"><b>Shot 06</b><span>Over the sea</span></div></div><div data-r><button type="button" class="lbi" data-t="Shot 07" data-s="Across the water" data-ar="0.5625" data-src="media/ai/leap-07.webp" aria-label="Open Shot 07"><div class="ph img" style="aspect-ratio:9/16"><img src="media/ai/leap-07.webp" alt="Shot 07, Across the water" loading="lazy" decoding="async"></div></button><div class="cap"><b>Shot 07</b><span>Across the water</span></div></div><div data-r><button type="button" class="lbi" data-t="Shot 08" data-s="Into the storm" data-ar="0.5625" data-src="media/ai/leap-08.webp" aria-label="Open Shot 08"><div class="ph img" style="aspect-ratio:9/16"><img src="media/ai/leap-08.webp" alt="Shot 08, Into the storm" loading="lazy" decoding="async"></div></button><div class="cap"><b>Shot 08</b><span>Into the storm</span></div></div><div data-r><button type="button" class="lbi" data-t="Shot 09" data-s="Past the moon" data-ar="0.5625" data-src="media/ai/leap-09.webp" aria-label="Open Shot 09"><div class="ph img" style="aspect-ratio:9/16"><img src="media/ai/leap-09.webp" alt="Shot 09, Past the moon" loading="lazy" decoding="async"></div></button><div class="cap"><b>Shot 09</b><span>Past the moon</span></div></div><div data-r><button type="button" class="lbi" data-t="Shot 10" data-s="First sight of Lanka" data-ar="0.5625" data-src="media/ai/leap-10.webp" aria-label="Open Shot 10"><div class="ph img" style="aspect-ratio:9/16"><img src="media/ai/leap-10.webp" alt="Shot 10, First sight of Lanka" loading="lazy" decoding="async"></div></button><div class="cap"><b>Shot 10</b><span>First sight of Lanka</span></div></div><div data-r><button type="button" class="lbi" data-t="Shot 11" data-s="On the wall" data-ar="0.5625" data-src="media/ai/leap-11.webp" aria-label="Open Shot 11"><div class="ph img" style="aspect-ratio:9/16"><img src="media/ai/leap-11.webp" alt="Shot 11, On the wall" loading="lazy" decoding="async"></div></button><div class="cap"><b>Shot 11</b><span>On the wall</span></div></div><div data-r><button type="button" class="lbi" data-t="Shot 12" data-s="The grove" data-ar="0.5625" data-src="media/ai/leap-12.webp" aria-label="Open Shot 12"><div class="ph img" style="aspect-ratio:9/16"><img src="media/ai/leap-12.webp" alt="Shot 12, The grove" loading="lazy" decoding="async"></div></button><div class="cap"><b>Shot 12</b><span>The grove</span></div></div><div data-r><button type="button" class="lbi" data-t="Shot 13" data-s="Sita" data-ar="0.5625" data-src="media/ai/leap-13.webp" aria-label="Open Shot 13"><div class="ph img" style="aspect-ratio:9/16"><img src="media/ai/leap-13.webp" alt="Shot 13, Sita" loading="lazy" decoding="async"></div></button><div class="cap"><b>Shot 13</b><span>Sita</span></div></div></div>
+      <div class="sbtn"><button type="button" data-s="-1" aria-label="Earlier frames">←</button><button type="button" data-s="1" aria-label="Later frames">→</button></div>
+    </div>
+  </div>
+  <div class="ss">
+    <div class="ssh" id="a-tools" data-r><span class="k mono">05</span><h2>AI tools and models</h2><p>The tools I pick from for each job, and the editing suite that finishes the film.</p><span class="n mono">19 tools</span></div>
+    <div class="tgrid"><div class="tgrp" data-r><p class="mono">Video models</p><div class="tg"><span class="tl"><b class="dot"></b>Google Flow (Veo)</span><span class="tl"><b class="dot"></b>Kling</span><span class="tl"><b class="dot"></b>Seedance</span><span class="tl"><b class="dot"></b>Higgsfield</span><span class="tl"><b class="dot"></b>Runway</span><span class="tl"><b class="dot"></b>Sora</span><span class="tl"><b class="dot"></b>Luma</span><span class="tl"><b class="dot"></b>Hailuo</span></div></div><div class="tgrp" data-r><p class="mono">Image models</p><div class="tg"><span class="tl"><b class="dot"></b>ChatGPT images</span><span class="tl"><b class="dot"></b>Midjourney</span><span class="tl"><b class="dot"></b>Nano Banana</span><span class="tl"><b class="dot"></b>Adobe Firefly</span></div></div><div class="tgrp" data-r><p class="mono">Voice and music</p><div class="tg"><span class="tl"><b class="dot"></b>ElevenLabs</span><span class="tl"><b class="dot"></b>Suno</span></div></div><div class="tgrp" data-r><p class="mono">Writing and planning</p><div class="tg"><span class="tl"><b class="dot"></b>ChatGPT</span><span class="tl"><b class="dot"></b>Claude</span></div></div><div class="tgrp" data-r><p class="mono">Finishing</p><div class="tg"><span class="tl"><b>Pr</b>Premiere Pro</span><span class="tl"><b>Ae</b>After Effects</span><span class="tl"><b class="dot"></b>Topaz Video AI</span></div></div></div>
+  </div>
+  <a class="next" href="#graphic"><span><small>Next</small><b>Graphic design</b></span><span class="circ" aria-hidden="true">→</span></a>
+</div>
+</section>
+<section class="view" id="v-about" data-view="about" aria-labelledby="ab-h" hidden>
+  <div class="ah">
+    <div class="ah-l">
+      <div>
+        <a class="crumb mono" href="#home">← All work</a>
+        <h1 id="ab-h" class="ah-t">Hi, I'm<br><span>Yoga.</span></h1>
+        <p class="ah-i">I design posters, brands and websites, and edit reels, ad films and AI films for growing businesses in Bengaluru and beyond.</p>
+      </div>
+      <nav class="ah-rows" aria-label="See the work">
+        <a href="#graphic"><span class="mono">01</span><b><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128,48,68.32,70.38a8,8,0,0,0-5.08,6.17L40,216l139.45-23.24a8,8,0,0,0,6.17-5.08L208,128Zm-4,104a20,20,0,1,1,20-20A20,20,0,0,1,124,152Z" opacity="0.2"/><path d="M248,92.68a15.86,15.86,0,0,0-4.69-11.31L174.63,12.68a16,16,0,0,0-22.63,0L123.57,41.11l-58,21.77A16.06,16.06,0,0,0,55.35,75.23L32.11,214.68A8,8,0,0,0,40,224a8.4,8.4,0,0,0,1.32-.11l139.44-23.24a16,16,0,0,0,12.35-10.17l21.77-58L243.31,104A15.87,15.87,0,0,0,248,92.68Zm-69.87,92.19L63.32,204l47.37-47.37a28,28,0,1,0-11.32-11.32L52,192.7,71.13,77.86,126,57.29,198.7,130ZM112,132a12,12,0,1,1,12,12A12,12,0,0,1,112,132Zm96-15.32L139.31,48l24-24L232,92.68Z"/></svg>Graphic design</b><i class="mono">70 works ↗</i></a>
+        <a href="#video"><span class="mono">02</span><b><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M67.71,64.59l47.79,27.6L40.43,112,32.27,82a7.76,7.76,0,0,1,5.58-9.52ZM199.84,37.76a7.9,7.9,0,0,0-9.66-5.49L126.61,49.05,174.4,76.64,208,67.77Z" opacity="0.2"/><path d="M216,104H102.09L210,75.51a8,8,0,0,0,5.68-9.84l-8.16-30a15.93,15.93,0,0,0-19.42-11.13L35.81,64.74a15.75,15.75,0,0,0-9.7,7.4,15.51,15.51,0,0,0-1.55,12L32,111.56c0,.14,0,.29,0,.44v88a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V112A8,8,0,0,0,216,104ZM192.16,40l6,22.07-22.62,6L147.42,51.83Zm-66.69,17.6,28.12,16.24-36.94,9.75L88.53,67.37Zm-79.4,44.62-6-22.08,26.5-7L94.69,89.4ZM208,200H48V120H208v80Z"/></svg>Video editing</b><i class="mono">12 films ↗</i></a>
+        <a href="#web"><span class="mono">03</span><b><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224,56V96H32V56a8,8,0,0,1,8-8H216A8,8,0,0,1,224,56Z" opacity="0.2"/><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,16V88H40V56Zm0,144H40V104H216v96Z"/></svg>Web design</b><i class="mono">14 projects ↗</i></a>
+        <a href="#ai"><span class="mono">04</span><b><svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M194.82,151.43l-55.09,20.3-20.3,55.09a7.92,7.92,0,0,1-14.86,0l-20.3-55.09-55.09-20.3a7.92,7.92,0,0,1,0-14.86l55.09-20.3,20.3-55.09a7.92,7.92,0,0,1,14.86,0l20.3,55.09,55.09,20.3A7.92,7.92,0,0,1,194.82,151.43Z" opacity="0.2"/><path d="M197.58,129.06,146,110l-19-51.62a15.92,15.92,0,0,0-29.88,0L78,110l-51.62,19a15.92,15.92,0,0,0,0,29.88L78,178l19,51.62a15.92,15.92,0,0,0,29.88,0L146,178l51.62-19a15.92,15.92,0,0,0,0-29.88ZM137,164.22a8,8,0,0,0-4.74,4.74L112,223.85,91.78,169A8,8,0,0,0,87,164.22L32.15,144,87,123.78A8,8,0,0,0,91.78,119L112,64.15,132.22,119a8,8,0,0,0,4.74,4.74L191.85,144ZM144,40a8,8,0,0,1,8-8h16V16a8,8,0,0,1,16,0V32h16a8,8,0,0,1,0,16H184V64a8,8,0,0,1-16,0V48H152A8,8,0,0,1,144,40ZM248,88a8,8,0,0,1-8,8h-8v8a8,8,0,0,1-16,0V96h-8a8,8,0,0,1,0-16h8V72a8,8,0,0,1,16,0v8h8A8,8,0,0,1,248,88Z"/></svg>AI film making</b><i class="mono">13 works ↗</i></a>
+      </nav>
+    </div>
+    <div class="ah-r">
+      <img src="media/about/yoga.webp" alt="Yoga, designer and video editor in Bengaluru" width="1000" height="1250" decoding="async">
+      <span class="ah-badge"><i aria-hidden="true"></i>Open for new projects</span>
+      <div class="ah-marq" aria-label="Tools I use"><div class="ah-track"><span class="tl"><b>Ps</b>Photoshop</span><span class="tl"><b>Ai</b>Illustrator</span><span class="tl"><b>Id</b>InDesign</span><span class="tl"><b>Pr</b>Premiere Pro</span><span class="tl"><b>Ae</b>After Effects</span><span class="tl"><b>Lr</b>Lightroom</span><span class="tl"><b>Au</b>Audition</span><span class="tl"><b class="dot"></b>Firefly</span><span class="tl"><b class="dot"></b>Google Flow (Veo)</span><span class="tl"><b class="dot"></b>Kling</span><span class="tl"><b class="dot"></b>Seedance</span><span class="tl"><b class="dot"></b>Midjourney</span><span class="tl"><b class="dot"></b>ElevenLabs</span><span class="tl"><b class="dot"></b>Blender</span><span class="tl"><b class="dot"></b>Framer</span><span class="tl"><b class="dot"></b>Shopify</span><span class="tl"><b>Ps</b>Photoshop</span><span class="tl"><b>Ai</b>Illustrator</span><span class="tl"><b>Id</b>InDesign</span><span class="tl"><b>Pr</b>Premiere Pro</span><span class="tl"><b>Ae</b>After Effects</span><span class="tl"><b>Lr</b>Lightroom</span><span class="tl"><b>Au</b>Audition</span><span class="tl"><b class="dot"></b>Firefly</span><span class="tl"><b class="dot"></b>Google Flow (Veo)</span><span class="tl"><b class="dot"></b>Kling</span><span class="tl"><b class="dot"></b>Seedance</span><span class="tl"><b class="dot"></b>Midjourney</span><span class="tl"><b class="dot"></b>ElevenLabs</span><span class="tl"><b class="dot"></b>Blender</span><span class="tl"><b class="dot"></b>Framer</span><span class="tl"><b class="dot"></b>Shopify</span></div></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="ab2">
+      <h2 class="ab2-t" data-r>From the first sketch to the final file, so every post, page and film looks like the same brand.</h2>
+      <div class="bio" data-r>
+            <p>I make posters, logos, websites and reels for businesses of every size, from colleges and clinics to fashion labels and food brands.</p>
+      <p>I work across the whole Adobe Creative Cloud: Photoshop, Illustrator and InDesign for design, Premiere Pro, After Effects and Audition for film, and Firefly for AI images.</p>
+      <p>For AI films I plan every shot first, generate with Google Flow, Kling, Seedance and Midjourney, and finish the edit, sound and colour by hand.</p>
+    </div>
+    </div>
+    <div class="tools" data-r>
+      <p class="mono">Adobe Creative Cloud</p>
+      <div class="tg"><span class="tl"><b>Ps</b>Photoshop</span><span class="tl"><b>Ai</b>Illustrator</span><span class="tl"><b>Id</b>InDesign</span><span class="tl"><b>Lr</b>Lightroom</span><span class="tl"><b>Pr</b>Premiere Pro</span><span class="tl"><b>Ae</b>After Effects</span><span class="tl"><b>Au</b>Audition</span><span class="tl"><b>Me</b>Media Encoder</span><span class="tl"><b>An</b>Animate</span><span class="tl"><b class="dot"></b>Firefly</span><span class="tl"><b class="dot"></b>Express</span></div>
+      <p class="mono">AI tools and models</p>
+      <div class="tg"><span class="tl"><b class="dot"></b>ChatGPT</span><span class="tl"><b class="dot"></b>ChatGPT images</span><span class="tl"><b class="dot"></b>Claude</span><span class="tl"><b class="dot"></b>ElevenLabs</span><span class="tl"><b class="dot"></b>Google Flow (Veo)</span><span class="tl"><b class="dot"></b>Hailuo</span><span class="tl"><b class="dot"></b>Higgsfield</span><span class="tl"><b class="dot"></b>Kling</span><span class="tl"><b class="dot"></b>Luma</span><span class="tl"><b class="dot"></b>Midjourney</span><span class="tl"><b class="dot"></b>Nano Banana</span><span class="tl"><b class="dot"></b>Runway</span><span class="tl"><b class="dot"></b>Seedance</span><span class="tl"><b class="dot"></b>Sora</span><span class="tl"><b class="dot"></b>Suno</span><span class="tl"><b class="dot"></b>Topaz Video AI</span></div>
+      <p class="mono">Also</p>
+      <div class="tg"><span class="tl"><b class="dot"></b>Blender</span><span class="tl"><b class="dot"></b>Shopify</span><span class="tl"><b class="dot"></b>Framer</span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap" id="site-foot">
+  <div class="contact" data-r>
+    <div class="in">
+      <div><h2>Have a project in mind?</h2><p>Send a message with what you need. A website, a campaign, a logo or a film.</p></div>
+      <div class="cta">
+        <a class="pill b" href="https://wa.me/917816816963" target="_blank" rel="noopener">WhatsApp +91 78168 16963 <span class="ar">↗</span></a>
+        <a class="pill w" href="https://www.instagram.com/vexel.media/" target="_blank" rel="noopener">Instagram @vexel.media <span class="ar">↗</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="foot mono">
+    <span>© 2026 Yoga, Bengaluru</span>
+    <span>Spec work is self-initiated and not linked to the brands shown.</span>
+    <button type="button" data-jump="top">Back to top ↑</button>
+  </div>
+</footer>
+
+<dialog id="lb" aria-label="Work" autofocus>
+  <div class="dm"><div id="lb-m"></div></div>
+  <div class="db"><p><b id="lb-t"></b><span id="lb-s"></span></p><nav><button type="button" id="lb-p">← Previous</button><button type="button" id="lb-n">Next →</button><button type="button" id="lb-x">Close</button></nav></div>
+</dialog>
+<dialog id="vp" aria-label="Video player" autofocus>
+  <div class="dm"><div id="vp-m"></div></div>
+  <div class="db"><p><b id="vp-t"></b><span id="vp-s"></span></p><nav><button type="button" id="vp-x">Close</button></nav></div>
+</dialog>
+
+<script>
+!function(t,i){"object"==typeof exports&&"undefined"!=typeof module?module.exports=i():"function"==typeof define&&define.amd?define(i):(t="undefined"!=typeof globalThis?globalThis:t||self).Lenis=i()}(this,(function(){"use strict";function clamp(t,i,e){return Math.max(t,Math.min(i,e))}class Animate{constructor(){this.isRunning=!1,this.value=0,this.from=0,this.to=0,this.currentTime=0}advance(t){var i;if(!this.isRunning)return;let e=!1;if(this.duration&&this.easing){this.currentTime+=t;const i=clamp(0,this.currentTime/this.duration,1);e=i>=1;const s=e?1:this.easing(i);this.value=this.from+(this.to-this.from)*s}else this.lerp?(this.value=function damp(t,i,e,s){return function lerp(t,i,e){return(1-e)*t+e*i}(t,i,1-Math.exp(-e*s))}(this.value,this.to,60*this.lerp,t),Math.round(this.value)===this.to&&(this.value=this.to,e=!0)):(this.value=this.to,e=!0);e&&this.stop(),null===(i=this.onUpdate)||void 0===i||i.call(this,this.value,e)}stop(){this.isRunning=!1}fromTo(t,i,{lerp:e,duration:s,easing:o,onStart:n,onUpdate:l}){this.from=this.value=t,this.to=i,this.lerp=e,this.duration=s,this.easing=o,this.currentTime=0,this.isRunning=!0,null==n||n(),this.onUpdate=l}}class Dimensions{constructor(t,i,{autoResize:e=!0,debounce:s=250}={}){this.wrapper=t,this.content=i,this.width=0,this.height=0,this.scrollHeight=0,this.scrollWidth=0,this.resize=()=>{this.onWrapperResize(),this.onContentResize()},this.onWrapperResize=()=>{this.wrapper instanceof Window?(this.width=window.innerWidth,this.height=window.innerHeight):(this.width=this.wrapper.clientWidth,this.height=this.wrapper.clientHeight)},this.onContentResize=()=>{this.wrapper instanceof Window?(this.scrollHeight=this.content.scrollHeight,this.scrollWidth=this.content.scrollWidth):(this.scrollHeight=this.wrapper.scrollHeight,this.scrollWidth=this.wrapper.scrollWidth)},e&&(this.debouncedResize=function debounce(t,i){let e;return function(...s){let o=this;clearTimeout(e),e=setTimeout((()=>{e=void 0,t.apply(o,s)}),i)}}(this.resize,s),this.wrapper instanceof Window?window.addEventListener("resize",this.debouncedResize,!1):(this.wrapperResizeObserver=new ResizeObserver(this.debouncedResize),this.wrapperResizeObserver.observe(this.wrapper)),this.contentResizeObserver=new ResizeObserver(this.debouncedResize),this.contentResizeObserver.observe(this.content)),this.resize()}destroy(){var t,i;null===(t=this.wrapperResizeObserver)||void 0===t||t.disconnect(),null===(i=this.contentResizeObserver)||void 0===i||i.disconnect(),this.wrapper===window&&this.debouncedResize&&window.removeEventListener("resize",this.debouncedResize,!1)}get limit(){return{x:this.scrollWidth-this.width,y:this.scrollHeight-this.height}}}class Emitter{constructor(){this.events={}}emit(t,...i){var e;let s=this.events[t]||[];for(let t=0,o=s.length;t<o;t++)null===(e=s[t])||void 0===e||e.call(s,...i)}on(t,i){var e;return(null===(e=this.events[t])||void 0===e?void 0:e.push(i))||(this.events[t]=[i]),()=>{var e;this.events[t]=null===(e=this.events[t])||void 0===e?void 0:e.filter((t=>i!==t))}}off(t,i){var e;this.events[t]=null===(e=this.events[t])||void 0===e?void 0:e.filter((t=>i!==t))}destroy(){this.events={}}}const t=100/6,i={passive:!1};class VirtualScroll{constructor(e,s={wheelMultiplier:1,touchMultiplier:1}){this.element=e,this.options=s,this.touchStart={x:0,y:0},this.lastDelta={x:0,y:0},this.window={width:0,height:0},this.emitter=new Emitter,this.onTouchStart=t=>{const{clientX:i,clientY:e}=t.targetTouches?t.targetTouches[0]:t;this.touchStart.x=i,this.touchStart.y=e,this.lastDelta={x:0,y:0},this.emitter.emit("scroll",{deltaX:0,deltaY:0,event:t})},this.onTouchMove=t=>{const{clientX:i,clientY:e}=t.targetTouches?t.targetTouches[0]:t,s=-(i-this.touchStart.x)*this.options.touchMultiplier,o=-(e-this.touchStart.y)*this.options.touchMultiplier;this.touchStart.x=i,this.touchStart.y=e,this.lastDelta={x:s,y:o},this.emitter.emit("scroll",{deltaX:s,deltaY:o,event:t})},this.onTouchEnd=t=>{this.emitter.emit("scroll",{deltaX:this.lastDelta.x,deltaY:this.lastDelta.y,event:t})},this.onWheel=i=>{let{deltaX:e,deltaY:s,deltaMode:o}=i;e*=1===o?t:2===o?this.window.width:1,s*=1===o?t:2===o?this.window.height:1,e*=this.options.wheelMultiplier,s*=this.options.wheelMultiplier,this.emitter.emit("scroll",{deltaX:e,deltaY:s,event:i})},this.onWindowResize=()=>{this.window={width:window.innerWidth,height:window.innerHeight}},window.addEventListener("resize",this.onWindowResize,!1),this.onWindowResize(),this.element.addEventListener("wheel",this.onWheel,i),this.element.addEventListener("touchstart",this.onTouchStart,i),this.element.addEventListener("touchmove",this.onTouchMove,i),this.element.addEventListener("touchend",this.onTouchEnd,i)}on(t,i){return this.emitter.on(t,i)}destroy(){this.emitter.destroy(),window.removeEventListener("resize",this.onWindowResize,!1),this.element.removeEventListener("wheel",this.onWheel,i),this.element.removeEventListener("touchstart",this.onTouchStart,i),this.element.removeEventListener("touchmove",this.onTouchMove,i),this.element.removeEventListener("touchend",this.onTouchEnd,i)}}return class Lenis{constructor({wrapper:t=window,content:i=document.documentElement,eventsTarget:e=t,smoothWheel:s=!0,syncTouch:o=!1,syncTouchLerp:n=.075,touchInertiaMultiplier:l=35,duration:r,easing:h=(t=>Math.min(1,1.001-Math.pow(2,-10*t))),lerp:a=.1,infinite:c=!1,orientation:u="vertical",gestureOrientation:d="vertical",touchMultiplier:p=1,wheelMultiplier:m=1,autoResize:v=!0,prevent:g,virtualScroll:S,__experimental__naiveDimensions:w=!1}={}){this._isScrolling=!1,this._isStopped=!1,this._isLocked=!1,this._preventNextNativeScrollEvent=!1,this._resetVelocityTimeout=null,this.time=0,this.userData={},this.lastVelocity=0,this.velocity=0,this.direction=0,this.animate=new Animate,this.emitter=new Emitter,this.onPointerDown=t=>{1===t.button&&this.reset()},this.onVirtualScroll=t=>{if("function"==typeof this.options.virtualScroll&&!1===this.options.virtualScroll(t))return;const{deltaX:i,deltaY:e,event:s}=t;if(this.emitter.emit("virtual-scroll",{deltaX:i,deltaY:e,event:s}),s.ctrlKey)return;const o=s.type.includes("touch"),n=s.type.includes("wheel");this.isTouching="touchstart"===s.type||"touchmove"===s.type;if(this.options.syncTouch&&o&&"touchstart"===s.type&&!this.isStopped&&!this.isLocked)return void this.reset();const l=0===i&&0===e,r="vertical"===this.options.gestureOrientation&&0===e||"horizontal"===this.options.gestureOrientation&&0===i;if(l||r)return;let h=s.composedPath();h=h.slice(0,h.indexOf(this.rootElement));const a=this.options.prevent;if(h.find((t=>{var i,e,s,l,r;return t instanceof HTMLElement&&("function"==typeof a&&(null==a?void 0:a(t))||(null===(i=t.hasAttribute)||void 0===i?void 0:i.call(t,"data-lenis-prevent"))||o&&(null===(e=t.hasAttribute)||void 0===e?void 0:e.call(t,"data-lenis-prevent-touch"))||n&&(null===(s=t.hasAttribute)||void 0===s?void 0:s.call(t,"data-lenis-prevent-wheel"))||(null===(l=t.classList)||void 0===l?void 0:l.contains("lenis"))&&!(null===(r=t.classList)||void 0===r?void 0:r.contains("lenis-stopped")))})))return;if(this.isStopped||this.isLocked)return void s.preventDefault();if(!(this.options.syncTouch&&o||this.options.smoothWheel&&n))return this.isScrolling="native",void this.animate.stop();s.preventDefault();let c=e;"both"===this.options.gestureOrientation?c=Math.abs(e)>Math.abs(i)?e:i:"horizontal"===this.options.gestureOrientation&&(c=i);const u=o&&this.options.syncTouch,d=o&&"touchend"===s.type&&Math.abs(c)>5;d&&(c=this.velocity*this.options.touchInertiaMultiplier),this.scrollTo(this.targetScroll+c,Object.assign({programmatic:!1},u?{lerp:d?this.options.syncTouchLerp:1}:{lerp:this.options.lerp,duration:this.options.duration,easing:this.options.easing}))},this.onNativeScroll=()=>{if(null!==this._resetVelocityTimeout&&(clearTimeout(this._resetVelocityTimeout),this._resetVelocityTimeout=null),this._preventNextNativeScrollEvent)this._preventNextNativeScrollEvent=!1;else if(!1===this.isScrolling||"native"===this.isScrolling){const t=this.animatedScroll;this.animatedScroll=this.targetScroll=this.actualScroll,this.lastVelocity=this.velocity,this.velocity=this.animatedScroll-t,this.direction=Math.sign(this.animatedScroll-t),this.isScrolling="native",this.emit(),0!==this.velocity&&(this._resetVelocityTimeout=setTimeout((()=>{this.lastVelocity=this.velocity,this.velocity=0,this.isScrolling=!1,this.emit()}),400))}},window.lenisVersion="1.1.13",t&&t!==document.documentElement&&t!==document.body||(t=window),this.options={wrapper:t,content:i,eventsTarget:e,smoothWheel:s,syncTouch:o,syncTouchLerp:n,touchInertiaMultiplier:l,duration:r,easing:h,lerp:a,infinite:c,gestureOrientation:d,orientation:u,touchMultiplier:p,wheelMultiplier:m,autoResize:v,prevent:g,virtualScroll:S,__experimental__naiveDimensions:w},this.dimensions=new Dimensions(t,i,{autoResize:v}),this.updateClassName(),this.targetScroll=this.animatedScroll=this.actualScroll,this.options.wrapper.addEventListener("scroll",this.onNativeScroll,!1),this.options.wrapper.addEventListener("pointerdown",this.onPointerDown,!1),this.virtualScroll=new VirtualScroll(e,{touchMultiplier:p,wheelMultiplier:m}),this.virtualScroll.on("scroll",this.onVirtualScroll)}destroy(){this.emitter.destroy(),this.options.wrapper.removeEventListener("scroll",this.onNativeScroll,!1),this.options.wrapper.removeEventListener("pointerdown",this.onPointerDown,!1),this.virtualScroll.destroy(),this.dimensions.destroy(),this.cleanUpClassName()}on(t,i){return this.emitter.on(t,i)}off(t,i){return this.emitter.off(t,i)}setScroll(t){this.isHorizontal?this.rootElement.scrollLeft=t:this.rootElement.scrollTop=t}resize(){this.dimensions.resize(),this.animatedScroll=this.targetScroll=this.actualScroll,this.emit()}emit(){this.emitter.emit("scroll",this)}reset(){this.isLocked=!1,this.isScrolling=!1,this.animatedScroll=this.targetScroll=this.actualScroll,this.lastVelocity=this.velocity=0,this.animate.stop()}start(){this.isStopped&&(this.isStopped=!1,this.reset())}stop(){this.isStopped||(this.isStopped=!0,this.animate.stop(),this.reset())}raf(t){const i=t-(this.time||t);this.time=t,this.animate.advance(.001*i)}scrollTo(t,{offset:i=0,immediate:e=!1,lock:s=!1,duration:o=this.options.duration,easing:n=this.options.easing,lerp:l=this.options.lerp,onStart:r,onComplete:h,force:a=!1,programmatic:c=!0,userData:u}={}){if(!this.isStopped&&!this.isLocked||a){if("string"==typeof t&&["top","left","start"].includes(t))t=0;else if("string"==typeof t&&["bottom","right","end"].includes(t))t=this.limit;else{let e;if("string"==typeof t?e=document.querySelector(t):t instanceof HTMLElement&&(null==t?void 0:t.nodeType)&&(e=t),e){if(this.options.wrapper!==window){const t=this.rootElement.getBoundingClientRect();i-=this.isHorizontal?t.left:t.top}const s=e.getBoundingClientRect();t=(this.isHorizontal?s.left:s.top)+this.animatedScroll}}if("number"==typeof t){if(t+=i,t=Math.round(t),this.options.infinite?c&&(this.targetScroll=this.animatedScroll=this.scroll):t=clamp(0,t,this.limit),t===this.targetScroll)return null==r||r(this),void(null==h||h(this));if(this.userData=null!=u?u:{},e)return this.animatedScroll=this.targetScroll=t,this.setScroll(this.scroll),this.reset(),this.preventNextNativeScrollEvent(),this.emit(),null==h||h(this),void(this.userData={});c||(this.targetScroll=t),this.animate.fromTo(this.animatedScroll,t,{duration:o,easing:n,lerp:l,onStart:()=>{s&&(this.isLocked=!0),this.isScrolling="smooth",null==r||r(this)},onUpdate:(t,i)=>{this.isScrolling="smooth",this.lastVelocity=this.velocity,this.velocity=t-this.animatedScroll,this.direction=Math.sign(this.velocity),this.animatedScroll=t,this.setScroll(this.scroll),c&&(this.targetScroll=t),i||this.emit(),i&&(this.reset(),this.emit(),null==h||h(this),this.userData={},this.preventNextNativeScrollEvent())}})}}}preventNextNativeScrollEvent(){this._preventNextNativeScrollEvent=!0,requestAnimationFrame((()=>{this._preventNextNativeScrollEvent=!1}))}get rootElement(){return this.options.wrapper===window?document.documentElement:this.options.wrapper}get limit(){return this.options.__experimental__naiveDimensions?this.isHorizontal?this.rootElement.scrollWidth-this.rootElement.clientWidth:this.rootElement.scrollHeight-this.rootElement.clientHeight:this.dimensions.limit[this.isHorizontal?"x":"y"]}get isHorizontal(){return"horizontal"===this.options.orientation}get actualScroll(){return this.isHorizontal?this.rootElement.scrollLeft:this.rootElement.scrollTop}get scroll(){return this.options.infinite?function modulo(t,i){return(t%i+i)%i}(this.animatedScroll,this.limit):this.animatedScroll}get progress(){return 0===this.limit?1:this.scroll/this.limit}get isScrolling(){return this._isScrolling}set isScrolling(t){this._isScrolling!==t&&(this._isScrolling=t,this.updateClassName())}get isStopped(){return this._isStopped}set isStopped(t){this._isStopped!==t&&(this._isStopped=t,this.updateClassName())}get isLocked(){return this._isLocked}set isLocked(t){this._isLocked!==t&&(this._isLocked=t,this.updateClassName())}get isSmooth(){return"smooth"===this.isScrolling}get className(){let t="lenis";return this.isStopped&&(t+=" lenis-stopped"),this.isLocked&&(t+=" lenis-locked"),this.isScrolling&&(t+=" lenis-scrolling"),"smooth"===this.isScrolling&&(t+=" lenis-smooth"),t}updateClassName(){this.cleanUpClassName(),this.rootElement.className=`${this.rootElement.className} ${this.className}`.trim()}cleanUpClassName(){this.rootElement.className=this.rootElement.className.replace(/lenis(-\w+)?/g,"").trim()}}}));
+//# sourceMappingURL=lenis.min.js.map
+</script>
+<script>
+{
+  const root = document.documentElement, body = document.body;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const VIEWS = ['home', 'graphic', 'video', 'web', 'ai', 'about'];
+  const TITLES = {home: 'Yoga Portfolio', graphic: 'Graphic design, Yoga', video: 'Video editing, Yoga', web: 'Web design, Yoga', ai: 'AI film making, Yoga', about: 'About, Yoga'};
+  const LABELS = {home: 'Portfolio', graphic: 'Graphic design', video: 'Video editing', web: 'Web design', ai: 'AI film making', about: 'About me'};
+  const EASE_IO = 'cubic-bezier(.76,0,.24,1)';
+  const views = [...document.querySelectorAll('.view')];
+  const catLinks = [...document.querySelectorAll('.cats a')];
+  const top = document.querySelector('.top');
+  const wipe = document.querySelector('.wipe'), wipeT = wipe.querySelector('.wipe-t');
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+  // smooth scrolling
+  let lenis = null;
+  if (!reduce && window.Lenis) {
+    lenis = new Lenis({duration: 1.2, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true});
+    const lraf = t => { lenis.raf(t); requestAnimationFrame(lraf); };
+    requestAnimationFrame(lraf);
+  }
+  const scrollTop = () => { if (lenis) lenis.scrollTo(0, {immediate: true, force: true}); else window.scrollTo(0, 0); };
+
+  // the type guides sit on the real cap height, x-height and baseline
+  const spec = document.getElementById('spec');
+  const word = spec.querySelector('.big');
+  const placeSpec = () => {
+    const fs = parseFloat(getComputedStyle(word).fontSize);
+    if (!fs || !spec.offsetWidth) return;
+    const probe = document.createElement('span');
+    probe.style.cssText = 'display:inline-block;width:0;height:0;vertical-align:baseline';
+    word.append(probe);
+    const top0 = spec.getBoundingClientRect().top;
+    const base = probe.getBoundingClientRect().top - top0;
+    probe.remove();
+    const c = document.createElement('canvas').getContext('2d');
+    c.font = getComputedStyle(word).fontWeight + ' ' + fs + 'px "Funnel Display"';
+    const cap = c.measureText('H').actualBoundingBoxAscent, xh = c.measureText('x').actualBoundingBoxAscent;
+    const g = spec.querySelectorAll('.guide');
+    g[0].style.top = (base - cap) + 'px'; g[1].style.top = (base - xh) + 'px'; g[2].style.top = base + 'px';
+  };
+  placeSpec();
+  if (document.fonts) document.fonts.ready.then(placeSpec);
+  new ResizeObserver(placeSpec).observe(spec);
+
+  // live Bengaluru clock
+  const clk = document.getElementById('clk');
+  const fmt = new Intl.DateTimeFormat('en-GB', {timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false});
+  const tickClock = () => { clk.textContent = fmt.format(new Date()) + ' IST'; };
+  tickClock(); setInterval(tickClock, 1000);
+
+  // split headings into words so they can slide up out of a mask
+  document.querySelectorAll('.vh h1, .ssh h2, .contact h2, .bio h2, .next b').forEach(h => {
+    const keep = h.querySelector('.bp');
+    if (keep) keep.remove();
+    const words = h.textContent.trim().split(/\s+/);
+    h.textContent = '';
+    words.forEach((w, i) => {
+      const outer = document.createElement('span'); outer.className = 'w';
+      const inner = document.createElement('span'); inner.textContent = w; inner.style.setProperty('--wi', i);
+      outer.append(inner); h.append(outer);
+      if (i < words.length - 1) h.append(' ');
+    });
+    if (keep) h.lastChild.append(keep);
+  });
+
+  // reveal blocks below the fold as they scroll in
+  const revIO = new IntersectionObserver(es => {
+    let i = 0;
+    for (const e of es) {
+      if (!e.isIntersecting) continue;
+      const el = e.target;
+      el.style.setProperty('--dl', (i++ * 0.08) + 's');
+      el.classList.add('ri');
+      revIO.unobserve(el);
+      setTimeout(() => { el.classList.remove('rp', 'ri'); el.style.removeProperty('--dl'); el.dataset.done = '1'; }, 1900 + i * 80);
+    }
+  }, {rootMargin: '0px 0px -10% 0px'});
+  const armReveal = scope => {
+    if (reduce || !scope) return;
+    for (const el of scope.querySelectorAll('[data-r]:not([data-done])')) {
+      if (el.classList.contains('rp')) continue;
+      if (el.getBoundingClientRect().top > innerHeight * 0.92) { el.classList.add('rp'); revIO.observe(el); }
+    }
+  };
+
+  // pages scrolling inside screens
+  const measure = () => document.querySelectorAll('.scr').forEach(s => {
+    const pg = s.querySelector('.pg');
+    if (pg && s.clientHeight) s.style.setProperty('--sh', Math.min(0, s.clientHeight - pg.offsetHeight) + 'px');
+  });
+  const scrRO = new ResizeObserver(measure);
+  document.querySelectorAll('.scr').forEach(s => scrRO.observe(s));
+  document.querySelectorAll('.scr img.pg').forEach(i => { if (!i.complete) i.addEventListener('load', measure); });
+
+  // app recordings play while on screen
+  const pgv = document.querySelectorAll('video.pgv');
+  if (pgv.length && !reduce) {
+    const vio = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.play().catch(() => {}); else e.target.pause(); }), {threshold: 0.25});
+    pgv.forEach(v => vio.observe(v));
+  }
+
+  // on scroll: header line, the landing text drifts up and fades, page titles drift slower than the page
+  const center = document.querySelector('.center');
+  const onScroll = y => {
+    top.classList.toggle('s', y > 8);
+    if (reduce) return;
+    if (body.dataset.view === 'home') {
+      center.style.transform = `translate3d(0,${y * 0.3}px,0)`;
+      center.style.opacity = String(Math.max(0, 1 - y / 650));
+    } else {
+      const w = document.querySelector('.view:not([hidden]) .vh .wrap');
+      if (w) { w.style.transform = `translate3d(0,${y * 0.22}px,0)`; w.style.opacity = String(Math.max(0, 1 - y / 900)); }
+    }
+  };
+  if (lenis) lenis.on('scroll', e => onScroll(e.scroll));
+  else addEventListener('scroll', () => onScroll(scrollY), {passive: true});
+
+  // switch the visible page
+  const swap = name => {
+    views.forEach(v => { v.hidden = v.dataset.view !== name; });
+    body.dataset.view = name;
+    catLinks.forEach(a => a.classList.toggle('on', a.dataset.v === name));
+    document.querySelector('.ib')?.classList.toggle('on', name === 'about');
+    document.title = TITLES[name];
+    document.querySelectorAll('.vh .wrap').forEach(w => { w.style.transform = ''; w.style.opacity = ''; });
+    center.style.transform = ''; center.style.opacity = '';
+    scrollTop();
+    if (lenis) lenis.resize();
+    requestAnimationFrame(() => { measure(); armReveal(document.getElementById('v-' + name)); armReveal(document.getElementById('site-foot')); });
+  };
+
+  // the blue wipe: a circle grows from where you clicked, the new page loads under it, then it lifts away
+  let pt = {x: innerWidth / 2, y: innerHeight / 2}, busy = false, queued = null;
+  addEventListener('pointerdown', e => { pt = {x: e.clientX, y: e.clientY}; }, {passive: true, capture: true});
+  const go = async name => {
+    if (reduce || !wipe.animate) { swap(name); return; }
+    if (busy) { queued = name; return; }
+    busy = true;
+    wipeT.textContent = LABELS[name];
+    wipe.style.visibility = 'visible';
+    const {x, y} = pt;
+    const r = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y)) + 20;
+    await wipe.animate([{clipPath: `circle(0px at ${x}px ${y}px)`}, {clipPath: `circle(${r}px at ${x}px ${y}px)`}],
+      {duration: 750, easing: EASE_IO, fill: 'forwards'}).finished;
+    wipeT.animate([{opacity: 0, transform: 'translateY(40px)'}, {opacity: 1, transform: 'none'}], {duration: 600, easing: 'cubic-bezier(.16,1,.3,1)', fill: 'both'});
+    swap(name);
+    await sleep(420);
+    await wipe.animate([{clipPath: 'inset(0 0 0 0)'}, {clipPath: 'inset(0 0 100% 0)'}], {duration: 850, easing: EASE_IO, fill: 'forwards'}).finished;
+    wipe.getAnimations().forEach(a => a.cancel());
+    wipeT.getAnimations().forEach(a => a.cancel());
+    wipe.style.visibility = '';
+    busy = false;
+    if (queued && queued !== body.dataset.view) { const q = queued; queued = null; go(q); } else queued = null;
+  };
+  const route = () => { const n = location.hash.slice(1); return VIEWS.includes(n) ? n : 'home'; };
+  addEventListener('hashchange', () => { if (route() !== body.dataset.view) go(route()); });
+
+  // first load: no opener, the landing animates in as soon as the fonts are ready
+  swap(route());
+  (async () => {
+    if (!root.classList.contains('boot')) return;
+    await Promise.race([document.fonts ? document.fonts.ready : sleep(0), sleep(700)]);
+    root.classList.remove('boot');
+    measure();
+  })();
+  addEventListener('load', measure);
+
+  // in-page jumps without touching the address
+  document.addEventListener('click', e => {
+    const b = e.target.closest('[data-jump]');
+    if (!b) return;
+    const id = b.dataset.jump;
+    const el = id === 'top' ? 0 : document.getElementById(id);
+    if (el === null) return;
+    if (lenis) lenis.scrollTo(el, {offset: id === 'top' ? 0 : -(top.offsetHeight + 16), duration: 1.5});
+    else if (el === 0) window.scrollTo({top: 0, behavior: reduce ? 'auto' : 'smooth'});
+    else el.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block: 'start'});
+  });
+
+  // side-scrolling strips
+  document.querySelectorAll('.strip-w').forEach(w => {
+    const s = w.querySelector('.strip');
+    w.querySelector('[data-s="-1"]').onclick = () => s.scrollBy({left: -s.clientWidth * 0.8, behavior: 'smooth'});
+    w.querySelector('[data-s="1"]').onclick = () => s.scrollBy({left: s.clientWidth * 0.8, behavior: 'smooth'});
+  });
+
+  // pointer: cursor ring, buttons that lean towards it
+  if (fine && !reduce) {
+    const ring = document.createElement('div'); ring.className = 'ring'; body.append(ring);
+    let rx = -100, ry = -100, tx = -100, ty = -100;
+    addEventListener('pointermove', e => {
+      tx = e.clientX; ty = e.clientY;
+      ring.classList.add('on');
+      ring.classList.toggle('big', !!e.target.closest('a, button, .lbi, .vt'));
+    }, {passive: true});
+    root.addEventListener('mouseleave', () => { ring.classList.remove('on'); });
+    const frame = () => {
+      rx += (tx - rx) * 0.2; ry += (ty - ry) * 0.2;
+      ring.style.transform = `translate3d(${rx}px,${ry}px,0)`;
+      requestAnimationFrame(frame);
+    };
+    requestAnimationFrame(frame);
+    document.querySelectorAll('.cb, .pill, .circ, .sbtn button').forEach(el => {
+      const lift = el.classList.contains('cb') ? -6 : 0, turn = el.classList.contains('circ') ? ' rotate(-45deg)' : '';
+      el.addEventListener('pointermove', e => {
+        const r = el.getBoundingClientRect();
+        const dx = (e.clientX - r.left - r.width / 2) * 0.22, dy = (e.clientY - r.top - r.height / 2) * 0.22;
+        el.style.transform = `translate3d(${dx}px,${dy + lift}px,0)${turn}`;
+      });
+      el.addEventListener('pointerleave', () => { el.style.transform = ''; });
+    });
+  }
+
+  // dialogs
+  const lock = on => { if (lenis) { if (on) lenis.stop(); else lenis.start(); } else root.style.overflow = on ? 'hidden' : ''; };
+  const wire = d => { d.addEventListener('close', () => lock(false)); d.addEventListener('click', e => { if (e.target === d) d.close(); }); };
+  const media = (box, t, isVideo) => {
+    const ar = parseFloat(t.dataset.ar) || 1;
+    box.style.aspectRatio = String(ar);
+    box.style.width = `min(100%, calc(70vh * ${ar}))`;
+    box.className = 'ph';
+    box.textContent = '';
+    if (t.dataset.src) {
+      const m = document.createElement(isVideo ? 'video' : 'img');
+      m.src = t.dataset.src;
+      if (isVideo) { m.controls = true; m.autoplay = true; m.playsInline = true; } else m.alt = t.dataset.t || '';
+      m.style.cssText = 'width:100%;height:100%;object-fit:contain';
+      box.append(m);
+    } else {
+      const s = document.createElement('span'); s.className = 'pl';
+      s.textContent = isVideo ? 'The film plays here' : 'The full piece shows here';
+      box.append(s);
+    }
+  };
+  const lb = document.getElementById('lb'); wire(lb);
+  let list = [], at = 0;
+  const showLb = () => {
+    const t = list[at];
+    const box = document.getElementById('lb-m');
+    media(box, t, false);
+    if (!reduce && box.animate) box.animate([{opacity: 0, transform: 'scale(.97)'}, {opacity: 1, transform: 'none'}], {duration: 500, easing: 'cubic-bezier(.16,1,.3,1)'});
+    document.getElementById('lb-t').textContent = t.dataset.t;
+    document.getElementById('lb-s').textContent = t.dataset.s + '   ' + (at + 1) + ' of ' + list.length;
+  };
+  // Poster wall: masonry rows (8px) sized from each tile's real height, and a text filter
+  const walls = [...document.querySelectorAll('.wall')];
+  const lay = () => walls.forEach(w => w.querySelectorAll('.wi:not([data-off])').forEach(it => {
+    const h = it.firstElementChild.getBoundingClientRect().height;
+    if (h) it.style.gridRowEnd = 'span ' + Math.ceil(h / 8);
+  }));
+  walls.forEach(w => w.querySelectorAll('img').forEach(i => i.addEventListener('load', lay, {once: true})));
+  addEventListener('resize', lay);
+  if (window.ResizeObserver) walls.forEach(w => new ResizeObserver(lay).observe(w));
+  document.querySelectorAll('.flt').forEach(f => f.addEventListener('click', e => {
+    const b = e.target.closest('button[data-f]'); if (!b) return;
+    f.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b));
+    const w = f.parentElement.querySelector('.wall'), k = b.dataset.f;
+    w.querySelectorAll('.wi').forEach(it => it.toggleAttribute('data-off', k !== 'all' && it.dataset.cat !== k));
+    w.querySelectorAll('.wi:not([data-off]) [data-r]').forEach(r => r.classList.add('in'));
+    lay();
+  }));
+  lay();
+  document.querySelectorAll('[data-open]').forEach(b => b.addEventListener('click', () => document.getElementById(b.dataset.open).click()));
+  document.querySelectorAll('.lbi').forEach(t => t.addEventListener('click', () => {
+    list = [...t.closest('[data-lbg]').querySelectorAll('.lbi')].filter(x => !x.closest('[data-off]')); at = list.indexOf(t);
+    showLb(); lb.showModal(); lock(true);
+  }));
+  const step = d => { at = (at + d + list.length) % list.length; showLb(); };
+  document.getElementById('lb-p').onclick = () => step(-1);
+  document.getElementById('lb-n').onclick = () => step(1);
+  document.getElementById('lb-x').onclick = () => lb.close();
+  lb.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') step(-1); if (e.key === 'ArrowRight') step(1); });
+  const vp = document.getElementById('vp'); wire(vp);
+  vp.addEventListener('close', () => { const v = vp.querySelector('video'); if (v) v.pause(); });
+  document.querySelectorAll('.vt').forEach(b => b.addEventListener('click', () => {
+    media(document.getElementById('vp-m'), b, true);
+    document.getElementById('vp-t').textContent = b.dataset.t;
+    document.getElementById('vp-s').textContent = b.dataset.s;
+    vp.showModal(); lock(true);
+  }));
+  document.getElementById('vp-x').onclick = () => vp.close();
+  // muted preview of the film while the pointer rests on a tile
+  if (!reduce && matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    document.querySelectorAll('.vt[data-src]').forEach(b => {
+      let v = null, t = 0;
+      b.addEventListener('pointerenter', () => {
+        clearTimeout(t);
+        t = setTimeout(() => {
+          if (!v) {
+            v = document.createElement('video');
+            v.className = 'pv'; v.muted = true; v.loop = true; v.playsInline = true; v.preload = 'auto';
+            v.src = b.dataset.src; v.setAttribute('aria-hidden', 'true');
+            v.addEventListener('loadedmetadata', () => { v.currentTime = Math.min(+b.dataset.pt || 0, v.duration - 1); }, {once: true});
+            v.addEventListener('playing', () => v.classList.add('on'));
+            b.querySelector('.ph').insertBefore(v, b.querySelector('.play'));
+          } else v.classList.add('on');
+          v.play().catch(() => {});
+        }, 180);
+      });
+      b.addEventListener('click', () => { clearTimeout(t); if (v) { v.classList.remove('on'); v.pause(); } });
+      b.addEventListener('pointerleave', () => {
+        clearTimeout(t);
+        if (v) { v.classList.remove('on'); setTimeout(() => { if (!v.classList.contains('on')) v.pause(); }, 500); }
+      });
+    });
+  }
+}
+</script>
+</body>
+</html>
